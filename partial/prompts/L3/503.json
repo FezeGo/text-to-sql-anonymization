@@ -1,0 +1,11 @@
+{
+  "example_id": 503,
+  "db_id": "battle_death",
+  "level": "L3",
+  "question": "How many battles did not lose any ship with tonnage '225'?",
+  "gold_sql": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/503.txt",
+  "schema_file": "test/schemas/L3/battle_death.json"
+}

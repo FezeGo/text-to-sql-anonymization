@@ -1,0 +1,30 @@
+{
+  "db_id": "employee_hire_evaluation",
+  "level": "L1",
+  "rename_tables": false,
+  "table_map": {
+    "employee": "employee",
+    "shop": "shop",
+    "hiring": "hiring",
+    "evaluation": "evaluation"
+  },
+  "column_map": {
+    "employee.employee_id": "empl_id",
+    "employee.name": "nm",
+    "employee.age": "age",
+    "employee.city": "city",
+    "shop.shop_id": "shop_id",
+    "shop.name": "nm",
+    "shop.location": "loca",
+    "shop.district": "dist",
+    "shop.number_products": "num_prod",
+    "shop.manager_name": "mana_nm",
+    "hiring.shop_id": "shop_id",
+    "hiring.employee_id": "empl_id",
+    "hiring.start_from": "star_from",
+    "hiring.is_full_time": "is_full_tm",
+    "evaluation.employee_id": "empl_id",
+    "evaluation.year_awarded": "yr_awar",
+    "evaluation.bonus": "bonu"
+  }
+}

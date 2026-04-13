@@ -1,0 +1,10 @@
+{
+  "example_id": 166,
+  "db_id": "car_1",
+  "level": "L1",
+  "question": "For all of the 4 cylinder cars, which model has the most horsepower?",
+  "gold_sql": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+  "predicted_sql": "SELECT T1.model FROM model_list AS T1 JOIN car_names AS T2 ON T1.mode = T2.mode JOIN cars_data AS T3 ON T2.make = T3.id WHERE T3.cyli = 4 ORDER BY T3.hors DESC LIMIT 1;",
+  "raw_response": "SELECT T1.model FROM model_list AS T1 JOIN car_names AS T2 ON T1.mode = T2.mode JOIN cars_data AS T3 ON T2.make = T3.id WHERE T3.cyli = 4 ORDER BY T3.hors DESC LIMIT 1;",
+  "prompt_file": "test/prompts/L1/166.txt"
+}

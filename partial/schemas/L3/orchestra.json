@@ -1,0 +1,63 @@
+{
+  "db_id": "orchestra",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "conductor",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    },
+    {
+      "table_name": "orchestra",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6"
+      ]
+    },
+    {
+      "table_name": "performance",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7"
+      ]
+    },
+    {
+      "table_name": "show",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "orchestra.col_3",
+      "conductor.col_1"
+    ],
+    [
+      "performance.col_2",
+      "orchestra.col_1"
+    ],
+    [
+      "show.col_2",
+      "performance.col_1"
+    ]
+  ]
+}

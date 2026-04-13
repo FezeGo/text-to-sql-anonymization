@@ -1,0 +1,11 @@
+{
+  "example_id": 1026,
+  "db_id": "singer",
+  "level": "L2",
+  "question": "List the name of singers that do not have any song.",
+  "gold_sql": "SELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L2/1026.txt",
+  "schema_file": "test/schemas/L2/singer.json"
+}

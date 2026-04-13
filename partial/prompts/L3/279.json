@@ -1,0 +1,11 @@
+{
+  "example_id": 279,
+  "db_id": "employee_hire_evaluation",
+  "level": "L3",
+  "question": "Find the name of the employee who got the highest one time bonus.",
+  "gold_sql": "SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID ORDER BY t2.bonus DESC LIMIT 1",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/279.txt",
+  "schema_file": "test/schemas/L3/employee_hire_evaluation.json"
+}

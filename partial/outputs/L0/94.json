@@ -1,0 +1,10 @@
+{
+  "example_id": 94,
+  "db_id": "car_1",
+  "level": "L0",
+  "question": "What is the full name of each car maker, along with its id and how many models it produces?",
+  "gold_sql": "SELECT T1.FullName ,  T1.Id ,  count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id;",
+  "predicted_sql": "SELECT T1.fullname, T1.id, COUNT(*) FROM car_makers AS T1 JOIN model_list AS T2 ON T1.id = T2.maker GROUP BY T1.id;",
+  "raw_response": "SELECT T1.fullname, T1.id, COUNT(*) FROM car_makers AS T1 JOIN model_list AS T2 ON T1.id = T2.maker GROUP BY T1.id;",
+  "prompt_file": "test/prompts/L0/94.txt"
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 883,
+  "db_id": "network_1",
+  "level": "L2",
+  "question": "How many friends does each student have?",
+  "gold_sql": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+  "predicted_sql": "SELECT count(*), pk_1 FROM table_2 GROUP BY pk_1",
+  "raw_response": "SELECT count(*), pk_1 FROM table_2 GROUP BY pk_1",
+  "prompt_file": "prompts/L2/883.txt"
+}

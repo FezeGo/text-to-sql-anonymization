@@ -1,0 +1,11 @@
+{
+  "example_id": 887,
+  "db_id": "network_1",
+  "level": "L0",
+  "question": "Return the name of the high school student with the most friends.",
+  "gold_sql": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/887.txt",
+  "schema_file": "schemas/L0/network_1.json"
+}

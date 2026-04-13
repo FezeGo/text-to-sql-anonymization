@@ -1,0 +1,10 @@
+{
+  "example_id": 686,
+  "db_id": "poker_player",
+  "level": "L2",
+  "question": "Count the number of different nationalities.",
+  "gold_sql": "SELECT count(DISTINCT Nationality) FROM people",
+  "predicted_sql": "SELECT count(DISTINCT attr_f56d02) FROM people;",
+  "raw_response": "SELECT count(DISTINCT attr_f56d02) FROM people;",
+  "prompt_file": "test/prompts/L2/686.txt"
+}

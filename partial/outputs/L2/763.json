@@ -1,0 +1,10 @@
+{
+  "example_id": 763,
+  "db_id": "world_1",
+  "level": "L2",
+  "question": "What are the name, population, and life expectancy of the largest Asian country by land?",
+  "gold_sql": "SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1",
+  "predicted_sql": "SELECT identifier, attr_248081, attr_2c2d41 FROM country WHERE attr_0e20e8 = 'Asia' ORDER BY attr_8cd0df DESC LIMIT 1;",
+  "raw_response": "SELECT identifier, attr_248081, attr_2c2d41 FROM country WHERE attr_0e20e8 = 'Asia' ORDER BY attr_8cd0df DESC LIMIT 1;",
+  "prompt_file": "test/prompts/L2/763.txt"
+}

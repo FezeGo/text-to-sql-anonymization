@@ -1,0 +1,10 @@
+{
+  "example_id": 236,
+  "db_id": "flight_2",
+  "level": "L2",
+  "question": "Which airlines have a flight with destination airport AHD?",
+  "gold_sql": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"",
+  "predicted_sql": "SELECT DISTINCT T1.text_1 FROM table_1 AS T1 JOIN table_3 AS T3 ON T1.pk_1 = T3.pk_1 WHERE T3.fk_2 = 'AHD'",
+  "raw_response": "SELECT DISTINCT T1.text_1 FROM table_1 AS T1 JOIN table_3 AS T3 ON T1.pk_1 = T3.pk_1 WHERE T3.fk_2 = 'AHD'",
+  "prompt_file": "prompts/L2/236.txt"
+}

@@ -1,0 +1,62 @@
+{
+  "db_id": "world_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "city",
+      "columns": [
+        "key",
+        "identifier",
+        "attr_ea549d",
+        "attr_6b77ef",
+        "attr_248081"
+      ]
+    },
+    {
+      "table_name": "sqlite_sequence",
+      "columns": [
+        "identifier",
+        "attr_e068c2"
+      ]
+    },
+    {
+      "table_name": "country",
+      "columns": [
+        "symbol",
+        "identifier",
+        "attr_0e20e8",
+        "attr_960db2",
+        "attr_8cd0df",
+        "attr_286e89",
+        "attr_248081",
+        "attr_a92b89",
+        "attr_2c2d41",
+        "attr_c19ac9",
+        "attr_0180ac",
+        "attr_7bc9fe",
+        "attr_523ba9",
+        "attr_27f085",
+        "attr_602d1b"
+      ]
+    },
+    {
+      "table_name": "countrylanguage",
+      "columns": [
+        "attr_ea549d",
+        "attr_8512ae",
+        "attr_38895b",
+        "attr_d1647a"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "city.attr_ea549d",
+      "country.symbol"
+    ],
+    [
+      "countrylanguage.attr_ea549d",
+      "country.symbol"
+    ]
+  ]
+}

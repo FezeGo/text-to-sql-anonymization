@@ -1,0 +1,10 @@
+{
+  "example_id": 137,
+  "db_id": "car_1",
+  "level": "L3",
+  "question": "What is the average edispl of the cars of model volvo?",
+  "gold_sql": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';",
+  "predicted_sql": "SELECT AVG(T1.col_4) FROM table_6 AS T1 JOIN table_5 AS T2 ON T1.col_1 = T2.col_1 WHERE T2.col_2 = 'volvo'",
+  "raw_response": "SELECT AVG(T1.col_4) FROM table_6 AS T1 JOIN table_5 AS T2 ON T1.col_1 = T2.col_1 WHERE T2.col_2 = 'volvo'",
+  "prompt_file": "prompts/L3/137.txt"
+}

@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+stadium(attr_1424ca_key, attr_d5189d, identifier, attr_7bd14a, attr_de3706, attr_21f25a, mean)
+singer(attr_05011f_key, identifier, nation, attr_683eb6_identifier, attr_683eb6_attr_123fea_calendar_year, temporal_span, is_attr_07cf4f)
+concert(attr_090955_key, attr_090955_identifier, attr_f48457, attr_1424ca_key, calendar_year)
+singer_in_concert(attr_090955_key, attr_05011f_key)
+
+Foreign keys:
+concert.attr_1424ca_key = stadium.attr_1424ca_key
+singer_in_concert.attr_05011f_key = singer.attr_05011f_key
+singer_in_concert.attr_090955_key = concert.attr_090955_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+For each stadium, how many concerts play there?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

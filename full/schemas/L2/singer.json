@@ -1,0 +1,32 @@
+{
+  "db_id": "singer",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "num_1",
+        "num_2",
+        "text_2"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "fk_1",
+        "num_1",
+        "num_2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_2.fk_1",
+      "table_1.pk_1"
+    ]
+  ]
+}

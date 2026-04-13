@@ -1,0 +1,56 @@
+{
+  "db_id": "tvshow",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "tv_channel",
+      "columns": [
+        "id",
+        "seri_nm",
+        "coun",
+        "lang",
+        "cont",
+        "pixe_aspe_rati_par",
+        "high_defi_tv",
+        "pay_per_view_ppv",
+        "pack_opti"
+      ]
+    },
+    {
+      "table_name": "tv_series",
+      "columns": [
+        "id",
+        "epis",
+        "air_dt",
+        "rati",
+        "shar",
+        "18_49_rati_shar",
+        "view_m",
+        "week_rank",
+        "chan"
+      ]
+    },
+    {
+      "table_name": "cartoon",
+      "columns": [
+        "id",
+        "titl",
+        "dire_by",
+        "writ_by",
+        "orig_air_dt",
+        "prod_code",
+        "chan"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "tv_series.chan",
+      "tv_channel.id"
+    ],
+    [
+      "cartoon.chan",
+      "tv_channel.id"
+    ]
+  ]
+}

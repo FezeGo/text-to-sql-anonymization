@@ -1,0 +1,10 @@
+{
+  "example_id": 645,
+  "db_id": "tvshow",
+  "level": "L2",
+  "question": "find the package option of the tv channel that do not have any cartoon directed by Ben Jones.",
+  "gold_sql": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
+  "predicted_sql": "SELECT attr_ab4086_attr_e67e20_attr_828301_attr_d01826 FROM tv_channel WHERE key NOT IN (SELECT attr_c485d2 FROM cartoon WHERE attr_42e55a_by = 'Ben Jones')",
+  "raw_response": "SELECT attr_ab4086_attr_e67e20_attr_828301_attr_d01826 FROM tv_channel WHERE key NOT IN (SELECT attr_c485d2 FROM cartoon WHERE attr_42e55a_by = 'Ben Jones')",
+  "prompt_file": "test/prompts/L2/645.txt"
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 804,
+  "db_id": "world_1",
+  "level": "L1",
+  "question": "What are the names of the nations with the 3 lowest populations?",
+  "gold_sql": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3",
+  "predicted_sql": "SELECT nm FROM country ORDER BY popu ASC LIMIT 3;",
+  "raw_response": "SELECT nm FROM country ORDER BY popu ASC LIMIT 3;",
+  "prompt_file": "test/prompts/L1/804.txt"
+}

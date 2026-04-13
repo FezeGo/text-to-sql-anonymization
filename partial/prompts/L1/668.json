@@ -1,0 +1,11 @@
+{
+  "example_id": 668,
+  "db_id": "poker_player",
+  "level": "L1",
+  "question": "Return the money rank of the poker player with the greatest height.",
+  "gold_sql": "SELECT T2.Money_Rank FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/668.txt",
+  "schema_file": "test/schemas/L1/poker_player.json"
+}

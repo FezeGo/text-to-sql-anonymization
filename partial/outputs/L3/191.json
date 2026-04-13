@@ -1,0 +1,10 @@
+{
+  "example_id": 191,
+  "db_id": "flight_2",
+  "level": "L3",
+  "question": "How many flights do we have?",
+  "gold_sql": "SELECT count(*) FROM FLIGHTS",
+  "predicted_sql": "SELECT COUNT(*) FROM flights;",
+  "raw_response": "SELECT COUNT(*) FROM flights;",
+  "prompt_file": "test/prompts/L3/191.txt"
+}

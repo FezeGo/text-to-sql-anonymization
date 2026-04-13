@@ -1,0 +1,81 @@
+{
+  "db_id": "car_1",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "continents",
+      "columns": [
+        "col_1",
+        "col_2"
+      ]
+    },
+    {
+      "table_name": "countries",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3"
+      ]
+    },
+    {
+      "table_name": "car_makers",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    },
+    {
+      "table_name": "model_list",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3"
+      ]
+    },
+    {
+      "table_name": "car_names",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3"
+      ]
+    },
+    {
+      "table_name": "cars_data",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "countries.col_3",
+      "continents.col_1"
+    ],
+    [
+      "car_makers.col_4",
+      "countries.col_1"
+    ],
+    [
+      "model_list.col_2",
+      "car_makers.col_1"
+    ],
+    [
+      "car_names.col_2",
+      "model_list.col_3"
+    ],
+    [
+      "cars_data.col_1",
+      "car_names.col_1"
+    ]
+  ]
+}

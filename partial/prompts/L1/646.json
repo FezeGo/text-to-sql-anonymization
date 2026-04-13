@@ -1,0 +1,11 @@
+{
+  "example_id": 646,
+  "db_id": "tvshow",
+  "level": "L1",
+  "question": "What are the package options of all tv channels that are not playing any cartoons directed by Ben Jones?",
+  "gold_sql": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/646.txt",
+  "schema_file": "test/schemas/L1/tvshow.json"
+}

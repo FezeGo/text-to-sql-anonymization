@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+conductor(conductor_id, name, age, nationality, year_of_work)
+orchestra(orchestra_id, orchestra, conductor_id, record_company, year_of_founded, major_record_format)
+performance(performance_id, orchestra_id, type, date, official_ratings_millions, weekly_rank, share)
+show(show_id, performance_id, if_first_show, result, attendance)
+
+Foreign keys:
+orchestra.conductor_id = conductor.conductor_id
+performance.orchestra_id = orchestra.orchestra_id
+show.performance_id = performance.performance_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the average attendance of shows?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

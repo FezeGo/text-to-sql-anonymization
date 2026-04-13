@@ -1,0 +1,10 @@
+{
+  "example_id": 912,
+  "db_id": "network_1",
+  "level": "L0",
+  "question": "How many likes does Kyle have?",
+  "gold_sql": "SELECT count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"",
+  "predicted_sql": "SELECT count(*) FROM likes JOIN highschooler ON likes.liked_id = highschooler.id WHERE highschooler.name = 'Kyle';",
+  "raw_response": "SELECT count(*) FROM likes JOIN highschooler ON likes.liked_id = highschooler.id WHERE highschooler.name = 'Kyle';",
+  "prompt_file": "prompts/L0/912.txt"
+}

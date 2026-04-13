@@ -1,0 +1,10 @@
+{
+  "example_id": 21,
+  "db_id": "concert_singer",
+  "level": "L3",
+  "question": "How many concerts occurred in 2014 or 2015?",
+  "gold_sql": "SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015",
+  "predicted_sql": "SELECT count(*) FROM concert WHERE col_3 = 2014 OR col_3 = 2015;",
+  "raw_response": "SELECT count(*) FROM concert WHERE col_3 = 2014 OR col_3 = 2015;",
+  "prompt_file": "test/prompts/L3/21.txt"
+}

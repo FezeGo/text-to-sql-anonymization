@@ -1,0 +1,62 @@
+{
+  "db_id": "world_1",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "city",
+      "columns": [
+        "id",
+        "nm",
+        "coun",
+        "dist",
+        "popu"
+      ]
+    },
+    {
+      "table_name": "sqlite_sequence",
+      "columns": [
+        "nm",
+        "seq"
+      ]
+    },
+    {
+      "table_name": "country",
+      "columns": [
+        "code",
+        "nm",
+        "cont",
+        "regi",
+        "surf",
+        "inde",
+        "popu",
+        "life",
+        "gnp",
+        "gnpo",
+        "loca",
+        "gove",
+        "head",
+        "capi",
+        "code"
+      ]
+    },
+    {
+      "table_name": "countrylanguage",
+      "columns": [
+        "coun",
+        "lang",
+        "isof",
+        "perc"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "city.coun",
+      "country.code"
+    ],
+    [
+      "countrylanguage.coun",
+      "country.code"
+    ]
+  ]
+}

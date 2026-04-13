@@ -1,0 +1,11 @@
+{
+  "example_id": 825,
+  "db_id": "orchestra",
+  "level": "L2",
+  "question": "What are the names of conductors, ordered by age?",
+  "gold_sql": "SELECT Name FROM conductor ORDER BY Age ASC",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L2/825.txt",
+  "schema_file": "test/schemas/L2/orchestra.json"
+}

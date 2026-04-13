@@ -1,0 +1,44 @@
+{
+  "db_id": "flight_2",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "airlines",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    },
+    {
+      "table_name": "airports",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    },
+    {
+      "table_name": "flights",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "flights.col_4",
+      "airports.col_2"
+    ],
+    [
+      "flights.col_3",
+      "airports.col_2"
+    ]
+  ]
+}

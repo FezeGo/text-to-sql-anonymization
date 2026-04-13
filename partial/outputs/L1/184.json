@@ -1,0 +1,10 @@
+{
+  "example_id": 184,
+  "db_id": "flight_2",
+  "level": "L1",
+  "question": "What are the airline names and abbreviations for airlines in the USA?",
+  "gold_sql": "SELECT Airline ,  Abbreviation FROM AIRLINES WHERE Country  =  \"USA\"",
+  "predicted_sql": "SELECT airl, abbr FROM airlines WHERE coun = 'USA';",
+  "raw_response": "SELECT airl, abbr FROM airlines WHERE coun = 'USA';",
+  "prompt_file": "test/prompts/L1/184.txt"
+}

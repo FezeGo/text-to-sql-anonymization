@@ -1,0 +1,11 @@
+{
+  "example_id": 23,
+  "db_id": "concert_singer",
+  "level": "L3",
+  "question": "For each stadium, how many concerts play there?",
+  "gold_sql": "SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/23.txt",
+  "schema_file": "schemas/L3/concert_singer.json"
+}

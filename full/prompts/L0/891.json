@@ -1,0 +1,11 @@
+{
+  "example_id": 891,
+  "db_id": "network_1",
+  "level": "L0",
+  "question": "Return the names of friends of the high school student Kyle.",
+  "gold_sql": "SELECT T3.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id JOIN Highschooler AS T3 ON T1.friend_id  =  T3.id WHERE T2.name  =  \"Kyle\"",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/891.txt",
+  "schema_file": "schemas/L0/network_1.json"
+}

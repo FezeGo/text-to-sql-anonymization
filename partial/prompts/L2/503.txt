@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+battle(key, identifier, calendar_mark, attr_44e61d_attr_f7ac7d, attr_f4b418_attr_f7ac7d, attr_b4a884)
+ship(attr_1c9a44_in_attr_a5101e, key, identifier, attr_11da74, attr_2a3f11_category, attr_d5189d, attr_6cfe0c_of_attr_2a3f11)
+death(attr_68ebfd_by_attr_2a3f11_key, key, attr_aad653, attr_3e4b66, attr_175325)
+
+Foreign keys:
+ship.attr_1c9a44_in_attr_a5101e = battle.key
+death.attr_68ebfd_by_attr_2a3f11_key = ship.key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+How many battles did not lose any ship with tonnage '225'?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

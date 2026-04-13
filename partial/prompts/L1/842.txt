@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+conductor(cond_id, nm, age, nati, yr_of_work)
+orchestra(orch_id, orch, cond_id, reco_comp, yr_of_foun, majo_reco_form)
+performance(perf_id, orch_id, type, dt, offi_rati_mill, week_rank, shar)
+show(show_id, perf_id, if_firs_show, resu, atte)
+
+Foreign keys:
+orchestra.cond_id = conductor.cond_id
+performance.orch_id = orchestra.orch_id
+show.perf_id = performance.perf_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show the names of conductors that have conducted more than one orchestras.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

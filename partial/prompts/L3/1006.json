@@ -1,0 +1,11 @@
+{
+  "example_id": 1006,
+  "db_id": "singer",
+  "level": "L3",
+  "question": "List the name of singers whose citizenship is not \"France\".",
+  "gold_sql": "SELECT Name FROM singer WHERE Citizenship != \"France\"",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/1006.txt",
+  "schema_file": "test/schemas/L3/singer.json"
+}

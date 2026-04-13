@@ -1,0 +1,11 @@
+{
+  "example_id": 384,
+  "db_id": "course_teach",
+  "level": "L0",
+  "question": "What are the names of the teachers ordered by ascending age?",
+  "gold_sql": "SELECT Name FROM teacher ORDER BY Age ASC",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/384.txt",
+  "schema_file": "schemas/L0/course_teach.json"
+}

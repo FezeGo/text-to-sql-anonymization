@@ -1,0 +1,10 @@
+{
+  "example_id": 275,
+  "db_id": "employee_hire_evaluation",
+  "level": "L3",
+  "question": "Find the names of stores whose number products is more than the average number of products.",
+  "gold_sql": "SELECT name FROM shop WHERE number_products  >  (SELECT avg(number_products) FROM shop)",
+  "predicted_sql": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_3 AS T2 ON T1.col_1 = T2.col_2 GROUP BY T2.col_2 HAVING COUNT(*) > (SELECT AVG(cnt) FROM (SELECT COUNT(*) AS cnt FROM table_3 GROUP BY col_2))",
+  "raw_response": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_3 AS T2 ON T1.col_1 = T2.col_2 GROUP BY T2.col_2 HAVING COUNT(*) > (SELECT AVG(cnt) FROM (SELECT COUNT(*) AS cnt FROM table_3 GROUP BY col_2))",
+  "prompt_file": "prompts/L3/275.txt"
+}

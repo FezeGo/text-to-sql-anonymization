@@ -1,0 +1,10 @@
+{
+  "example_id": 390,
+  "db_id": "course_teach",
+  "level": "L0",
+  "question": "What are the names of the teachers who are aged either 32 or 33?",
+  "gold_sql": "SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33",
+  "predicted_sql": "SELECT name FROM teacher WHERE age = 32 OR age = 33;",
+  "raw_response": "SELECT name FROM teacher WHERE age = 32 OR age = 33;",
+  "prompt_file": "test/prompts/L0/390.txt"
+}

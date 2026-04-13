@@ -1,0 +1,38 @@
+{
+  "db_id": "car_1",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "continents": "continents",
+    "countries": "countries",
+    "car_makers": "car_makers",
+    "model_list": "model_list",
+    "car_names": "car_names",
+    "cars_data": "cars_data"
+  },
+  "column_map": {
+    "continents.contid": "attr_a7a742",
+    "continents.continent": "attr_0e20e8",
+    "countries.countryid": "attr_df978e",
+    "countries.countryname": "attr_0a984f",
+    "countries.continent": "attr_0e20e8",
+    "car_makers.id": "key",
+    "car_makers.maker": "attr_35977a",
+    "car_makers.fullname": "attr_c315cc",
+    "car_makers.country": "nation",
+    "model_list.modelid": "attr_93417e",
+    "model_list.maker": "attr_35977a",
+    "model_list.model": "attr_20f35e",
+    "car_names.makeid": "attr_66aece",
+    "car_names.model": "attr_20f35e",
+    "car_names.make": "attr_099daf",
+    "cars_data.id": "key",
+    "cars_data.mpg": "attr_b4f4f5",
+    "cars_data.cylinders": "attr_fd0c4a",
+    "cars_data.edispl": "attr_65e1c7",
+    "cars_data.horsepower": "attr_7a1db2",
+    "cars_data.weight": "attr_7edabf",
+    "cars_data.accelerate": "attr_75baa4",
+    "cars_data.year": "calendar_year"
+  }
+}

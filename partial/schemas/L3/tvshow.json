@@ -1,0 +1,56 @@
+{
+  "db_id": "tvshow",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "tv_channel",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9"
+      ]
+    },
+    {
+      "table_name": "tv_series",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9"
+      ]
+    },
+    {
+      "table_name": "cartoon",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "tv_series.col_9",
+      "tv_channel.col_1"
+    ],
+    [
+      "cartoon.col_7",
+      "tv_channel.col_1"
+    ]
+  ]
+}

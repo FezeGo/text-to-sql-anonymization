@@ -1,0 +1,10 @@
+{
+  "example_id": 427,
+  "db_id": "museum_visit",
+  "level": "L3",
+  "question": "Find the number of visitors who did not visit any museum opened after 2010.",
+  "gold_sql": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)",
+  "predicted_sql": "SELECT count(*) FROM visitor WHERE col_1 NOT IN (SELECT T1.col_2 FROM visit AS T1 JOIN museum AS T2 ON T1.col_1 = T2.col_1 WHERE T2.col_4 > 2010)",
+  "raw_response": "SELECT count(*) FROM visitor WHERE col_1 NOT IN (SELECT T1.col_2 FROM visit AS T1 JOIN museum AS T2 ON T1.col_1 = T2.col_1 WHERE T2.col_4 > 2010)",
+  "prompt_file": "test/prompts/L3/427.txt"
+}

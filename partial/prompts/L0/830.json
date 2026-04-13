@@ -1,0 +1,11 @@
+{
+  "example_id": 830,
+  "db_id": "orchestra",
+  "level": "L0",
+  "question": "What is the average attendance of shows?",
+  "gold_sql": "SELECT avg(Attendance) FROM SHOW",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L0/830.txt",
+  "schema_file": "test/schemas/L0/orchestra.json"
+}

@@ -1,0 +1,57 @@
+{
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "col_1",
+        "col_2"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    },
+    {
+      "table_name": "table_4",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_2.col_3",
+      "table_1.col_1"
+    ],
+    [
+      "table_3.col_2",
+      "table_2.col_1"
+    ],
+    [
+      "table_4.col_2",
+      "table_3.col_1"
+    ]
+  ]
+}

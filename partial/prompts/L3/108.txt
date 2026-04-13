@@ -1,0 +1,25 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+continents(col_1, col_2)
+countries(col_1, col_2, col_3)
+car_makers(col_1, col_2, col_3, col_4)
+model_list(col_1, col_2, col_3)
+car_names(col_1, col_2, col_3)
+cars_data(col_1, col_2, col_3, col_4, col_5, col_6, col_7, col_8)
+
+Foreign keys:
+countries.col_3 = continents.col_1
+car_makers.col_4 = countries.col_1
+model_list.col_2 = car_makers.col_1
+car_names.col_2 = model_list.col_3
+cars_data.col_1 = car_names.col_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the name of the country with the most car makers?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

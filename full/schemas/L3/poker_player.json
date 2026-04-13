@@ -1,0 +1,33 @@
+{
+  "db_id": "poker_player",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_1.col_2",
+      "table_2.col_1"
+    ]
+  ]
+}

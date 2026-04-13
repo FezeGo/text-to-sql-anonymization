@@ -1,0 +1,182 @@
+[
+  {
+    "example_id": 791,
+    "db_id": "world_1",
+    "level": "L2",
+    "question": "Give the name, population, and head of state for the country that has the largest area.",
+    "gold_sql": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1",
+    "predicted_sql": "SELECT text_1, num_3, text_6 FROM table_3 ORDER BY num_1 DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 1032,
+    "db_id": "real_estate_properties",
+    "level": "L2",
+    "question": "Show the property type descriptions of properties belonging to that code.",
+    "gold_sql": "SELECT T2.property_type_description FROM Properties AS T1 JOIN Ref_Property_Types AS T2 ON T1.property_type_code  =  T2.property_type_code GROUP BY T1.property_type_code",
+    "predicted_sql": "SELECT T1.cat_1 FROM table_2 AS T1 JOIN table_4 AS T2 ON T1.pk_1 = T2.fk_1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 912,
+    "db_id": "network_1",
+    "level": "L2",
+    "question": "How many likes does Kyle have?",
+    "gold_sql": "SELECT count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"",
+    "predicted_sql": "SELECT num_1 FROM table_1 WHERE text_1 = 'Kyle'",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 251,
+    "db_id": "flight_2",
+    "level": "L2",
+    "question": "What are flight numbers of flights departing from City \"Aberdeen \"?",
+    "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
+    "predicted_sql": "SELECT T1.num_1 FROM table_3 AS T1 JOIN table_2 AS T2 ON T1.fk_1 = T2.pk_1 WHERE T2.text_2 = 'Aberdeen '",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 314,
+    "db_id": "cre_Doc_Template_Mgt",
+    "level": "L2",
+    "question": "What are the template ids of any templates used in more than a single document?",
+    "gold_sql": "SELECT template_id FROM Documents GROUP BY template_id HAVING count(*)  >  1",
+    "predicted_sql": "SELECT fk_1 FROM table_3 GROUP BY fk_1 HAVING COUNT(*) > 1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 699,
+    "db_id": "voter_1",
+    "level": "L2",
+    "question": "What are the create dates, states, and phone numbers of the votes that were for the contestant named 'Tabatha Gehling'?",
+    "gold_sql": "SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  'Tabatha Gehling'",
+    "predicted_sql": "SELECT T1.date_1, T2.text_1, T1.num_1 FROM table_3 AS T1 JOIN table_2 AS T2 ON T1.fk_2 = T2.pk_1 JOIN table_1 AS T3 ON T1.fk_1 = T3.text_1 WHERE T3.text_1 = 'Tabatha Gehling'",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 94,
+    "db_id": "car_1",
+    "level": "L2",
+    "question": "What is the full name of each car maker, along with its id and how many models it produces?",
+    "gold_sql": "SELECT T1.FullName ,  T1.Id ,  count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id;",
+    "predicted_sql": "SELECT T1.text_2, T1.pk_1, COUNT(*) FROM table_3 AS T1 JOIN table_4 AS T2 ON T1.pk_1 = T2.fk_1 GROUP BY T1.pk_1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 420,
+    "db_id": "museum_visit",
+    "level": "L2",
+    "question": "What are the id, name and membership level of visitors who have spent the largest amount of money in total in all museum tickets?",
+    "gold_sql": "SELECT t2.visitor_id ,  t1.name ,  t1.Level_of_membership FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t2.visitor_id ORDER BY sum(t2.Total_spent) DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.pk_1, T1.text_1, T1.num_1 FROM table_1 AS T1 JOIN table_3 AS T3 ON T1.pk_1 = T3.pk_1 JOIN table_2 AS T2 ON T3.fk_1 = T2.pk_1 GROUP BY T1.pk_1 ORDER BY SUM(T2.num_1) DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 499,
+    "db_id": "battle_death",
+    "level": "L2",
+    "question": "What are the ids and names of the battles that led to more than 10 people killed in total.",
+    "gold_sql": "SELECT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle JOIN death AS T3 ON T2.id  =  T3.caused_by_ship_id GROUP BY T1.id HAVING sum(T3.killed)  >  10",
+    "predicted_sql": "SELECT T1.pk_1, T1.text_1 FROM table_2 AS T1 JOIN table_3 AS T2 ON T1.pk_1 = T2.fk_1 GROUP BY T1.pk_1 HAVING SUM(T2.num_1) > 10;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 860,
+    "db_id": "orchestra",
+    "level": "L2",
+    "question": "Show the years in which orchestras that have given more than one performance are founded.",
+    "gold_sql": "SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1",
+    "predicted_sql": "SELECT T1.num_1 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.pk_1 = T2.fk_1 GROUP BY T1.pk_1 HAVING COUNT(*) > 1",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 883,
+    "db_id": "network_1",
+    "level": "L2",
+    "question": "How many friends does each student have?",
+    "gold_sql": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+    "predicted_sql": "SELECT count(*), pk_1 FROM table_2 GROUP BY pk_1",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 246,
+    "db_id": "flight_2",
+    "level": "L2",
+    "question": "Which flight numbers correspond to United Airlines flights?",
+    "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"",
+    "predicted_sql": "SELECT T1.num_1 FROM table_3 AS T1 JOIN table_1 AS T2 ON T1.pk_1 = T2.pk_1 WHERE T2.text_1 = 'United Airlines'",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 712,
+    "db_id": "world_1",
+    "level": "L2",
+    "question": "Which language is the most popular in Aruba?",
+    "gold_sql": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+    "predicted_sql": "SELECT T2.text_1 FROM table_3 AS T1 JOIN table_4 AS T2 ON T1.pk_1 = T2.pk_1 WHERE T1.text_1 = 'Aruba' ORDER BY T2.num_1 DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 21,
+    "db_id": "concert_singer",
+    "level": "L2",
+    "question": "How many concerts occurred in 2014 or 2015?",
+    "gold_sql": "SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015",
+    "predicted_sql": "SELECT count(*) FROM table_3 WHERE date_1 = '2014' OR date_1 = '2015'",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 790,
+    "db_id": "world_1",
+    "level": "L2",
+    "question": "What are the population, name and leader of the country with the largest area?",
+    "gold_sql": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1",
+    "predicted_sql": "SELECT num_3, text_1, text_6 FROM table_3 ORDER BY num_1 DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 401,
+    "db_id": "course_teach",
+    "level": "L2",
+    "question": "Show names of teachers and the courses they are arranged to teach in ascending alphabetical order of the teacher's name.",
+    "gold_sql": "SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ORDER BY T3.Name",
+    "predicted_sql": "SELECT T2.text_1, T1.text_1 FROM table_2 AS T2 JOIN table_3 AS T3 ON T2.pk_1 = T3.fk_1 JOIN table_1 AS T1 ON T3.pk_1 = T1.pk_1 ORDER BY T2.text_1 ASC;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 236,
+    "db_id": "flight_2",
+    "level": "L2",
+    "question": "Which airlines have a flight with destination airport AHD?",
+    "gold_sql": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"",
+    "predicted_sql": "SELECT DISTINCT T1.text_1 FROM table_1 AS T1 JOIN table_3 AS T3 ON T1.pk_1 = T3.pk_1 WHERE T3.fk_2 = 'AHD'",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 871,
+    "db_id": "network_1",
+    "level": "L2",
+    "question": "What are the names of all high schoolers in grade 10?",
+    "gold_sql": "SELECT name FROM Highschooler WHERE grade  =  10",
+    "predicted_sql": "SELECT text_1 FROM table_1 WHERE num_1 = 10;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 830,
+    "db_id": "orchestra",
+    "level": "L2",
+    "question": "What is the average attendance of shows?",
+    "gold_sql": "SELECT avg(Attendance) FROM SHOW",
+    "predicted_sql": "SELECT AVG(num_1) FROM table_2;",
+    "error_type": "syntax_or_execution_error"
+  },
+  {
+    "example_id": 390,
+    "db_id": "course_teach",
+    "level": "L2",
+    "question": "What are the names of the teachers who are aged either 32 or 33?",
+    "gold_sql": "SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33",
+    "predicted_sql": "SELECT T1.text_1 FROM table_2 AS T1 JOIN table_3 AS T2 ON T1.pk_1 = T2.fk_1 WHERE T2.num_1 = 32 OR T2.num_1 = 33",
+    "error_type": "syntax_or_execution_error"
+  }
+]

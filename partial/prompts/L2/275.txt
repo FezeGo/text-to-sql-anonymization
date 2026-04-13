@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+employee(staff_member_key, identifier, temporal_span, municipality)
+shop(attr_fb54f3_key, identifier, attr_d5189d, attr_6b77ef, index_attr_86024c, supervisor_identifier)
+hiring(attr_fb54f3_key, staff_member_key, attr_ea2b26_attr_d98a07, is_attr_e9dc92_temporal_mark)
+evaluation(staff_member_key, calendar_year_attr_87e8bc, attr_78056e)
+
+Foreign keys:
+hiring.staff_member_key = employee.staff_member_key
+hiring.attr_fb54f3_key = shop.attr_fb54f3_key
+evaluation.staff_member_key = employee.staff_member_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Find the names of stores whose number products is more than the average number of products.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

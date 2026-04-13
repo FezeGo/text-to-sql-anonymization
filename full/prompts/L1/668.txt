@@ -1,0 +1,17 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+poker_player(poke_play_id, peop_id, fina_tabl_made, best_fini, mone_rank, earn)
+people(peop_id, nati, nm, birt_dt, heig)
+
+Foreign keys:
+poker_player.peop_id = people.peop_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Return the money rank of the poker player with the greatest height.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

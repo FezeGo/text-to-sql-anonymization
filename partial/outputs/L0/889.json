@@ -1,0 +1,10 @@
+{
+  "example_id": 889,
+  "db_id": "network_1",
+  "level": "L0",
+  "question": "What are the names of high schoolers who have 3 or more friends?",
+  "gold_sql": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  3",
+  "predicted_sql": "SELECT T1.name FROM highschooler AS T1 JOIN friend AS T2 ON T1.id = T2.student_id GROUP BY T1.id HAVING COUNT(*) >= 3;",
+  "raw_response": "SELECT T1.name FROM highschooler AS T1 JOIN friend AS T2 ON T1.id = T2.student_id GROUP BY T1.id HAVING COUNT(*) >= 3;",
+  "prompt_file": "test/prompts/L0/889.txt"
+}

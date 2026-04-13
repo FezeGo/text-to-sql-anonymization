@@ -1,0 +1,36 @@
+{
+  "db_id": "orchestra",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "conductor": "conductor",
+    "orchestra": "orchestra",
+    "performance": "performance",
+    "show": "show"
+  },
+  "column_map": {
+    "conductor.conductor_id": "attr_cd1315_key",
+    "conductor.name": "identifier",
+    "conductor.age": "temporal_span",
+    "conductor.nationality": "attr_f56d02",
+    "conductor.year_of_work": "calendar_year_of_attr_67e92c",
+    "orchestra.orchestra_id": "attr_8f163b_key",
+    "orchestra.orchestra": "attr_8f163b",
+    "orchestra.conductor_id": "attr_cd1315_key",
+    "orchestra.record_company": "attr_de17f0_organization",
+    "orchestra.year_of_founded": "calendar_year_of_attr_dd5450",
+    "orchestra.major_record_format": "attr_f1425d_attr_de17f0_attr_1ddcb9",
+    "performance.performance_id": "attr_c05f6c_key",
+    "performance.orchestra_id": "attr_8f163b_key",
+    "performance.type": "category",
+    "performance.date": "calendar_mark",
+    "performance.official_ratings_millions": "attr_c74f86_attr_ff3afd_attr_dbe06f",
+    "performance.weekly_rank": "attr_4a11fc_ordering",
+    "performance.share": "attr_85e47a",
+    "show.show_id": "attr_a7dd12_key",
+    "show.performance_id": "attr_c05f6c_key",
+    "show.if_first_show": "if_attr_8b04d5_attr_a7dd12",
+    "show.result": "attr_b4a884",
+    "show.attendance": "attr_64c62c"
+  }
+}

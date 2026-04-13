@@ -1,0 +1,11 @@
+{
+  "example_id": 79,
+  "db_id": "pets_1",
+  "level": "L1",
+  "question": "Find the number of pets for each student who has any pet and student id.",
+  "gold_sql": "SELECT count(*) ,  T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/79.txt",
+  "schema_file": "test/schemas/L1/pets_1.json"
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 43,
+  "db_id": "concert_singer",
+  "level": "L0",
+  "question": "Find the number of concerts happened in the stadium with the highest capacity .",
+  "gold_sql": "select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1)",
+  "predicted_sql": "SELECT count(*) FROM concert JOIN stadium ON concert.stadium_id = stadium.stadium_id WHERE stadium.capacity = (SELECT max(capacity) FROM stadium)",
+  "raw_response": "SELECT count(*) FROM concert JOIN stadium ON concert.stadium_id = stadium.stadium_id WHERE stadium.capacity = (SELECT max(capacity) FROM stadium)",
+  "prompt_file": "prompts/L0/43.txt"
+}

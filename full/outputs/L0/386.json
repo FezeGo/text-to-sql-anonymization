@@ -1,0 +1,10 @@
+{
+  "example_id": 386,
+  "db_id": "course_teach",
+  "level": "L0",
+  "question": "What is the age and hometown of every teacher?",
+  "gold_sql": "SELECT Age ,  Hometown FROM teacher",
+  "predicted_sql": "SELECT age, hometown FROM teacher;",
+  "raw_response": "SELECT age, hometown FROM teacher;",
+  "prompt_file": "prompts/L0/386.txt"
+}

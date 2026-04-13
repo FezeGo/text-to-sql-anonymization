@@ -1,0 +1,10 @@
+{
+  "example_id": 871,
+  "db_id": "network_1",
+  "level": "L1",
+  "question": "What are the names of all high schoolers in grade 10?",
+  "gold_sql": "SELECT name FROM Highschooler WHERE grade  =  10",
+  "predicted_sql": "SELECT nm FROM highschooler WHERE grad = 10;",
+  "raw_response": "SELECT nm FROM highschooler WHERE grad = 10;",
+  "prompt_file": "prompts/L1/871.txt"
+}

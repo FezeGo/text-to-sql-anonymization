@@ -1,0 +1,10 @@
+{
+  "example_id": 699,
+  "db_id": "voter_1",
+  "level": "L2",
+  "question": "What are the create dates, states, and phone numbers of the votes that were for the contestant named 'Tabatha Gehling'?",
+  "gold_sql": "SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  'Tabatha Gehling'",
+  "predicted_sql": "SELECT T1.date_1, T2.text_1, T1.num_1 FROM table_3 AS T1 JOIN table_2 AS T2 ON T1.fk_2 = T2.pk_1 JOIN table_1 AS T3 ON T1.fk_1 = T3.text_1 WHERE T3.text_1 = 'Tabatha Gehling'",
+  "raw_response": "SELECT T1.date_1, T2.text_1, T1.num_1 FROM table_3 AS T1 JOIN table_2 AS T2 ON T1.fk_2 = T2.pk_1 JOIN table_1 AS T3 ON T1.fk_1 = T3.text_1 WHERE T3.text_1 = 'Tabatha Gehling'",
+  "prompt_file": "prompts/L2/699.txt"
+}

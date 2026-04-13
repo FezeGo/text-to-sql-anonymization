@@ -1,0 +1,33 @@
+{
+  "db_id": "concert_singer",
+  "level": "L1",
+  "table_map": {
+    "stadium": "stadium",
+    "singer": "singer",
+    "concert": "concert",
+    "singer_in_concert": "singer_in_concert"
+  },
+  "column_map": {
+    "stadium.stadium_id": "stad_id",
+    "stadium.location": "loc",
+    "stadium.name": "nm",
+    "stadium.capacity": "capa",
+    "stadium.highest": "high",
+    "stadium.lowest": "lowe",
+    "stadium.average": "aver",
+    "singer.singer_id": "sing_id",
+    "singer.name": "nm",
+    "singer.country": "coun",
+    "singer.song_name": "song_nm",
+    "singer.song_release_year": "song_rele_year",
+    "singer.age": "age",
+    "singer.is_male": "is_male",
+    "concert.concert_id": "conc_id",
+    "concert.concert_name": "conc_nm",
+    "concert.theme": "them",
+    "concert.stadium_id": "stad_id",
+    "concert.year": "year",
+    "singer_in_concert.concert_id": "conc_id",
+    "singer_in_concert.singer_id": "sing_id"
+  }
+}

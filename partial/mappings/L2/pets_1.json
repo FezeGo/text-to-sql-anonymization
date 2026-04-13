@@ -1,0 +1,26 @@
+{
+  "db_id": "pets_1",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "student": "student",
+    "has_pet": "has_pet",
+    "pets": "pets"
+  },
+  "column_map": {
+    "student.stuid": "attr_ebaa72",
+    "student.lname": "attr_bfbb12",
+    "student.fname": "attr_a3da70",
+    "student.age": "temporal_span",
+    "student.sex": "attr_3c3662",
+    "student.major": "attr_f1425d",
+    "student.advisor": "attr_a33c73",
+    "student.city_code": "municipality_symbol",
+    "has_pet.stuid": "attr_ebaa72",
+    "has_pet.petid": "attr_f593a2",
+    "pets.petid": "attr_f593a2",
+    "pets.pettype": "attr_b92885",
+    "pets.pet_age": "attr_6c43c0_temporal_span",
+    "pets.weight": "attr_7edabf"
+  }
+}

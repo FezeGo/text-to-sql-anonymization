@@ -1,0 +1,10 @@
+{
+  "example_id": 422,
+  "db_id": "museum_visit",
+  "level": "L2",
+  "question": "What is the name of the museum that had no visitor yet?",
+  "gold_sql": "SELECT name FROM museum WHERE Museum_ID NOT IN (SELECT museum_id FROM visit)",
+  "predicted_sql": "SELECT text_1 FROM table_2 WHERE pk_1 NOT IN (SELECT fk_1 FROM table_3)",
+  "raw_response": "SELECT text_1 FROM table_2 WHERE pk_1 NOT IN (SELECT fk_1 FROM table_3)",
+  "prompt_file": "prompts/L2/422.txt"
+}

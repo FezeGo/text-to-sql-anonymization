@@ -1,0 +1,10 @@
+{
+  "example_id": 825,
+  "db_id": "orchestra",
+  "level": "L2",
+  "question": "What are the names of conductors, ordered by age?",
+  "gold_sql": "SELECT Name FROM conductor ORDER BY Age ASC",
+  "predicted_sql": "SELECT text_1 FROM table_1 ORDER BY num_1",
+  "raw_response": "SELECT text_1 FROM table_1 ORDER BY num_1",
+  "prompt_file": "prompts/L2/825.txt"
+}

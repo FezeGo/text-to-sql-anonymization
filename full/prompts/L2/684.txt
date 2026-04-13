@@ -1,0 +1,17 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+table_1(pk_1, fk_1, num_1, num_2, num_3, num_4)
+table_2(pk_1, text_1, text_2, date_1, num_1)
+
+Foreign keys:
+table_1.fk_1 = table_2.pk_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the names of people who do not play poker?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

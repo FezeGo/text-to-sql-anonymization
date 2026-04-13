@@ -1,0 +1,41 @@
+{
+  "db_id": "course_teach",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "course",
+      "columns": [
+        "course_id",
+        "staring_date",
+        "course"
+      ]
+    },
+    {
+      "table_name": "teacher",
+      "columns": [
+        "teacher_id",
+        "name",
+        "age",
+        "hometown"
+      ]
+    },
+    {
+      "table_name": "course_arrange",
+      "columns": [
+        "course_id",
+        "teacher_id",
+        "grade"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "course_arrange.teacher_id",
+      "teacher.teacher_id"
+    ],
+    [
+      "course_arrange.course_id",
+      "course.course_id"
+    ]
+  ]
+}

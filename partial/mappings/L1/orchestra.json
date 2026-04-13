@@ -1,0 +1,36 @@
+{
+  "db_id": "orchestra",
+  "level": "L1",
+  "rename_tables": false,
+  "table_map": {
+    "conductor": "conductor",
+    "orchestra": "orchestra",
+    "performance": "performance",
+    "show": "show"
+  },
+  "column_map": {
+    "conductor.conductor_id": "cond_id",
+    "conductor.name": "nm",
+    "conductor.age": "age",
+    "conductor.nationality": "nati",
+    "conductor.year_of_work": "yr_of_work",
+    "orchestra.orchestra_id": "orch_id",
+    "orchestra.orchestra": "orch",
+    "orchestra.conductor_id": "cond_id",
+    "orchestra.record_company": "reco_comp",
+    "orchestra.year_of_founded": "yr_of_foun",
+    "orchestra.major_record_format": "majo_reco_form",
+    "performance.performance_id": "perf_id",
+    "performance.orchestra_id": "orch_id",
+    "performance.type": "type",
+    "performance.date": "dt",
+    "performance.official_ratings_millions": "offi_rati_mill",
+    "performance.weekly_rank": "week_rank",
+    "performance.share": "shar",
+    "show.show_id": "show_id",
+    "show.performance_id": "perf_id",
+    "show.if_first_show": "if_firs_show",
+    "show.result": "resu",
+    "show.attendance": "atte"
+  }
+}

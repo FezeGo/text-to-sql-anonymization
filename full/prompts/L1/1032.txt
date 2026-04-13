@@ -1,0 +1,23 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+ref_feature_types(feat_typ_code, feat_typ_nm)
+ref_property_types(prop_typ_code, prop_typ_desc)
+other_available_features(feat_id, feat_typ_code, feat_nm, feat_desc)
+properties(prop_id, prop_typ_code, dt_on_mark, dt_sold, prop_nm, prop_addr, room_coun, vend_requ_pric, buye_offe_pric, agre_sell_pric, apt_feat_1, apt_feat_2, apt_feat_3, fld_feat_1, fld_feat_2, fld_feat_3, hse_feat_1, hse_feat_2, hse_feat_3, oth_feat_1, oth_feat_2, oth_feat_3, shp_feat_1, shp_feat_2, shp_feat_3, othe_prop_deta)
+other_property_features(prop_id, feat_id, prop_feat_desc)
+
+Foreign keys:
+other_available_features.feat_typ_code = ref_feature_types.feat_typ_code
+properties.prop_typ_code = ref_property_types.prop_typ_code
+other_property_features.prop_id = properties.prop_id
+other_property_features.feat_id = other_available_features.feat_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show the property type descriptions of properties belonging to that code.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

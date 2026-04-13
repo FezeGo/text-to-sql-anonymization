@@ -1,0 +1,40 @@
+{
+  "db_id": "voter_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "area_code_state",
+      "columns": [
+        "attr_4b8267_symbol",
+        "region"
+      ]
+    },
+    {
+      "table_name": "contestants",
+      "columns": [
+        "attr_7189ae_index",
+        "attr_7189ae_identifier"
+      ]
+    },
+    {
+      "table_name": "votes",
+      "columns": [
+        "attr_4ca5d1_key",
+        "attr_f7a42f_index",
+        "region",
+        "attr_7189ae_index",
+        "attr_e2fa53"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "votes.attr_7189ae_index",
+      "contestants.attr_7189ae_index"
+    ],
+    [
+      "votes.region",
+      "area_code_state.region"
+    ]
+  ]
+}

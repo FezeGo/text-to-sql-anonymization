@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+highschooler(id, nm, grad)
+friend(stud_id, frie_id)
+likes(stud_id, like_id)
+
+Foreign keys:
+friend.frie_id = highschooler.id
+friend.stud_id = highschooler.id
+likes.stud_id = highschooler.id
+likes.like_id = highschooler.id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the names of all high schoolers in grade 10?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

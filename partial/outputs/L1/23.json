@@ -1,0 +1,10 @@
+{
+  "example_id": 23,
+  "db_id": "concert_singer",
+  "level": "L1",
+  "question": "For each stadium, how many concerts play there?",
+  "gold_sql": "SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",
+  "predicted_sql": "SELECT T1.nm, COUNT(*) FROM stadium AS T1 JOIN concert AS T2 ON T1.stad_id = T2.stad_id GROUP BY T1.stad_id",
+  "raw_response": "SELECT T1.nm, COUNT(*) FROM stadium AS T1 JOIN concert AS T2 ON T1.stad_id = T2.stad_id GROUP BY T1.stad_id",
+  "prompt_file": "test/prompts/L1/23.txt"
+}

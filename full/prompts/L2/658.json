@@ -1,0 +1,11 @@
+{
+  "example_id": 658,
+  "db_id": "poker_player",
+  "level": "L2",
+  "question": "Return the maximum final tables made across all poker players who have earnings below 200000.",
+  "gold_sql": "SELECT max(Final_Table_Made) FROM poker_player WHERE Earnings  <  200000",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "prompts/L2/658.txt",
+  "schema_file": "schemas/L2/poker_player.json"
+}

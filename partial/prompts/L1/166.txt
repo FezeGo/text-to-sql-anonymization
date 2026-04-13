@@ -1,0 +1,25 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+continents(cont, cont)
+countries(coun, coun, cont)
+car_makers(id, make, full, coun)
+model_list(mode, make, mode)
+car_names(make, mode, make)
+cars_data(id, mpg, cyli, edis, hors, weig, acce, yr)
+
+Foreign keys:
+countries.cont = continents.cont
+car_makers.coun = countries.coun
+model_list.make = car_makers.id
+car_names.mode = model_list.mode
+cars_data.id = car_names.make
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+For all of the 4 cylinder cars, which model has the most horsepower?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

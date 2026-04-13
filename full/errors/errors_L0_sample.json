@@ -1,0 +1,74 @@
+[
+  {
+    "example_id": 1032,
+    "db_id": "real_estate_properties",
+    "level": "L0",
+    "question": "Show the property type descriptions of properties belonging to that code.",
+    "gold_sql": "SELECT T2.property_type_description FROM Properties AS T1 JOIN Ref_Property_Types AS T2 ON T1.property_type_code  =  T2.property_type_code GROUP BY T1.property_type_code",
+    "predicted_sql": "SELECT T1.property_type_description FROM ref_property_types AS T1 JOIN properties AS T2 ON T1.property_type_code  =  T2.property_type_code",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 420,
+    "db_id": "museum_visit",
+    "level": "L0",
+    "question": "What are the id, name and membership level of visitors who have spent the largest amount of money in total in all museum tickets?",
+    "gold_sql": "SELECT t2.visitor_id ,  t1.name ,  t1.Level_of_membership FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t2.visitor_id ORDER BY sum(t2.Total_spent) DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.id, T1.name, T1.level_of_membership FROM visitor AS T1 JOIN visit AS T2 ON T1.id = T2.visitor_id GROUP BY T1.id ORDER BY SUM(T2.total_spent) DESC LIMIT 1",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 883,
+    "db_id": "network_1",
+    "level": "L0",
+    "question": "How many friends does each student have?",
+    "gold_sql": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+    "predicted_sql": "SELECT T1.name, COUNT(*) FROM highschooler AS T1 JOIN friend AS T2 ON T1.id = T2.student_id GROUP BY T1.id",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 790,
+    "db_id": "world_1",
+    "level": "L0",
+    "question": "What are the population, name and leader of the country with the largest area?",
+    "gold_sql": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1",
+    "predicted_sql": "SELECT population, name, headofstate FROM country ORDER BY surfacearea DESC LIMIT 1;",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 80,
+    "db_id": "pets_1",
+    "level": "L0",
+    "question": "For students who have pets , how many pets does each student have ? list their ids instead of names .",
+    "gold_sql": "select count(*) ,  t1.stuid from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid group by t1.stuid",
+    "predicted_sql": "SELECT stuid, count(*) FROM has_pet GROUP BY stuid",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 161,
+    "db_id": "car_1",
+    "level": "L0",
+    "question": "How many countries has more than 2 car makers ?",
+    "gold_sql": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+    "predicted_sql": "SELECT count(*) FROM (SELECT country FROM car_makers GROUP BY country HAVING count(*) > 2);",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 403,
+    "db_id": "course_teach",
+    "level": "L0",
+    "question": "Show the name of the teacher for the math course.",
+    "gold_sql": "SELECT T3.Name FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID WHERE T2.Course  =  \"Math\"",
+    "predicted_sql": "SELECT T1.name FROM teacher AS T1 JOIN course_arrange AS T2 ON T1.teacher_id = T2.teacher_id JOIN course AS T3 ON T2.course_id = T3.course_id WHERE T3.course = 'math'",
+    "error_type": "wrong_result"
+  },
+  {
+    "example_id": 23,
+    "db_id": "concert_singer",
+    "level": "L0",
+    "question": "For each stadium, how many concerts play there?",
+    "gold_sql": "SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",
+    "predicted_sql": "SELECT count(*), stadium_id FROM concert GROUP BY stadium_id",
+    "error_type": "wrong_result"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "db_id": "course_teach",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "course",
+      "columns": [
+        "cour_id",
+        "star_dt",
+        "cour"
+      ]
+    },
+    {
+      "table_name": "teacher",
+      "columns": [
+        "teac_id",
+        "nm",
+        "age",
+        "home"
+      ]
+    },
+    {
+      "table_name": "course_arrange",
+      "columns": [
+        "cour_id",
+        "teac_id",
+        "grad"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "course_arrange.teac_id",
+      "teacher.teac_id"
+    ],
+    [
+      "course_arrange.cour_id",
+      "course.cour_id"
+    ]
+  ]
+}

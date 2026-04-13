@@ -1,0 +1,57 @@
+{
+  "db_id": "employee_hire_evaluation",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "employee",
+      "columns": [
+        "empl_id",
+        "nm",
+        "age",
+        "city"
+      ]
+    },
+    {
+      "table_name": "shop",
+      "columns": [
+        "shop_id",
+        "nm",
+        "loc",
+        "dist",
+        "numb_prod",
+        "mana_nm"
+      ]
+    },
+    {
+      "table_name": "hiring",
+      "columns": [
+        "shop_id",
+        "empl_id",
+        "star_from",
+        "is_full_time"
+      ]
+    },
+    {
+      "table_name": "evaluation",
+      "columns": [
+        "empl_id",
+        "year_awar",
+        "bonu"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "hiring.empl_id",
+      "employee.empl_id"
+    ],
+    [
+      "hiring.shop_id",
+      "shop.shop_id"
+    ],
+    [
+      "evaluation.empl_id",
+      "employee.empl_id"
+    ]
+  ]
+}

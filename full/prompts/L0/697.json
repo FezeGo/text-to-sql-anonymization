@@ -1,0 +1,11 @@
+{
+  "example_id": 697,
+  "db_id": "voter_1",
+  "level": "L0",
+  "question": "How many contestants did not get voted?",
+  "gold_sql": "SELECT count(*) FROM contestants WHERE contestant_number NOT IN ( SELECT contestant_number FROM votes )",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/697.txt",
+  "schema_file": "schemas/L0/voter_1.json"
+}

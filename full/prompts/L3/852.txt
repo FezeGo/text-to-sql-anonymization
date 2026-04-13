@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+table_1(col_1, col_2, col_3, col_4, col_5)
+table_2(col_1, col_2, col_3, col_4, col_5, col_6)
+table_3(col_1, col_2, col_3, col_4, col_5, col_6, col_7)
+table_4(col_1, col_2, col_3, col_4, col_5)
+
+Foreign keys:
+table_2.col_3 = table_1.col_1
+table_3.col_2 = table_2.col_1
+table_4.col_2 = table_3.col_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+List the record company shared by the most number of orchestras.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

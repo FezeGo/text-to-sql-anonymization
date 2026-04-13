@@ -1,0 +1,10 @@
+{
+  "example_id": 425,
+  "db_id": "museum_visit",
+  "level": "L2",
+  "question": "What is the total ticket expense of the visitors whose membership level is 1?",
+  "gold_sql": "SELECT sum(t2.Total_spent) FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id WHERE t1.Level_of_membership  =  1",
+  "predicted_sql": "SELECT SUM(T1.aggregate_attr_167b8c) FROM visit AS T1 JOIN visitor AS T2 ON T1.attr_127870_key = T2.key WHERE T2.attr_c9e9a8_of_attr_b46127 = 1;",
+  "raw_response": "SELECT SUM(T1.aggregate_attr_167b8c) FROM visit AS T1 JOIN visitor AS T2 ON T1.attr_127870_key = T2.key WHERE T2.attr_c9e9a8_of_attr_b46127 = 1;",
+  "prompt_file": "test/prompts/L2/425.txt"
+}

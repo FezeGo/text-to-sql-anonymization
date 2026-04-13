@@ -1,0 +1,20 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+table_1(col_1, col_2, col_3, col_4, col_5)
+table_2(col_1, col_2)
+table_3(col_1, col_2, col_3, col_4, col_5, col_6, col_7, col_8, col_9, col_10, col_11, col_12, col_13, col_14, col_15)
+table_4(col_1, col_2, col_3, col_4)
+
+Foreign keys:
+table_1.col_3 = table_3.col_1
+table_4.col_1 = table_3.col_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Which language is the most popular in Aruba?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

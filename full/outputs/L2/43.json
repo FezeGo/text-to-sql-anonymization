@@ -1,0 +1,10 @@
+{
+  "example_id": 43,
+  "db_id": "concert_singer",
+  "level": "L2",
+  "question": "Find the number of concerts happened in the stadium with the highest capacity .",
+  "gold_sql": "select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1)",
+  "predicted_sql": "SELECT COUNT(*) FROM table_3 WHERE fk_1 = (SELECT pk_1 FROM table_1 ORDER BY num_1 DESC LIMIT 1)",
+  "raw_response": "SELECT COUNT(*) FROM table_3 WHERE fk_1 = (SELECT pk_1 FROM table_1 ORDER BY num_1 DESC LIMIT 1)",
+  "prompt_file": "prompts/L2/43.txt"
+}

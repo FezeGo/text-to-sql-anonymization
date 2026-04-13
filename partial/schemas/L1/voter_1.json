@@ -1,0 +1,40 @@
+{
+  "db_id": "voter_1",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "area_code_state",
+      "columns": [
+        "area_code",
+        "stat"
+      ]
+    },
+    {
+      "table_name": "contestants",
+      "columns": [
+        "cont_num",
+        "cont_nm"
+      ]
+    },
+    {
+      "table_name": "votes",
+      "columns": [
+        "vote_id",
+        "phon_num",
+        "stat",
+        "cont_num",
+        "crea"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "votes.cont_num",
+      "contestants.cont_num"
+    ],
+    [
+      "votes.stat",
+      "area_code_state.stat"
+    ]
+  ]
+}

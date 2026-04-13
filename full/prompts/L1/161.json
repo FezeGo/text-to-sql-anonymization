@@ -1,0 +1,11 @@
+{
+  "example_id": 161,
+  "db_id": "car_1",
+  "level": "L1",
+  "question": "How many countries has more than 2 car makers ?",
+  "gold_sql": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L1/161.txt",
+  "schema_file": "schemas/L1/car_1.json"
+}

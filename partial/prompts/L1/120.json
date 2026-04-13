@@ -1,0 +1,11 @@
+{
+  "example_id": 120,
+  "db_id": "car_1",
+  "level": "L1",
+  "question": "What is the minimum weight of the car with 8 cylinders produced in 1974 ?",
+  "gold_sql": "select min(weight) from cars_data where cylinders  =  8 and year  =  1974",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/120.txt",
+  "schema_file": "test/schemas/L1/car_1.json"
+}

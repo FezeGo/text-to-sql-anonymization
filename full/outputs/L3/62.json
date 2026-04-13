@@ -1,0 +1,10 @@
+{
+  "example_id": 62,
+  "db_id": "pets_1",
+  "level": "L3",
+  "question": "What major is every student who does not own a cat as a pet, and also how old are they?",
+  "gold_sql": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
+  "predicted_sql": "SELECT col_6, col_4 FROM table_1 WHERE col_1 NOT IN (SELECT T2.col_1 FROM table_2 AS T2 JOIN table_3 AS T3 ON T2.col_2 = T3.col_1 WHERE T3.col_2 = 'cat')",
+  "raw_response": "SELECT col_6, col_4 FROM table_1 WHERE col_1 NOT IN (SELECT T2.col_1 FROM table_2 AS T2 JOIN table_3 AS T3 ON T2.col_2 = T3.col_1 WHERE T3.col_2 = 'cat')",
+  "prompt_file": "prompts/L3/62.txt"
+}

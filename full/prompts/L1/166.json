@@ -1,0 +1,11 @@
+{
+  "example_id": 166,
+  "db_id": "car_1",
+  "level": "L1",
+  "question": "For all of the 4 cylinder cars, which model has the most horsepower?",
+  "gold_sql": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "prompts/L1/166.txt",
+  "schema_file": "schemas/L1/car_1.json"
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 390,
+  "db_id": "course_teach",
+  "level": "L2",
+  "question": "What are the names of the teachers who are aged either 32 or 33?",
+  "gold_sql": "SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33",
+  "predicted_sql": "SELECT T1.text_1 FROM table_2 AS T1 JOIN table_3 AS T2 ON T1.pk_1 = T2.fk_1 WHERE T2.num_1 = 32 OR T2.num_1 = 33",
+  "raw_response": "SELECT T1.text_1 FROM table_2 AS T1 JOIN table_3 AS T2 ON T1.pk_1 = T2.fk_1 WHERE T2.num_1 = 32 OR T2.num_1 = 33",
+  "prompt_file": "prompts/L2/390.txt"
+}

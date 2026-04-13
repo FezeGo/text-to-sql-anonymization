@@ -1,0 +1,11 @@
+{
+  "example_id": 403,
+  "db_id": "course_teach",
+  "level": "L3",
+  "question": "Show the name of the teacher for the math course.",
+  "gold_sql": "SELECT T3.Name FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID WHERE T2.Course  =  \"Math\"",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/403.txt",
+  "schema_file": "test/schemas/L3/course_teach.json"
+}

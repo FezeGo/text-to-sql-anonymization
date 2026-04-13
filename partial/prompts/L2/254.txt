@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+airlines(attr_9871d3, attr_6d2f2f, attr_c70297, nation)
+airports(municipality, attr_bee03b, attr_430408, nation, attr_d16076)
+flights(attr_6d2f2f, attr_6d8380, attr_bb3b2d, attr_f2262b)
+
+Foreign keys:
+flights.attr_f2262b = airports.attr_bee03b
+flights.attr_bb3b2d = airports.attr_bee03b
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Give the flight numbers of flights arriving in Aberdeen.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

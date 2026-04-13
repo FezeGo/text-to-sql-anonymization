@@ -1,0 +1,10 @@
+{
+  "example_id": 830,
+  "db_id": "orchestra",
+  "level": "L2",
+  "question": "What is the average attendance of shows?",
+  "gold_sql": "SELECT avg(Attendance) FROM SHOW",
+  "predicted_sql": "SELECT AVG(num_1) FROM table_2;",
+  "raw_response": "SELECT AVG(num_1) FROM table_2;",
+  "prompt_file": "prompts/L2/830.txt"
+}

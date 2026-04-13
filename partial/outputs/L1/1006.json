@@ -1,0 +1,10 @@
+{
+  "example_id": 1006,
+  "db_id": "singer",
+  "level": "L1",
+  "question": "List the name of singers whose citizenship is not \"France\".",
+  "gold_sql": "SELECT Name FROM singer WHERE Citizenship != \"France\"",
+  "predicted_sql": "SELECT nm FROM singer WHERE citi != 'France'",
+  "raw_response": "SELECT nm FROM singer WHERE citi != 'France'",
+  "prompt_file": "test/prompts/L1/1006.txt"
+}

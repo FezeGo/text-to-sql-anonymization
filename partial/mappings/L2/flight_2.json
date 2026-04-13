@@ -1,0 +1,25 @@
+{
+  "db_id": "flight_2",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "airlines": "airlines",
+    "airports": "airports",
+    "flights": "flights"
+  },
+  "column_map": {
+    "airlines.uid": "attr_9871d3",
+    "airlines.airline": "attr_6d2f2f",
+    "airlines.abbreviation": "attr_c70297",
+    "airlines.country": "nation",
+    "airports.city": "municipality",
+    "airports.airportcode": "attr_bee03b",
+    "airports.airportname": "attr_430408",
+    "airports.country": "nation",
+    "airports.countryabbrev": "attr_d16076",
+    "flights.airline": "attr_6d2f2f",
+    "flights.flightno": "attr_6d8380",
+    "flights.sourceairport": "attr_bb3b2d",
+    "flights.destairport": "attr_f2262b"
+  }
+}

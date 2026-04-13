@@ -1,0 +1,11 @@
+{
+  "example_id": 763,
+  "db_id": "world_1",
+  "level": "L3",
+  "question": "What are the name, population, and life expectancy of the largest Asian country by land?",
+  "gold_sql": "SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/763.txt",
+  "schema_file": "test/schemas/L3/world_1.json"
+}

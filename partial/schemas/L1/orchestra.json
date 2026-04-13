@@ -1,0 +1,63 @@
+{
+  "db_id": "orchestra",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "conductor",
+      "columns": [
+        "cond_id",
+        "nm",
+        "age",
+        "nati",
+        "yr_of_work"
+      ]
+    },
+    {
+      "table_name": "orchestra",
+      "columns": [
+        "orch_id",
+        "orch",
+        "cond_id",
+        "reco_comp",
+        "yr_of_foun",
+        "majo_reco_form"
+      ]
+    },
+    {
+      "table_name": "performance",
+      "columns": [
+        "perf_id",
+        "orch_id",
+        "type",
+        "dt",
+        "offi_rati_mill",
+        "week_rank",
+        "shar"
+      ]
+    },
+    {
+      "table_name": "show",
+      "columns": [
+        "show_id",
+        "perf_id",
+        "if_firs_show",
+        "resu",
+        "atte"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "orchestra.cond_id",
+      "conductor.cond_id"
+    ],
+    [
+      "performance.orch_id",
+      "orchestra.orch_id"
+    ],
+    [
+      "show.perf_id",
+      "performance.perf_id"
+    ]
+  ]
+}

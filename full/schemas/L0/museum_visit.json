@@ -1,0 +1,43 @@
+{
+  "db_id": "museum_visit",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "museum",
+      "columns": [
+        "museum_id",
+        "name",
+        "num_of_staff",
+        "open_year"
+      ]
+    },
+    {
+      "table_name": "visitor",
+      "columns": [
+        "id",
+        "name",
+        "level_of_membership",
+        "age"
+      ]
+    },
+    {
+      "table_name": "visit",
+      "columns": [
+        "museum_id",
+        "visitor_id",
+        "num_of_ticket",
+        "total_spent"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "visit.visitor_id",
+      "visitor.id"
+    ],
+    [
+      "visit.museum_id",
+      "museum.museum_id"
+    ]
+  ]
+}

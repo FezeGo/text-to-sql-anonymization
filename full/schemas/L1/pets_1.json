@@ -1,0 +1,45 @@
+{
+  "db_id": "pets_1",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "student",
+      "columns": [
+        "stui",
+        "lnam",
+        "fnam",
+        "age",
+        "sex",
+        "majo",
+        "advi",
+        "city_code"
+      ]
+    },
+    {
+      "table_name": "has_pet",
+      "columns": [
+        "stui",
+        "peti"
+      ]
+    },
+    {
+      "table_name": "pets",
+      "columns": [
+        "peti",
+        "pett",
+        "pet_age",
+        "weig"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "has_pet.stui",
+      "student.stui"
+    ],
+    [
+      "has_pet.peti",
+      "pets.peti"
+    ]
+  ]
+}

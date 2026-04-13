@@ -1,0 +1,10 @@
+{
+  "example_id": 648,
+  "db_id": "poker_player",
+  "level": "L3",
+  "question": "Count the number of poker players.",
+  "gold_sql": "SELECT count(*) FROM poker_player",
+  "predicted_sql": "SELECT count(*) FROM table_1",
+  "raw_response": "SELECT count(*) FROM table_1",
+  "prompt_file": "prompts/L3/648.txt"
+}

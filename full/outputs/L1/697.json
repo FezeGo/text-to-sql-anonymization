@@ -1,0 +1,10 @@
+{
+  "example_id": 697,
+  "db_id": "voter_1",
+  "level": "L1",
+  "question": "How many contestants did not get voted?",
+  "gold_sql": "SELECT count(*) FROM contestants WHERE contestant_number NOT IN ( SELECT contestant_number FROM votes )",
+  "predicted_sql": "SELECT count(*) FROM contestants WHERE cont_numb NOT IN (SELECT cont_numb FROM votes)",
+  "raw_response": "SELECT count(*) FROM contestants WHERE cont_numb NOT IN (SELECT cont_numb FROM votes)",
+  "prompt_file": "prompts/L1/697.txt"
+}

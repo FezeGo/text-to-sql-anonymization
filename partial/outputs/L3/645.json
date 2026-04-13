@@ -1,0 +1,10 @@
+{
+  "example_id": 645,
+  "db_id": "tvshow",
+  "level": "L3",
+  "question": "find the package option of the tv channel that do not have any cartoon directed by Ben Jones.",
+  "gold_sql": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
+  "predicted_sql": "SELECT col_7 FROM tv_channel WHERE col_1 NOT IN (SELECT col_7 FROM cartoon WHERE col_3 = 'Ben Jones')",
+  "raw_response": "SELECT col_7 FROM tv_channel WHERE col_1 NOT IN (SELECT col_7 FROM cartoon WHERE col_3 = 'Ben Jones')",
+  "prompt_file": "test/prompts/L3/645.txt"
+}

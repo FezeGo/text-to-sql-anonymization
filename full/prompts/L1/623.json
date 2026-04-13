@@ -1,0 +1,11 @@
+{
+  "example_id": 623,
+  "db_id": "tvshow",
+  "level": "L1",
+  "question": "What is the TV Channel of TV series with Episode \"A Love of a Lifetime\"? List the TV Channel's series name.",
+  "gold_sql": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "prompts/L1/623.txt",
+  "schema_file": "schemas/L1/tvshow.json"
+}

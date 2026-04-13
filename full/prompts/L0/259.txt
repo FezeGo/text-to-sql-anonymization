@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+employee(employee_id, name, age, city)
+shop(shop_id, name, location, district, number_products, manager_name)
+hiring(shop_id, employee_id, start_from, is_full_time)
+evaluation(employee_id, year_awarded, bonus)
+
+Foreign keys:
+hiring.employee_id = employee.employee_id
+hiring.shop_id = shop.shop_id
+evaluation.employee_id = employee.employee_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+How many employees are there?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

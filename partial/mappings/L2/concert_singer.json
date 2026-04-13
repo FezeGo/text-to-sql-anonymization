@@ -1,0 +1,34 @@
+{
+  "db_id": "concert_singer",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "stadium": "stadium",
+    "singer": "singer",
+    "concert": "concert",
+    "singer_in_concert": "singer_in_concert"
+  },
+  "column_map": {
+    "stadium.stadium_id": "attr_1424ca_key",
+    "stadium.location": "attr_d5189d",
+    "stadium.name": "identifier",
+    "stadium.capacity": "attr_7bd14a",
+    "stadium.highest": "attr_de3706",
+    "stadium.lowest": "attr_21f25a",
+    "stadium.average": "mean",
+    "singer.singer_id": "attr_05011f_key",
+    "singer.name": "identifier",
+    "singer.country": "nation",
+    "singer.song_name": "attr_683eb6_identifier",
+    "singer.song_release_year": "attr_683eb6_attr_123fea_calendar_year",
+    "singer.age": "temporal_span",
+    "singer.is_male": "is_attr_07cf4f",
+    "concert.concert_id": "attr_090955_key",
+    "concert.concert_name": "attr_090955_identifier",
+    "concert.theme": "attr_f48457",
+    "concert.stadium_id": "attr_1424ca_key",
+    "concert.year": "calendar_year",
+    "singer_in_concert.concert_id": "attr_090955_key",
+    "singer_in_concert.singer_id": "attr_05011f_key"
+  }
+}

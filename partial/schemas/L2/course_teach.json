@@ -1,0 +1,41 @@
+{
+  "db_id": "course_teach",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "course",
+      "columns": [
+        "attr_046d47_key",
+        "attr_65711b_calendar_mark",
+        "attr_046d47"
+      ]
+    },
+    {
+      "table_name": "teacher",
+      "columns": [
+        "instructor_key",
+        "identifier",
+        "temporal_span",
+        "attr_262c99"
+      ]
+    },
+    {
+      "table_name": "course_arrange",
+      "columns": [
+        "attr_046d47_key",
+        "instructor_key",
+        "evaluation"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "course_arrange.instructor_key",
+      "teacher.instructor_key"
+    ],
+    [
+      "course_arrange.attr_046d47_key",
+      "course.attr_046d47_key"
+    ]
+  ]
+}

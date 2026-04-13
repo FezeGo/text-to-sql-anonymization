@@ -1,0 +1,25 @@
+{
+  "db_id": "pets_1",
+  "level": "L3",
+  "table_map": {
+    "student": "table_1",
+    "has_pet": "table_2",
+    "pets": "table_3"
+  },
+  "column_map": {
+    "student.stuid": "col_1",
+    "student.lname": "col_2",
+    "student.fname": "col_3",
+    "student.age": "col_4",
+    "student.sex": "col_5",
+    "student.major": "col_6",
+    "student.advisor": "col_7",
+    "student.city_code": "col_8",
+    "has_pet.stuid": "col_1",
+    "has_pet.petid": "col_2",
+    "pets.petid": "col_1",
+    "pets.pettype": "col_2",
+    "pets.pet_age": "col_3",
+    "pets.weight": "col_4"
+  }
+}

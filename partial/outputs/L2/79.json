@@ -1,0 +1,10 @@
+{
+  "example_id": 79,
+  "db_id": "pets_1",
+  "level": "L2",
+  "question": "Find the number of pets for each student who has any pet and student id.",
+  "gold_sql": "SELECT count(*) ,  T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid",
+  "predicted_sql": "SELECT count(*), attr_ebaa72 FROM has_pet GROUP BY attr_ebaa72",
+  "raw_response": "SELECT count(*), attr_ebaa72 FROM has_pet GROUP BY attr_ebaa72",
+  "prompt_file": "test/prompts/L2/79.txt"
+}

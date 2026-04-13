@@ -1,0 +1,10 @@
+{
+  "example_id": 33,
+  "db_id": "concert_singer",
+  "level": "L2",
+  "question": "Show the name and theme for all concerts and the number of singers in each concert.",
+  "gold_sql": "SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id",
+  "predicted_sql": "SELECT T1.attr_090955_identifier, T1.attr_f48457, COUNT(*) FROM concert AS T1 JOIN singer_in_concert AS T2 ON T1.attr_090955_key = T2.attr_090955_key GROUP BY T1.attr_090955_key;",
+  "raw_response": "SELECT T1.attr_090955_identifier, T1.attr_f48457, COUNT(*) FROM concert AS T1 JOIN singer_in_concert AS T2 ON T1.attr_090955_key = T2.attr_090955_key GROUP BY T1.attr_090955_key;",
+  "prompt_file": "test/prompts/L2/33.txt"
+}

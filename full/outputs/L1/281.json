@@ -1,0 +1,10 @@
+{
+  "example_id": 281,
+  "db_id": "employee_hire_evaluation",
+  "level": "L1",
+  "question": "Find the names of employees who never won any award in the evaluation.",
+  "gold_sql": "SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)",
+  "predicted_sql": "SELECT nm FROM employee WHERE empl_id NOT IN (SELECT empl_id FROM evaluation)",
+  "raw_response": "SELECT nm FROM employee WHERE empl_id NOT IN (SELECT empl_id FROM evaluation)",
+  "prompt_file": "prompts/L1/281.txt"
+}

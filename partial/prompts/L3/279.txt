@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+employee(col_1, col_2, col_3, col_4)
+shop(col_1, col_2, col_3, col_4, col_5, col_6)
+hiring(col_1, col_2, col_3, col_4)
+evaluation(col_1, col_2, col_3)
+
+Foreign keys:
+hiring.col_2 = employee.col_1
+hiring.col_1 = shop.col_1
+evaluation.col_1 = employee.col_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Find the name of the employee who got the highest one time bonus.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

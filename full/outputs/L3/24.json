@@ -1,0 +1,10 @@
+{
+  "example_id": 24,
+  "db_id": "concert_singer",
+  "level": "L3",
+  "question": "Show the stadium name and capacity with most number of concerts in year 2014 or after.",
+  "gold_sql": "SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1",
+  "predicted_sql": "SELECT T1.col_3, T1.col_4 FROM table_1 AS T1 JOIN table_3 AS T3 ON T1.col_1 = T3.col_4 WHERE T3.col_3 >= 2014 GROUP BY T1.col_1 ORDER BY COUNT(*) DESC LIMIT 1",
+  "raw_response": "SELECT T1.col_3, T1.col_4 FROM table_1 AS T1 JOIN table_3 AS T3 ON T1.col_1 = T3.col_4 WHERE T3.col_3 >= 2014 GROUP BY T1.col_1 ORDER BY COUNT(*) DESC LIMIT 1",
+  "prompt_file": "prompts/L3/24.txt"
+}

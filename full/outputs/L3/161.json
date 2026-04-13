@@ -1,0 +1,10 @@
+{
+  "example_id": 161,
+  "db_id": "car_1",
+  "level": "L3",
+  "question": "How many countries has more than 2 car makers ?",
+  "gold_sql": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+  "predicted_sql": "SELECT count(*) FROM (SELECT col_4 FROM table_3 GROUP BY col_4 HAVING count(*) > 2)",
+  "raw_response": "SELECT count(*) FROM (SELECT col_4 FROM table_3 GROUP BY col_4 HAVING count(*) > 2)",
+  "prompt_file": "prompts/L3/161.txt"
+}

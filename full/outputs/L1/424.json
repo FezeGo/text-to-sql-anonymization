@@ -1,0 +1,10 @@
+{
+  "example_id": 424,
+  "db_id": "museum_visit",
+  "level": "L1",
+  "question": "What are the average and maximum number of tickets bought in all visits?",
+  "gold_sql": "SELECT avg(num_of_ticket) ,  max(num_of_ticket) FROM visit",
+  "predicted_sql": "SELECT AVG(num_of_tick), MAX(num_of_tick) FROM visit;",
+  "raw_response": "SELECT AVG(num_of_tick), MAX(num_of_tick) FROM visit;",
+  "prompt_file": "prompts/L1/424.txt"
+}

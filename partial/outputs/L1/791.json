@@ -1,0 +1,10 @@
+{
+  "example_id": 791,
+  "db_id": "world_1",
+  "level": "L1",
+  "question": "Give the name, population, and head of state for the country that has the largest area.",
+  "gold_sql": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1",
+  "predicted_sql": "SELECT nm, popu, head FROM country ORDER BY surf DESC LIMIT 1;",
+  "raw_response": "SELECT nm, popu, head FROM country ORDER BY surf DESC LIMIT 1;",
+  "prompt_file": "test/prompts/L1/791.txt"
+}

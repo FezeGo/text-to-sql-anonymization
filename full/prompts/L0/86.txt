@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+student(stuid, lname, fname, age, sex, major, advisor, city_code)
+has_pet(stuid, petid)
+pets(petid, pettype, pet_age, weight)
+
+Foreign keys:
+has_pet.stuid = student.stuid
+has_pet.petid = pets.petid
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the average age for all students who do not own any pets ?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

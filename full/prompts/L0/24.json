@@ -1,0 +1,11 @@
+{
+  "example_id": 24,
+  "db_id": "concert_singer",
+  "level": "L0",
+  "question": "Show the stadium name and capacity with most number of concerts in year 2014 or after.",
+  "gold_sql": "SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/24.txt",
+  "schema_file": "schemas/L0/concert_singer.json"
+}

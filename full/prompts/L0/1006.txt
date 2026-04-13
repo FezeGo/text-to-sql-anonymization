@@ -1,0 +1,17 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+singer(singer_id, name, birth_year, net_worth_millions, citizenship)
+song(song_id, title, singer_id, sales, highest_position)
+
+Foreign keys:
+song.singer_id = singer.singer_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+List the name of singers whose citizenship is not "France".
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

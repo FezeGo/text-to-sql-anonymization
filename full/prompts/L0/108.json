@@ -1,0 +1,11 @@
+{
+  "example_id": 108,
+  "db_id": "car_1",
+  "level": "L0",
+  "question": "What is the name of the country with the most car makers?",
+  "gold_sql": "SELECT T2.CountryName FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId GROUP BY T1.Country ORDER BY Count(*) DESC LIMIT 1;",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/108.txt",
+  "schema_file": "schemas/L0/car_1.json"
+}

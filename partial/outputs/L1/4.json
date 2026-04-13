@@ -1,0 +1,10 @@
+{
+  "example_id": 4,
+  "db_id": "concert_singer",
+  "level": "L1",
+  "question": "What is the average, minimum, and maximum age of all singers from France?",
+  "gold_sql": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",
+  "predicted_sql": "SELECT AVG(age), MIN(age), MAX(age) FROM singer WHERE coun = 'France'",
+  "raw_response": "SELECT AVG(age), MIN(age), MAX(age) FROM singer WHERE coun = 'France'",
+  "prompt_file": "test/prompts/L1/4.txt"
+}

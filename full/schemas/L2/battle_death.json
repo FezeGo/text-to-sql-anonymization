@@ -1,0 +1,49 @@
+{
+  "db_id": "battle_death",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "date_1",
+        "text_2",
+        "text_3",
+        "text_4"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "fk_1",
+        "pk_1",
+        "text_1",
+        "text_2",
+        "cat_1",
+        "text_3",
+        "text_4"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "fk_1",
+        "pk_1",
+        "text_1",
+        "num_1",
+        "num_2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_2.fk_1",
+      "table_1.pk_1"
+    ],
+    [
+      "table_3.fk_1",
+      "table_2.pk_1"
+    ]
+  ]
+}

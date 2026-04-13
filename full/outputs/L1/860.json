@@ -1,0 +1,10 @@
+{
+  "example_id": 860,
+  "db_id": "orchestra",
+  "level": "L1",
+  "question": "Show the years in which orchestras that have given more than one performance are founded.",
+  "gold_sql": "SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1",
+  "predicted_sql": "SELECT T1.year_of_foun FROM orchestra AS T1 JOIN performance AS T2 ON T1.orch_id = T2.orch_id GROUP BY T1.orch_id HAVING COUNT(*) > 1",
+  "raw_response": "SELECT T1.year_of_foun FROM orchestra AS T1 JOIN performance AS T2 ON T1.orch_id = T2.orch_id GROUP BY T1.orch_id HAVING COUNT(*) > 1",
+  "prompt_file": "prompts/L1/860.txt"
+}

@@ -1,0 +1,11 @@
+{
+  "example_id": 282,
+  "db_id": "employee_hire_evaluation",
+  "level": "L3",
+  "question": "What are the names of the employees who never received any evaluation?",
+  "gold_sql": "SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/282.txt",
+  "schema_file": "schemas/L3/employee_hire_evaluation.json"
+}

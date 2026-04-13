@@ -1,0 +1,46 @@
+{
+  "db_id": "network_1",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "highschooler",
+      "columns": [
+        "id",
+        "nm",
+        "grad"
+      ]
+    },
+    {
+      "table_name": "friend",
+      "columns": [
+        "stud_id",
+        "frie_id"
+      ]
+    },
+    {
+      "table_name": "likes",
+      "columns": [
+        "stud_id",
+        "like_id"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "friend.frie_id",
+      "highschooler.id"
+    ],
+    [
+      "friend.stud_id",
+      "highschooler.id"
+    ],
+    [
+      "likes.stud_id",
+      "highschooler.id"
+    ],
+    [
+      "likes.like_id",
+      "highschooler.id"
+    ]
+  ]
+}

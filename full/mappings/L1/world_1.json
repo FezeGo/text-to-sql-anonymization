@@ -1,0 +1,38 @@
+{
+  "db_id": "world_1",
+  "level": "L1",
+  "table_map": {
+    "city": "city",
+    "sqlite_sequence": "sqlite_sequence",
+    "country": "country",
+    "countrylanguage": "countrylanguage"
+  },
+  "column_map": {
+    "city.id": "id",
+    "city.name": "nm",
+    "city.countrycode": "coun",
+    "city.district": "dist",
+    "city.population": "popu",
+    "sqlite_sequence.name": "nm",
+    "sqlite_sequence.seq": "seq",
+    "country.code": "code",
+    "country.name": "nm",
+    "country.continent": "cont",
+    "country.region": "regi",
+    "country.surfacearea": "surf",
+    "country.indepyear": "inde",
+    "country.population": "popu",
+    "country.lifeexpectancy": "life",
+    "country.gnp": "gnp",
+    "country.gnpold": "gnpo",
+    "country.localname": "loca",
+    "country.governmentform": "gove",
+    "country.headofstate": "head",
+    "country.capital": "capi",
+    "country.code2": "code",
+    "countrylanguage.countrycode": "coun",
+    "countrylanguage.language": "lang",
+    "countrylanguage.isofficial": "isof",
+    "countrylanguage.percentage": "perc"
+  }
+}

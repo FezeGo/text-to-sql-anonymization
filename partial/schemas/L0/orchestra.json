@@ -1,0 +1,63 @@
+{
+  "db_id": "orchestra",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "conductor",
+      "columns": [
+        "conductor_id",
+        "name",
+        "age",
+        "nationality",
+        "year_of_work"
+      ]
+    },
+    {
+      "table_name": "orchestra",
+      "columns": [
+        "orchestra_id",
+        "orchestra",
+        "conductor_id",
+        "record_company",
+        "year_of_founded",
+        "major_record_format"
+      ]
+    },
+    {
+      "table_name": "performance",
+      "columns": [
+        "performance_id",
+        "orchestra_id",
+        "type",
+        "date",
+        "official_ratings_millions",
+        "weekly_rank",
+        "share"
+      ]
+    },
+    {
+      "table_name": "show",
+      "columns": [
+        "show_id",
+        "performance_id",
+        "if_first_show",
+        "result",
+        "attendance"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "orchestra.conductor_id",
+      "conductor.conductor_id"
+    ],
+    [
+      "performance.orchestra_id",
+      "orchestra.orchestra_id"
+    ],
+    [
+      "show.performance_id",
+      "performance.performance_id"
+    ]
+  ]
+}

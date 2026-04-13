@@ -1,0 +1,11 @@
+{
+  "example_id": 43,
+  "db_id": "concert_singer",
+  "level": "L2",
+  "question": "Find the number of concerts happened in the stadium with the highest capacity .",
+  "gold_sql": "select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "prompts/L2/43.txt",
+  "schema_file": "schemas/L2/concert_singer.json"
+}

@@ -1,0 +1,11 @@
+{
+  "example_id": 860,
+  "db_id": "orchestra",
+  "level": "L2",
+  "question": "Show the years in which orchestras that have given more than one performance are founded.",
+  "gold_sql": "SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L2/860.txt",
+  "schema_file": "schemas/L2/orchestra.json"
+}

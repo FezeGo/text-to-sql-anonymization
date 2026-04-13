@@ -1,0 +1,11 @@
+{
+  "example_id": 686,
+  "db_id": "poker_player",
+  "level": "L2",
+  "question": "Count the number of different nationalities.",
+  "gold_sql": "SELECT count(DISTINCT Nationality) FROM people",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L2/686.txt",
+  "schema_file": "test/schemas/L2/poker_player.json"
+}

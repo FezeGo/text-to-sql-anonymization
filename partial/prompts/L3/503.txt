@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+battle(col_1, col_2, col_3, col_4, col_5, col_6)
+ship(col_1, col_2, col_3, col_4, col_5, col_6, col_7)
+death(col_1, col_2, col_3, col_4, col_5)
+
+Foreign keys:
+ship.col_1 = battle.col_1
+death.col_1 = ship.col_2
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+How many battles did not lose any ship with tonnage '225'?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

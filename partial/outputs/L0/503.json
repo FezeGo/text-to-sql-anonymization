@@ -1,0 +1,10 @@
+{
+  "example_id": 503,
+  "db_id": "battle_death",
+  "level": "L0",
+  "question": "How many battles did not lose any ship with tonnage '225'?",
+  "gold_sql": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
+  "predicted_sql": "SELECT COUNT(*) FROM battle WHERE id NOT IN (SELECT lost_in_battle FROM ship WHERE tonnage = '225')",
+  "raw_response": "SELECT COUNT(*) FROM battle WHERE id NOT IN (SELECT lost_in_battle FROM ship WHERE tonnage = '225')",
+  "prompt_file": "test/prompts/L0/503.txt"
+}

@@ -1,0 +1,18 @@
+{
+  "db_id": "network_1",
+  "level": "L3",
+  "table_map": {
+    "highschooler": "table_1",
+    "friend": "table_2",
+    "likes": "table_3"
+  },
+  "column_map": {
+    "highschooler.id": "col_1",
+    "highschooler.name": "col_2",
+    "highschooler.grade": "col_3",
+    "friend.student_id": "col_1",
+    "friend.friend_id": "col_2",
+    "likes.student_id": "col_1",
+    "likes.liked_id": "col_2"
+  }
+}

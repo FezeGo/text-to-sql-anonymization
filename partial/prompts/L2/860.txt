@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+conductor(attr_cd1315_key, identifier, temporal_span, attr_f56d02, calendar_year_of_attr_67e92c)
+orchestra(attr_8f163b_key, attr_8f163b, attr_cd1315_key, attr_de17f0_organization, calendar_year_of_attr_dd5450, attr_f1425d_attr_de17f0_attr_1ddcb9)
+performance(attr_c05f6c_key, attr_8f163b_key, category, calendar_mark, attr_c74f86_attr_ff3afd_attr_dbe06f, attr_4a11fc_ordering, attr_85e47a)
+show(attr_a7dd12_key, attr_c05f6c_key, if_attr_8b04d5_attr_a7dd12, attr_b4a884, attr_64c62c)
+
+Foreign keys:
+orchestra.attr_cd1315_key = conductor.attr_cd1315_key
+performance.attr_8f163b_key = orchestra.attr_8f163b_key
+show.attr_c05f6c_key = performance.attr_c05f6c_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show the years in which orchestras that have given more than one performance are founded.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

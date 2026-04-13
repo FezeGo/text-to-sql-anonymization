@@ -1,0 +1,11 @@
+{
+  "example_id": 259,
+  "db_id": "employee_hire_evaluation",
+  "level": "L3",
+  "question": "How many employees are there?",
+  "gold_sql": "SELECT count(*) FROM employee",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/259.txt",
+  "schema_file": "schemas/L3/employee_hire_evaluation.json"
+}

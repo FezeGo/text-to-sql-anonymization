@@ -1,0 +1,10 @@
+{
+  "example_id": 680,
+  "db_id": "poker_player",
+  "level": "L1",
+  "question": "What are the names and birth dates of people, ordered by their names in alphabetical order?",
+  "gold_sql": "SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC",
+  "predicted_sql": "SELECT nm, birt_dt FROM people ORDER BY nm ASC;",
+  "raw_response": "SELECT nm, birt_dt FROM people ORDER BY nm ASC;",
+  "prompt_file": "test/prompts/L1/680.txt"
+}

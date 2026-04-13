@@ -1,0 +1,11 @@
+{
+  "example_id": 680,
+  "db_id": "poker_player",
+  "level": "L3",
+  "question": "What are the names and birth dates of people, ordered by their names in alphabetical order?",
+  "gold_sql": "SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/680.txt",
+  "schema_file": "schemas/L3/poker_player.json"
+}

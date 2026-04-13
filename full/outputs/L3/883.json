@@ -1,0 +1,10 @@
+{
+  "example_id": 883,
+  "db_id": "network_1",
+  "level": "L3",
+  "question": "How many friends does each student have?",
+  "gold_sql": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+  "predicted_sql": "```sql\nSELECT T1.col_2, COUNT(*) FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_1 = T2.col_1 GROUP BY T1.col_1\n```",
+  "raw_response": "```sql\nSELECT T1.col_2, COUNT(*) FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_1 = T2.col_1 GROUP BY T1.col_1\n```",
+  "prompt_file": "prompts/L3/883.txt"
+}

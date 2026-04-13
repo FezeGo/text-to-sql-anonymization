@@ -1,0 +1,11 @@
+{
+  "example_id": 251,
+  "db_id": "flight_2",
+  "level": "L3",
+  "question": "What are flight numbers of flights departing from City \"Aberdeen \"?",
+  "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/251.txt",
+  "schema_file": "test/schemas/L3/flight_2.json"
+}

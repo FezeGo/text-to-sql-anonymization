@@ -1,0 +1,10 @@
+{
+  "example_id": 658,
+  "db_id": "poker_player",
+  "level": "L1",
+  "question": "Return the maximum final tables made across all poker players who have earnings below 200000.",
+  "gold_sql": "SELECT max(Final_Table_Made) FROM poker_player WHERE Earnings  <  200000",
+  "predicted_sql": "SELECT MAX(fina_tabl_made) FROM poker_player WHERE earn < 200000;",
+  "raw_response": "SELECT MAX(fina_tabl_made) FROM poker_player WHERE earn < 200000;",
+  "prompt_file": "test/prompts/L1/658.txt"
+}

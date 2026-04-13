@@ -1,0 +1,11 @@
+{
+  "example_id": 85,
+  "db_id": "pets_1",
+  "level": "L2",
+  "question": "Find the average age of students who do not have any pet .",
+  "gold_sql": "select avg(age) from student where stuid not in (select stuid from has_pet)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L2/85.txt",
+  "schema_file": "test/schemas/L2/pets_1.json"
+}

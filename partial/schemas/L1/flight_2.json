@@ -1,0 +1,44 @@
+{
+  "db_id": "flight_2",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "airlines",
+      "columns": [
+        "uid",
+        "airl",
+        "abbr",
+        "coun"
+      ]
+    },
+    {
+      "table_name": "airports",
+      "columns": [
+        "city",
+        "airp",
+        "airp",
+        "coun",
+        "coun"
+      ]
+    },
+    {
+      "table_name": "flights",
+      "columns": [
+        "airl",
+        "flig",
+        "sour",
+        "dest"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "flights.dest",
+      "airports.airp"
+    ],
+    [
+      "flights.sour",
+      "airports.airp"
+    ]
+  ]
+}

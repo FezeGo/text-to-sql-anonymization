@@ -1,0 +1,11 @@
+{
+  "example_id": 422,
+  "db_id": "museum_visit",
+  "level": "L0",
+  "question": "What is the name of the museum that had no visitor yet?",
+  "gold_sql": "SELECT name FROM museum WHERE Museum_ID NOT IN (SELECT museum_id FROM visit)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L0/422.txt",
+  "schema_file": "test/schemas/L0/museum_visit.json"
+}

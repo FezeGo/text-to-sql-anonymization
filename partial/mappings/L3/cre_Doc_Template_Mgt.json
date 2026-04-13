@@ -1,0 +1,30 @@
+{
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L3",
+  "rename_tables": false,
+  "table_map": {
+    "ref_template_types": "ref_template_types",
+    "templates": "templates",
+    "documents": "documents",
+    "paragraphs": "paragraphs"
+  },
+  "column_map": {
+    "ref_template_types.template_type_code": "col_1",
+    "ref_template_types.template_type_description": "col_2",
+    "templates.template_id": "col_1",
+    "templates.version_number": "col_2",
+    "templates.template_type_code": "col_3",
+    "templates.date_effective_from": "col_4",
+    "templates.date_effective_to": "col_5",
+    "templates.template_details": "col_6",
+    "documents.document_id": "col_1",
+    "documents.template_id": "col_2",
+    "documents.document_name": "col_3",
+    "documents.document_description": "col_4",
+    "documents.other_details": "col_5",
+    "paragraphs.paragraph_id": "col_1",
+    "paragraphs.document_id": "col_2",
+    "paragraphs.paragraph_text": "col_3",
+    "paragraphs.other_details": "col_4"
+  }
+}

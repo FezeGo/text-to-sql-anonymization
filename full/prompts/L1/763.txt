@@ -1,0 +1,20 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+city(id, nm, coun, dist, popu)
+sqlite_sequence(nm, seq)
+country(code, nm, cont, regi, surf, inde, popu, life, gnp, gnpo, loca, gove, head, capi, code)
+countrylanguage(coun, lang, isof, perc)
+
+Foreign keys:
+city.coun = country.code
+countrylanguage.coun = country.code
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the name, population, and life expectancy of the largest Asian country by land?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+museum(muse_id, nm, num_of_staf, open_yr)
+visitor(id, nm, leve_of_memb, age)
+visit(muse_id, visi_id, num_of_tick, tota_spen)
+
+Foreign keys:
+visit.visi_id = visitor.id
+visit.muse_id = museum.muse_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the total ticket expense of the visitors whose membership level is 1?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

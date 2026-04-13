@@ -1,0 +1,56 @@
+{
+  "db_id": "tvshow",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_2.col_9",
+      "table_1.col_1"
+    ],
+    [
+      "table_3.col_7",
+      "table_1.col_1"
+    ]
+  ]
+}

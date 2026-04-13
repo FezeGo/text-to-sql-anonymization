@@ -1,0 +1,11 @@
+{
+  "example_id": 883,
+  "db_id": "network_1",
+  "level": "L1",
+  "question": "How many friends does each student have?",
+  "gold_sql": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/883.txt",
+  "schema_file": "test/schemas/L1/network_1.json"
+}

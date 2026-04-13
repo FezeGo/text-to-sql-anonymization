@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+tv_channel(id, seri_nm, coun, lang, cont, pixe_aspe_rati_par, high_defi_tv, pay_per_view_ppv, pack_opti)
+tv_series(id, epis, air_dt, rati, shar, 18_49_rati_shar, view_m, week_rank, chan)
+cartoon(id, titl, dire_by, writ_by, orig_air_dt, prod_code, chan)
+
+Foreign keys:
+tv_series.chan = tv_channel.id
+cartoon.chan = tv_channel.id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+find the package option of the tv channel that do not have any cartoon directed by Ben Jones.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

@@ -1,0 +1,61 @@
+{
+  "db_id": "concert_singer",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "stadium",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7"
+      ]
+    },
+    {
+      "table_name": "singer",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7"
+      ]
+    },
+    {
+      "table_name": "concert",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    },
+    {
+      "table_name": "singer_in_concert",
+      "columns": [
+        "col_1",
+        "col_2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "concert.col_4",
+      "stadium.col_1"
+    ],
+    [
+      "singer_in_concert.col_2",
+      "singer.col_1"
+    ],
+    [
+      "singer_in_concert.col_1",
+      "concert.col_1"
+    ]
+  ]
+}

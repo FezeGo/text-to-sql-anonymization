@@ -1,0 +1,32 @@
+{
+  "db_id": "singer",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "singer",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    },
+    {
+      "table_name": "song",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "song.col_3",
+      "singer.col_1"
+    ]
+  ]
+}

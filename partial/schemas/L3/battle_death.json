@@ -1,0 +1,49 @@
+{
+  "db_id": "battle_death",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "battle",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6"
+      ]
+    },
+    {
+      "table_name": "ship",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7"
+      ]
+    },
+    {
+      "table_name": "death",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "ship.col_1",
+      "battle.col_1"
+    ],
+    [
+      "death.col_1",
+      "ship.col_2"
+    ]
+  ]
+}

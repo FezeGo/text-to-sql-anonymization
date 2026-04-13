@@ -1,0 +1,11 @@
+{
+  "example_id": 393,
+  "db_id": "course_teach",
+  "level": "L1",
+  "question": "Show different hometown of teachers and the number of teachers from each hometown.",
+  "gold_sql": "SELECT Hometown ,  COUNT(*) FROM teacher GROUP BY Hometown",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/393.txt",
+  "schema_file": "test/schemas/L1/course_teach.json"
+}

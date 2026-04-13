@@ -1,0 +1,33 @@
+{
+  "db_id": "poker_player",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "poker_player",
+      "columns": [
+        "poke_play_id",
+        "peop_id",
+        "fina_tabl_made",
+        "best_fini",
+        "mone_rank",
+        "earn"
+      ]
+    },
+    {
+      "table_name": "people",
+      "columns": [
+        "peop_id",
+        "nati",
+        "nm",
+        "birt_dt",
+        "heig"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "poker_player.peop_id",
+      "people.peop_id"
+    ]
+  ]
+}

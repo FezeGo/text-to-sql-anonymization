@@ -1,0 +1,10 @@
+{
+  "example_id": 609,
+  "db_id": "tvshow",
+  "level": "L1",
+  "question": "What is the TV Channel that shows the cartoon \"The Rise of the Blue Beetle!\"? List the TV Channel's series name.",
+  "gold_sql": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T2.Title = \"The Rise of the Blue Beetle!\";",
+  "predicted_sql": "SELECT T1.seri_nm FROM tv_channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.chan WHERE T2.titl = 'The Rise of the Blue Beetle!'",
+  "raw_response": "SELECT T1.seri_nm FROM tv_channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.chan WHERE T2.titl = 'The Rise of the Blue Beetle!'",
+  "prompt_file": "test/prompts/L1/609.txt"
+}

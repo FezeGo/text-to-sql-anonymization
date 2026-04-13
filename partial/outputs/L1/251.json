@@ -1,0 +1,10 @@
+{
+  "example_id": 251,
+  "db_id": "flight_2",
+  "level": "L1",
+  "question": "What are flight numbers of flights departing from City \"Aberdeen \"?",
+  "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
+  "predicted_sql": "SELECT T1.flig FROM flights AS T1 JOIN airports AS T2 ON T1.sour = T2.airp WHERE T2.city = 'Aberdeen'",
+  "raw_response": "SELECT T1.flig FROM flights AS T1 JOIN airports AS T2 ON T1.sour = T2.airp WHERE T2.city = 'Aberdeen'",
+  "prompt_file": "test/prompts/L1/251.txt"
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 311,
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L0",
+  "question": "What is the id and type code for the template used by the most documents?",
+  "gold_sql": "SELECT T1.template_id ,  T2.Template_Type_Code FROM Documents AS T1 JOIN Templates AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_id ORDER BY count(*) DESC LIMIT 1",
+  "predicted_sql": "SELECT template_id, template_type_code FROM templates JOIN documents USING (template_id) GROUP BY template_id ORDER BY COUNT(*) DESC LIMIT 1;",
+  "raw_response": "SELECT template_id, template_type_code FROM templates JOIN documents USING (template_id) GROUP BY template_id ORDER BY COUNT(*) DESC LIMIT 1;",
+  "prompt_file": "test/prompts/L0/311.txt"
+}

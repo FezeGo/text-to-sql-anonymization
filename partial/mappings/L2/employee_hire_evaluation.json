@@ -1,0 +1,30 @@
+{
+  "db_id": "employee_hire_evaluation",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "employee": "employee",
+    "shop": "shop",
+    "hiring": "hiring",
+    "evaluation": "evaluation"
+  },
+  "column_map": {
+    "employee.employee_id": "staff_member_key",
+    "employee.name": "identifier",
+    "employee.age": "temporal_span",
+    "employee.city": "municipality",
+    "shop.shop_id": "attr_fb54f3_key",
+    "shop.name": "identifier",
+    "shop.location": "attr_d5189d",
+    "shop.district": "attr_6b77ef",
+    "shop.number_products": "index_attr_86024c",
+    "shop.manager_name": "supervisor_identifier",
+    "hiring.shop_id": "attr_fb54f3_key",
+    "hiring.employee_id": "staff_member_key",
+    "hiring.start_from": "attr_ea2b26_attr_d98a07",
+    "hiring.is_full_time": "is_attr_e9dc92_temporal_mark",
+    "evaluation.employee_id": "staff_member_key",
+    "evaluation.year_awarded": "calendar_year_attr_87e8bc",
+    "evaluation.bonus": "attr_78056e"
+  }
+}

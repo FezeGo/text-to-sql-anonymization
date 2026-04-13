@@ -1,0 +1,33 @@
+{
+  "db_id": "poker_player",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "poker_player",
+      "columns": [
+        "attr_de46d4_attr_912af0_key",
+        "attr_12a032_key",
+        "attr_2a1585_attr_aab9e1_attr_4ab871",
+        "attr_db8220_attr_3248bc",
+        "attr_972625_ordering",
+        "attr_263fa9"
+      ]
+    },
+    {
+      "table_name": "people",
+      "columns": [
+        "attr_12a032_key",
+        "attr_f56d02",
+        "identifier",
+        "attr_a3e2a6_calendar_mark",
+        "attr_b435e2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "poker_player.attr_12a032_key",
+      "people.attr_12a032_key"
+    ]
+  ]
+}

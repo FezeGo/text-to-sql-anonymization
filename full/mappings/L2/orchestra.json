@@ -1,0 +1,35 @@
+{
+  "db_id": "orchestra",
+  "level": "L2",
+  "table_map": {
+    "conductor": "table_1",
+    "orchestra": "table_2",
+    "performance": "table_3",
+    "show": "table_4"
+  },
+  "column_map": {
+    "conductor.conductor_id": "pk_1",
+    "conductor.name": "text_1",
+    "conductor.age": "num_1",
+    "conductor.nationality": "text_2",
+    "conductor.year_of_work": "num_2",
+    "orchestra.orchestra_id": "pk_1",
+    "orchestra.orchestra": "text_1",
+    "orchestra.conductor_id": "fk_1",
+    "orchestra.record_company": "text_2",
+    "orchestra.year_of_founded": "num_1",
+    "orchestra.major_record_format": "text_3",
+    "performance.performance_id": "pk_1",
+    "performance.orchestra_id": "fk_1",
+    "performance.type": "cat_1",
+    "performance.date": "date_1",
+    "performance.official_ratings_(millions)": "num_1",
+    "performance.weekly_rank": "text_1",
+    "performance.share": "text_2",
+    "show.show_id": "num_1",
+    "show.performance_id": "fk_1",
+    "show.if_first_show": "text_1",
+    "show.result": "text_2",
+    "show.attendance": "num_2"
+  }
+}

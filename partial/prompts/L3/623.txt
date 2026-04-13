@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+tv_channel(col_1, col_2, col_3, col_4, col_5, col_6, col_7, col_8, col_9)
+tv_series(col_1, col_2, col_3, col_4, col_5, col_6, col_7, col_8, col_9)
+cartoon(col_1, col_2, col_3, col_4, col_5, col_6, col_7)
+
+Foreign keys:
+tv_series.col_9 = tv_channel.col_1
+cartoon.col_7 = tv_channel.col_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the TV Channel of TV series with Episode "A Love of a Lifetime"? List the TV Channel's series name.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

@@ -1,0 +1,45 @@
+{
+  "db_id": "pets_1",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "student",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8"
+      ]
+    },
+    {
+      "table_name": "has_pet",
+      "columns": [
+        "col_1",
+        "col_2"
+      ]
+    },
+    {
+      "table_name": "pets",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "has_pet.col_1",
+      "student.col_1"
+    ],
+    [
+      "has_pet.col_2",
+      "pets.col_1"
+    ]
+  ]
+}

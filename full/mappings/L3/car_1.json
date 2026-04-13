@@ -1,0 +1,37 @@
+{
+  "db_id": "car_1",
+  "level": "L3",
+  "table_map": {
+    "continents": "table_1",
+    "countries": "table_2",
+    "car_makers": "table_3",
+    "model_list": "table_4",
+    "car_names": "table_5",
+    "cars_data": "table_6"
+  },
+  "column_map": {
+    "continents.contid": "col_1",
+    "continents.continent": "col_2",
+    "countries.countryid": "col_1",
+    "countries.countryname": "col_2",
+    "countries.continent": "col_3",
+    "car_makers.id": "col_1",
+    "car_makers.maker": "col_2",
+    "car_makers.fullname": "col_3",
+    "car_makers.country": "col_4",
+    "model_list.modelid": "col_1",
+    "model_list.maker": "col_2",
+    "model_list.model": "col_3",
+    "car_names.makeid": "col_1",
+    "car_names.model": "col_2",
+    "car_names.make": "col_3",
+    "cars_data.id": "col_1",
+    "cars_data.mpg": "col_2",
+    "cars_data.cylinders": "col_3",
+    "cars_data.edispl": "col_4",
+    "cars_data.horsepower": "col_5",
+    "cars_data.weight": "col_6",
+    "cars_data.accelerate": "col_7",
+    "cars_data.year": "col_8"
+  }
+}

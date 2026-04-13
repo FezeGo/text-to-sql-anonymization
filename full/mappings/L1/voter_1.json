@@ -1,0 +1,20 @@
+{
+  "db_id": "voter_1",
+  "level": "L1",
+  "table_map": {
+    "area_code_state": "area_code_state",
+    "contestants": "contestants",
+    "votes": "votes"
+  },
+  "column_map": {
+    "area_code_state.area_code": "area_code",
+    "area_code_state.state": "stat",
+    "contestants.contestant_number": "cont_numb",
+    "contestants.contestant_name": "cont_nm",
+    "votes.vote_id": "vote_id",
+    "votes.phone_number": "phon_numb",
+    "votes.state": "stat",
+    "votes.contestant_number": "cont_numb",
+    "votes.created": "crea"
+  }
+}

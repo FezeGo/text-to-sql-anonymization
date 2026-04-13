@@ -1,0 +1,63 @@
+{
+  "db_id": "orchestra",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "conductor",
+      "columns": [
+        "attr_cd1315_key",
+        "identifier",
+        "temporal_span",
+        "attr_f56d02",
+        "calendar_year_of_attr_67e92c"
+      ]
+    },
+    {
+      "table_name": "orchestra",
+      "columns": [
+        "attr_8f163b_key",
+        "attr_8f163b",
+        "attr_cd1315_key",
+        "attr_de17f0_organization",
+        "calendar_year_of_attr_dd5450",
+        "attr_f1425d_attr_de17f0_attr_1ddcb9"
+      ]
+    },
+    {
+      "table_name": "performance",
+      "columns": [
+        "attr_c05f6c_key",
+        "attr_8f163b_key",
+        "category",
+        "calendar_mark",
+        "attr_c74f86_attr_ff3afd_attr_dbe06f",
+        "attr_4a11fc_ordering",
+        "attr_85e47a"
+      ]
+    },
+    {
+      "table_name": "show",
+      "columns": [
+        "attr_a7dd12_key",
+        "attr_c05f6c_key",
+        "if_attr_8b04d5_attr_a7dd12",
+        "attr_b4a884",
+        "attr_64c62c"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "orchestra.attr_cd1315_key",
+      "conductor.attr_cd1315_key"
+    ],
+    [
+      "performance.attr_8f163b_key",
+      "orchestra.attr_8f163b_key"
+    ],
+    [
+      "show.attr_c05f6c_key",
+      "performance.attr_c05f6c_key"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "example_id": 236,
+  "db_id": "flight_2",
+  "level": "L1",
+  "question": "Which airlines have a flight with destination airport AHD?",
+  "gold_sql": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/236.txt",
+  "schema_file": "test/schemas/L1/flight_2.json"
+}

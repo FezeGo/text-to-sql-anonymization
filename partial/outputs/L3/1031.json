@@ -1,0 +1,10 @@
+{
+  "example_id": 1031,
+  "db_id": "real_estate_properties",
+  "level": "L3",
+  "question": "What is the feature type name of feature AirCon?",
+  "gold_sql": "SELECT T2.feature_type_name FROM Other_Available_Features AS T1 JOIN Ref_Feature_Types AS T2 ON T1.feature_type_code  =  T2.feature_type_code WHERE T1.feature_name  =  \"AirCon\"",
+  "predicted_sql": "SELECT T1.col_2 FROM ref_feature_types AS T1 JOIN other_available_features AS T2 ON T1.col_1 = T2.col_2 WHERE T2.col_3 = 'AirCon'",
+  "raw_response": "SELECT T1.col_2 FROM ref_feature_types AS T1 JOIN other_available_features AS T2 ON T1.col_1 = T2.col_2 WHERE T2.col_3 = 'AirCon'",
+  "prompt_file": "test/prompts/L3/1031.txt"
+}

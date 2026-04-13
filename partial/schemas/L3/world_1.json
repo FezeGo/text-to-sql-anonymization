@@ -1,0 +1,62 @@
+{
+  "db_id": "world_1",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "city",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5"
+      ]
+    },
+    {
+      "table_name": "sqlite_sequence",
+      "columns": [
+        "col_1",
+        "col_2"
+      ]
+    },
+    {
+      "table_name": "country",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9",
+        "col_10",
+        "col_11",
+        "col_12",
+        "col_13",
+        "col_14",
+        "col_15"
+      ]
+    },
+    {
+      "table_name": "countrylanguage",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "city.col_3",
+      "country.col_1"
+    ],
+    [
+      "countrylanguage.col_1",
+      "country.col_1"
+    ]
+  ]
+}

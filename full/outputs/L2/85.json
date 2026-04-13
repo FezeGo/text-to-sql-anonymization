@@ -1,0 +1,10 @@
+{
+  "example_id": 85,
+  "db_id": "pets_1",
+  "level": "L2",
+  "question": "Find the average age of students who do not have any pet .",
+  "gold_sql": "select avg(age) from student where stuid not in (select stuid from has_pet)",
+  "predicted_sql": "SELECT AVG(num_1) FROM table_1 WHERE pk_1 NOT IN (SELECT fk_1 FROM table_2)",
+  "raw_response": "SELECT AVG(num_1) FROM table_1 WHERE pk_1 NOT IN (SELECT fk_1 FROM table_2)",
+  "prompt_file": "prompts/L2/85.txt"
+}

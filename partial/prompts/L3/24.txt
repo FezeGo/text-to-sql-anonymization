@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+stadium(col_1, col_2, col_3, col_4, col_5, col_6, col_7)
+singer(col_1, col_2, col_3, col_4, col_5, col_6, col_7)
+concert(col_1, col_2, col_3, col_4, col_5)
+singer_in_concert(col_1, col_2)
+
+Foreign keys:
+concert.col_4 = stadium.col_1
+singer_in_concert.col_2 = singer.col_1
+singer_in_concert.col_1 = concert.col_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show the stadium name and capacity with most number of concerts in year 2014 or after.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

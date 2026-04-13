@@ -1,0 +1,56 @@
+{
+  "db_id": "tvshow",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "tv_channel",
+      "columns": [
+        "key",
+        "attr_bef995_identifier",
+        "nation",
+        "attr_8512ae",
+        "attr_9a0364",
+        "attr_ab4086_attr_e67e20_attr_828301_attr_d01826",
+        "attr_f0ab23_attr_30618b_tv",
+        "remuneration_attr_fe3838_attr_1bda80_attr_f3b02e",
+        "attr_efe90a_attr_ef3e30"
+      ]
+    },
+    {
+      "table_name": "tv_series",
+      "columns": [
+        "key",
+        "attr_ec3781",
+        "attr_3c4588_calendar_mark",
+        "attr_2c5504",
+        "attr_85e47a",
+        "18_49_attr_2c5504_attr_85e47a",
+        "attr_4c21a8_m",
+        "attr_4a11fc_ordering",
+        "attr_c485d2"
+      ]
+    },
+    {
+      "table_name": "cartoon",
+      "columns": [
+        "key",
+        "designation",
+        "attr_42e55a_by",
+        "attr_9cc26f_by",
+        "attr_919c8b_attr_3c4588_calendar_mark",
+        "attr_fd8978_symbol",
+        "attr_c485d2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "tv_series.attr_c485d2",
+      "tv_channel.key"
+    ],
+    [
+      "cartoon.attr_c485d2",
+      "tv_channel.key"
+    ]
+  ]
+}

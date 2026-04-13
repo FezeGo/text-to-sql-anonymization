@@ -1,0 +1,11 @@
+{
+  "example_id": 94,
+  "db_id": "car_1",
+  "level": "L1",
+  "question": "What is the full name of each car maker, along with its id and how many models it produces?",
+  "gold_sql": "SELECT T1.FullName ,  T1.Id ,  count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id;",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/94.txt",
+  "schema_file": "test/schemas/L1/car_1.json"
+}

@@ -1,0 +1,20 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+city(id, name, countrycode, district, population)
+sqlite_sequence(name, seq)
+country(code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, governmentform, headofstate, capital, code2)
+countrylanguage(countrycode, language, isofficial, percentage)
+
+Foreign keys:
+city.countrycode = country.code
+countrylanguage.countrycode = country.code
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Which language is the most popular in Aruba?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

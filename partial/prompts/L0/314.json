@@ -1,0 +1,11 @@
+{
+  "example_id": 314,
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L0",
+  "question": "What are the template ids of any templates used in more than a single document?",
+  "gold_sql": "SELECT template_id FROM Documents GROUP BY template_id HAVING count(*)  >  1",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L0/314.txt",
+  "schema_file": "test/schemas/L0/cre_Doc_Template_Mgt.json"
+}

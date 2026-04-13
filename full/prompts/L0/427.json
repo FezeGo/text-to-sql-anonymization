@@ -1,0 +1,11 @@
+{
+  "example_id": 427,
+  "db_id": "museum_visit",
+  "level": "L0",
+  "question": "Find the number of visitors who did not visit any museum opened after 2010.",
+  "gold_sql": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/427.txt",
+  "schema_file": "schemas/L0/museum_visit.json"
+}

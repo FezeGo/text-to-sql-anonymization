@@ -1,0 +1,20 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+table_1(pk_1, text_1, fk_1, text_2, num_1)
+table_2(text_1, text_2)
+table_3(pk_1, text_1, text_2, text_3, num_1, num_2, num_3, num_4, num_5, num_6, text_4, text_5, text_6, num_7, text_7)
+table_4(pk_1, text_1, text_2, num_1)
+
+Foreign keys:
+table_1.fk_1 = table_3.pk_1
+table_4.pk_1 = table_3.pk_1
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Which region is the city Kabul located in?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

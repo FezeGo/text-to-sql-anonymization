@@ -1,0 +1,10 @@
+{
+  "example_id": 842,
+  "db_id": "orchestra",
+  "level": "L3",
+  "question": "Show the names of conductors that have conducted more than one orchestras.",
+  "gold_sql": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1",
+  "predicted_sql": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_1 = T2.col_3 GROUP BY T1.col_1 HAVING COUNT(*) > 1",
+  "raw_response": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_1 = T2.col_3 GROUP BY T1.col_1 HAVING COUNT(*) > 1",
+  "prompt_file": "prompts/L3/842.txt"
+}

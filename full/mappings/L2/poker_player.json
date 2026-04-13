@@ -1,0 +1,21 @@
+{
+  "db_id": "poker_player",
+  "level": "L2",
+  "table_map": {
+    "poker_player": "table_1",
+    "people": "table_2"
+  },
+  "column_map": {
+    "poker_player.poker_player_id": "pk_1",
+    "poker_player.people_id": "fk_1",
+    "poker_player.final_table_made": "num_1",
+    "poker_player.best_finish": "num_2",
+    "poker_player.money_rank": "num_3",
+    "poker_player.earnings": "num_4",
+    "people.people_id": "pk_1",
+    "people.nationality": "text_1",
+    "people.name": "text_2",
+    "people.birth_date": "date_1",
+    "people.height": "num_1"
+  }
+}

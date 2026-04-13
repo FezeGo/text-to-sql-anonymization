@@ -1,0 +1,11 @@
+{
+  "example_id": 842,
+  "db_id": "orchestra",
+  "level": "L0",
+  "question": "Show the names of conductors that have conducted more than one orchestras.",
+  "gold_sql": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L0/842.txt",
+  "schema_file": "test/schemas/L0/orchestra.json"
+}

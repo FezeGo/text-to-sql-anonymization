@@ -1,0 +1,22 @@
+{
+  "db_id": "poker_player",
+  "level": "L3",
+  "rename_tables": false,
+  "table_map": {
+    "poker_player": "poker_player",
+    "people": "people"
+  },
+  "column_map": {
+    "poker_player.poker_player_id": "col_1",
+    "poker_player.people_id": "col_2",
+    "poker_player.final_table_made": "col_3",
+    "poker_player.best_finish": "col_4",
+    "poker_player.money_rank": "col_5",
+    "poker_player.earnings": "col_6",
+    "people.people_id": "col_1",
+    "people.nationality": "col_2",
+    "people.name": "col_3",
+    "people.birth_date": "col_4",
+    "people.height": "col_5"
+  }
+}

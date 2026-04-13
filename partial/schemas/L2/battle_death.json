@@ -1,0 +1,49 @@
+{
+  "db_id": "battle_death",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "battle",
+      "columns": [
+        "key",
+        "identifier",
+        "calendar_mark",
+        "attr_44e61d_attr_f7ac7d",
+        "attr_f4b418_attr_f7ac7d",
+        "attr_b4a884"
+      ]
+    },
+    {
+      "table_name": "ship",
+      "columns": [
+        "attr_1c9a44_in_attr_a5101e",
+        "key",
+        "identifier",
+        "attr_11da74",
+        "attr_2a3f11_category",
+        "attr_d5189d",
+        "attr_6cfe0c_of_attr_2a3f11"
+      ]
+    },
+    {
+      "table_name": "death",
+      "columns": [
+        "attr_68ebfd_by_attr_2a3f11_key",
+        "key",
+        "attr_aad653",
+        "attr_3e4b66",
+        "attr_175325"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "ship.attr_1c9a44_in_attr_a5101e",
+      "battle.key"
+    ],
+    [
+      "death.attr_68ebfd_by_attr_2a3f11_key",
+      "ship.key"
+    ]
+  ]
+}

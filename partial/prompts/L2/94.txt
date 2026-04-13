@@ -1,0 +1,25 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+continents(attr_a7a742, attr_0e20e8)
+countries(attr_df978e, attr_0a984f, attr_0e20e8)
+car_makers(key, attr_35977a, attr_c315cc, nation)
+model_list(attr_93417e, attr_35977a, attr_20f35e)
+car_names(attr_66aece, attr_20f35e, attr_099daf)
+cars_data(key, attr_b4f4f5, attr_fd0c4a, attr_65e1c7, attr_7a1db2, attr_7edabf, attr_75baa4, calendar_year)
+
+Foreign keys:
+countries.attr_0e20e8 = continents.attr_a7a742
+car_makers.nation = countries.attr_df978e
+model_list.attr_35977a = car_makers.key
+car_names.attr_20f35e = model_list.attr_20f35e
+cars_data.key = car_names.attr_66aece
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the full name of each car maker, along with its id and how many models it produces?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

@@ -1,0 +1,62 @@
+{
+  "db_id": "world_1",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "city",
+      "columns": [
+        "id",
+        "name",
+        "countrycode",
+        "district",
+        "population"
+      ]
+    },
+    {
+      "table_name": "sqlite_sequence",
+      "columns": [
+        "name",
+        "seq"
+      ]
+    },
+    {
+      "table_name": "country",
+      "columns": [
+        "code",
+        "name",
+        "continent",
+        "region",
+        "surfacearea",
+        "indepyear",
+        "population",
+        "lifeexpectancy",
+        "gnp",
+        "gnpold",
+        "localname",
+        "governmentform",
+        "headofstate",
+        "capital",
+        "code2"
+      ]
+    },
+    {
+      "table_name": "countrylanguage",
+      "columns": [
+        "countrycode",
+        "language",
+        "isofficial",
+        "percentage"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "city.countrycode",
+      "country.code"
+    ],
+    [
+      "countrylanguage.countrycode",
+      "country.code"
+    ]
+  ]
+}

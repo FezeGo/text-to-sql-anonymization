@@ -1,0 +1,11 @@
+{
+  "example_id": 598,
+  "db_id": "tvshow",
+  "level": "L0",
+  "question": "How many different series and contents are listed in the TV Channel table?",
+  "gold_sql": "SELECT count(DISTINCT series_name) ,  count(DISTINCT content) FROM TV_Channel;",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L0/598.txt",
+  "schema_file": "test/schemas/L0/tvshow.json"
+}

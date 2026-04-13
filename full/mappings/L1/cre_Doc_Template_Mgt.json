@@ -1,0 +1,29 @@
+{
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L1",
+  "table_map": {
+    "ref_template_types": "ref_template_types",
+    "templates": "templates",
+    "documents": "documents",
+    "paragraphs": "paragraphs"
+  },
+  "column_map": {
+    "ref_template_types.template_type_code": "temp_typ_code",
+    "ref_template_types.template_type_description": "temp_typ_desc",
+    "templates.template_id": "temp_id",
+    "templates.version_number": "vers_numb",
+    "templates.template_type_code": "temp_typ_code",
+    "templates.date_effective_from": "dt_effe_from",
+    "templates.date_effective_to": "dt_effe_to",
+    "templates.template_details": "temp_deta",
+    "documents.document_id": "docu_id",
+    "documents.template_id": "temp_id",
+    "documents.document_name": "docu_nm",
+    "documents.document_description": "docu_desc",
+    "documents.other_details": "othe_deta",
+    "paragraphs.paragraph_id": "para_id",
+    "paragraphs.document_id": "docu_id",
+    "paragraphs.paragraph_text": "para_text",
+    "paragraphs.other_details": "othe_deta"
+  }
+}

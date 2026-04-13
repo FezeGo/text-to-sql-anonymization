@@ -1,0 +1,21 @@
+{
+  "db_id": "course_teach",
+  "level": "L3",
+  "table_map": {
+    "course": "table_1",
+    "teacher": "table_2",
+    "course_arrange": "table_3"
+  },
+  "column_map": {
+    "course.course_id": "col_1",
+    "course.staring_date": "col_2",
+    "course.course": "col_3",
+    "teacher.teacher_id": "col_1",
+    "teacher.name": "col_2",
+    "teacher.age": "col_3",
+    "teacher.hometown": "col_4",
+    "course_arrange.course_id": "col_1",
+    "course_arrange.teacher_id": "col_2",
+    "course_arrange.grade": "col_3"
+  }
+}

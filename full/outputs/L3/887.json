@@ -1,0 +1,10 @@
+{
+  "example_id": 887,
+  "db_id": "network_1",
+  "level": "L3",
+  "question": "Return the name of the high school student with the most friends.",
+  "gold_sql": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1",
+  "predicted_sql": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_1 = T2.col_1 GROUP BY T1.col_1 ORDER BY COUNT(*) DESC LIMIT 1;",
+  "raw_response": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_1 = T2.col_1 GROUP BY T1.col_1 ORDER BY COUNT(*) DESC LIMIT 1;",
+  "prompt_file": "prompts/L3/887.txt"
+}

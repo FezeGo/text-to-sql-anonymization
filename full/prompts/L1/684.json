@@ -1,0 +1,11 @@
+{
+  "example_id": 684,
+  "db_id": "poker_player",
+  "level": "L1",
+  "question": "What are the names of people who do not play poker?",
+  "gold_sql": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "prompts/L1/684.txt",
+  "schema_file": "schemas/L1/poker_player.json"
+}

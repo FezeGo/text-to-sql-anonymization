@@ -1,0 +1,45 @@
+{
+  "db_id": "pets_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "student",
+      "columns": [
+        "attr_ebaa72",
+        "attr_bfbb12",
+        "attr_a3da70",
+        "temporal_span",
+        "attr_3c3662",
+        "attr_f1425d",
+        "attr_a33c73",
+        "municipality_symbol"
+      ]
+    },
+    {
+      "table_name": "has_pet",
+      "columns": [
+        "attr_ebaa72",
+        "attr_f593a2"
+      ]
+    },
+    {
+      "table_name": "pets",
+      "columns": [
+        "attr_f593a2",
+        "attr_b92885",
+        "attr_6c43c0_temporal_span",
+        "attr_7edabf"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "has_pet.attr_ebaa72",
+      "student.attr_ebaa72"
+    ],
+    [
+      "has_pet.attr_f593a2",
+      "pets.attr_f593a2"
+    ]
+  ]
+}

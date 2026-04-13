@@ -1,0 +1,22 @@
+{
+  "db_id": "course_teach",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "course": "course",
+    "teacher": "teacher",
+    "course_arrange": "course_arrange"
+  },
+  "column_map": {
+    "course.course_id": "attr_046d47_key",
+    "course.staring_date": "attr_65711b_calendar_mark",
+    "course.course": "attr_046d47",
+    "teacher.teacher_id": "instructor_key",
+    "teacher.name": "identifier",
+    "teacher.age": "temporal_span",
+    "teacher.hometown": "attr_262c99",
+    "course_arrange.course_id": "attr_046d47_key",
+    "course_arrange.teacher_id": "instructor_key",
+    "course_arrange.grade": "evaluation"
+  }
+}

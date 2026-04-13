@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+course(attr_046d47_key, attr_65711b_calendar_mark, attr_046d47)
+teacher(instructor_key, identifier, temporal_span, attr_262c99)
+course_arrange(attr_046d47_key, instructor_key, evaluation)
+
+Foreign keys:
+course_arrange.instructor_key = teacher.instructor_key
+course_arrange.attr_046d47_key = course.attr_046d47_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show names of teachers and the courses they are arranged to teach in ascending alphabetical order of the teacher's name.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

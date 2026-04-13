@@ -1,0 +1,10 @@
+{
+  "example_id": 668,
+  "db_id": "poker_player",
+  "level": "L3",
+  "question": "Return the money rank of the poker player with the greatest height.",
+  "gold_sql": "SELECT T2.Money_Rank FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
+  "predicted_sql": "SELECT T1.col_5 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_2 = T2.col_1 ORDER BY T2.col_3 DESC LIMIT 1;",
+  "raw_response": "SELECT T1.col_5 FROM table_1 AS T1 JOIN table_2 AS T2 ON T1.col_2 = T2.col_1 ORDER BY T2.col_3 DESC LIMIT 1;",
+  "prompt_file": "prompts/L3/668.txt"
+}

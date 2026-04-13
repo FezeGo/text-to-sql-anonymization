@@ -1,0 +1,49 @@
+{
+  "db_id": "battle_death",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "battle",
+      "columns": [
+        "id",
+        "nm",
+        "dt",
+        "bulg_comm",
+        "lati_comm",
+        "resu"
+      ]
+    },
+    {
+      "table_name": "ship",
+      "columns": [
+        "lost_in_batt",
+        "id",
+        "nm",
+        "tonn",
+        "ship_type",
+        "loca",
+        "disp_of_ship"
+      ]
+    },
+    {
+      "table_name": "death",
+      "columns": [
+        "caus_by_ship_id",
+        "id",
+        "note",
+        "kill",
+        "inju"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "ship.lost_in_batt",
+      "battle.id"
+    ],
+    [
+      "death.caus_by_ship_id",
+      "ship.id"
+    ]
+  ]
+}

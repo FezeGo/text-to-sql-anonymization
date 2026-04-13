@@ -1,0 +1,10 @@
+{
+  "example_id": 684,
+  "db_id": "poker_player",
+  "level": "L1",
+  "question": "What are the names of people who do not play poker?",
+  "gold_sql": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)",
+  "predicted_sql": "SELECT nm FROM people WHERE peop_id NOT IN (SELECT peop_id FROM poker_player)",
+  "raw_response": "SELECT nm FROM people WHERE peop_id NOT IN (SELECT peop_id FROM poker_player)",
+  "prompt_file": "prompts/L1/684.txt"
+}

@@ -1,0 +1,22 @@
+{
+  "db_id": "poker_player",
+  "level": "L1",
+  "rename_tables": false,
+  "table_map": {
+    "poker_player": "poker_player",
+    "people": "people"
+  },
+  "column_map": {
+    "poker_player.poker_player_id": "poke_play_id",
+    "poker_player.people_id": "peop_id",
+    "poker_player.final_table_made": "fina_tabl_made",
+    "poker_player.best_finish": "best_fini",
+    "poker_player.money_rank": "mone_rank",
+    "poker_player.earnings": "earn",
+    "people.people_id": "peop_id",
+    "people.nationality": "nati",
+    "people.name": "nm",
+    "people.birth_date": "birt_dt",
+    "people.height": "heig"
+  }
+}

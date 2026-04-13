@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+area_code_state(area_code, state)
+contestants(contestant_number, contestant_name)
+votes(vote_id, phone_number, state, contestant_number, created)
+
+Foreign keys:
+votes.contestant_number = contestants.contestant_number
+votes.state = area_code_state.state
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+How many contestants did not get voted?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

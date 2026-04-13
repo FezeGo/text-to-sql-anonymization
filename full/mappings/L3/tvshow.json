@@ -1,0 +1,36 @@
+{
+  "db_id": "tvshow",
+  "level": "L3",
+  "table_map": {
+    "tv_channel": "table_1",
+    "tv_series": "table_2",
+    "cartoon": "table_3"
+  },
+  "column_map": {
+    "tv_channel.id": "col_1",
+    "tv_channel.series_name": "col_2",
+    "tv_channel.country": "col_3",
+    "tv_channel.language": "col_4",
+    "tv_channel.content": "col_5",
+    "tv_channel.pixel_aspect_ratio_par": "col_6",
+    "tv_channel.hight_definition_tv": "col_7",
+    "tv_channel.pay_per_view_ppv": "col_8",
+    "tv_channel.package_option": "col_9",
+    "tv_series.id": "col_1",
+    "tv_series.episode": "col_2",
+    "tv_series.air_date": "col_3",
+    "tv_series.rating": "col_4",
+    "tv_series.share": "col_5",
+    "tv_series.18_49_rating_share": "col_6",
+    "tv_series.viewers_m": "col_7",
+    "tv_series.weekly_rank": "col_8",
+    "tv_series.channel": "col_9",
+    "cartoon.id": "col_1",
+    "cartoon.title": "col_2",
+    "cartoon.directed_by": "col_3",
+    "cartoon.written_by": "col_4",
+    "cartoon.original_air_date": "col_5",
+    "cartoon.production_code": "col_6",
+    "cartoon.channel": "col_7"
+  }
+}

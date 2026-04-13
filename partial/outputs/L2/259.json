@@ -1,0 +1,10 @@
+{
+  "example_id": 259,
+  "db_id": "employee_hire_evaluation",
+  "level": "L2",
+  "question": "How many employees are there?",
+  "gold_sql": "SELECT count(*) FROM employee",
+  "predicted_sql": "SELECT count(*) FROM employee",
+  "raw_response": "SELECT count(*) FROM employee",
+  "prompt_file": "test/prompts/L2/259.txt"
+}

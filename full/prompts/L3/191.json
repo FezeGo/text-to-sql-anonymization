@@ -1,0 +1,11 @@
+{
+  "example_id": 191,
+  "db_id": "flight_2",
+  "level": "L3",
+  "question": "How many flights do we have?",
+  "gold_sql": "SELECT count(*) FROM FLIGHTS",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/191.txt",
+  "schema_file": "schemas/L3/flight_2.json"
+}

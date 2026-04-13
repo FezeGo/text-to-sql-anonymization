@@ -1,0 +1,30 @@
+{
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "ref_template_types": "ref_template_types",
+    "templates": "templates",
+    "documents": "documents",
+    "paragraphs": "paragraphs"
+  },
+  "column_map": {
+    "ref_template_types.template_type_code": "attr_66f618_category_symbol",
+    "ref_template_types.template_type_description": "attr_66f618_category_attr_67daf9",
+    "templates.template_id": "attr_66f618_key",
+    "templates.version_number": "attr_2af72f_index",
+    "templates.template_type_code": "attr_66f618_category_symbol",
+    "templates.date_effective_from": "calendar_mark_attr_8726c9_attr_d98a07",
+    "templates.date_effective_to": "calendar_mark_attr_8726c9_to",
+    "templates.template_details": "attr_66f618_attr_277929",
+    "documents.document_id": "attr_fdc3bd_key",
+    "documents.template_id": "attr_66f618_key",
+    "documents.document_name": "attr_fdc3bd_identifier",
+    "documents.document_description": "attr_fdc3bd_attr_67daf9",
+    "documents.other_details": "attr_795f32_attr_277929",
+    "paragraphs.paragraph_id": "attr_32a97f_key",
+    "paragraphs.document_id": "attr_fdc3bd_key",
+    "paragraphs.paragraph_text": "attr_32a97f_attr_1cb251",
+    "paragraphs.other_details": "attr_795f32_attr_277929"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 712,
+  "db_id": "world_1",
+  "level": "L2",
+  "question": "Which language is the most popular in Aruba?",
+  "gold_sql": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+  "predicted_sql": "SELECT T2.attr_8512ae FROM country AS T1 JOIN countrylanguage AS T2 ON T1.symbol = T2.attr_ea549d WHERE T1.identifier = 'Aruba' ORDER BY T2.attr_d1647a DESC LIMIT 1;",
+  "raw_response": "SELECT T2.attr_8512ae FROM country AS T1 JOIN countrylanguage AS T2 ON T1.symbol = T2.attr_ea549d WHERE T1.identifier = 'Aruba' ORDER BY T2.attr_d1647a DESC LIMIT 1;",
+  "prompt_file": "test/prompts/L2/712.txt"
+}

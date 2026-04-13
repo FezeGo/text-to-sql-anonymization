@@ -1,0 +1,45 @@
+{
+  "db_id": "pets_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "text_2",
+        "num_1",
+        "text_3",
+        "num_2",
+        "num_3",
+        "text_4"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "fk_1",
+        "fk_2"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "pk_1",
+        "cat_1",
+        "num_1",
+        "num_2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_2.fk_1",
+      "table_1.pk_1"
+    ],
+    [
+      "table_2.fk_2",
+      "table_3.pk_1"
+    ]
+  ]
+}

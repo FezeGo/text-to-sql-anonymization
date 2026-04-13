@@ -1,0 +1,38 @@
+{
+  "db_id": "world_1",
+  "level": "L2",
+  "table_map": {
+    "city": "table_1",
+    "sqlite_sequence": "table_2",
+    "country": "table_3",
+    "countrylanguage": "table_4"
+  },
+  "column_map": {
+    "city.id": "pk_1",
+    "city.name": "text_1",
+    "city.countrycode": "fk_1",
+    "city.district": "text_2",
+    "city.population": "num_1",
+    "sqlite_sequence.name": "text_1",
+    "sqlite_sequence.seq": "text_2",
+    "country.code": "pk_1",
+    "country.name": "text_1",
+    "country.continent": "text_2",
+    "country.region": "text_3",
+    "country.surfacearea": "num_1",
+    "country.indepyear": "num_2",
+    "country.population": "num_3",
+    "country.lifeexpectancy": "num_4",
+    "country.gnp": "num_5",
+    "country.gnpold": "num_6",
+    "country.localname": "text_4",
+    "country.governmentform": "text_5",
+    "country.headofstate": "text_6",
+    "country.capital": "num_7",
+    "country.code2": "text_7",
+    "countrylanguage.countrycode": "pk_1",
+    "countrylanguage.language": "text_1",
+    "countrylanguage.isofficial": "text_2",
+    "countrylanguage.percentage": "num_1"
+  }
+}

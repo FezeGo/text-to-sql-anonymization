@@ -1,0 +1,81 @@
+{
+  "db_id": "car_1",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "continents",
+      "columns": [
+        "cont",
+        "cont"
+      ]
+    },
+    {
+      "table_name": "countries",
+      "columns": [
+        "coun",
+        "coun",
+        "cont"
+      ]
+    },
+    {
+      "table_name": "car_makers",
+      "columns": [
+        "id",
+        "make",
+        "full",
+        "coun"
+      ]
+    },
+    {
+      "table_name": "model_list",
+      "columns": [
+        "mode",
+        "make",
+        "mode"
+      ]
+    },
+    {
+      "table_name": "car_names",
+      "columns": [
+        "make",
+        "mode",
+        "make"
+      ]
+    },
+    {
+      "table_name": "cars_data",
+      "columns": [
+        "id",
+        "mpg",
+        "cyli",
+        "edis",
+        "hors",
+        "weig",
+        "acce",
+        "year"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "countries.cont",
+      "continents.cont"
+    ],
+    [
+      "car_makers.coun",
+      "countries.coun"
+    ],
+    [
+      "model_list.make",
+      "car_makers.id"
+    ],
+    [
+      "car_names.mode",
+      "model_list.mode"
+    ],
+    [
+      "cars_data.id",
+      "car_names.make"
+    ]
+  ]
+}

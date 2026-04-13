@@ -1,0 +1,10 @@
+{
+  "example_id": 1032,
+  "db_id": "real_estate_properties",
+  "level": "L2",
+  "question": "Show the property type descriptions of properties belonging to that code.",
+  "gold_sql": "SELECT T2.property_type_description FROM Properties AS T1 JOIN Ref_Property_Types AS T2 ON T1.property_type_code  =  T2.property_type_code GROUP BY T1.property_type_code",
+  "predicted_sql": "SELECT T2.attr_1a8db4_category_attr_67daf9 FROM properties AS T1 JOIN ref_property_types AS T2 ON T1.attr_1a8db4_category_symbol = T2.attr_1a8db4_category_symbol;",
+  "raw_response": "SELECT T2.attr_1a8db4_category_attr_67daf9 FROM properties AS T1 JOIN ref_property_types AS T2 ON T1.attr_1a8db4_category_symbol = T2.attr_1a8db4_category_symbol;",
+  "prompt_file": "test/prompts/L2/1032.txt"
+}

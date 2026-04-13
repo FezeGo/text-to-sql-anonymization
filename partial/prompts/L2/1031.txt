@@ -1,0 +1,23 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+ref_feature_types(attr_518a48_category_symbol, attr_518a48_category_identifier)
+ref_property_types(attr_1a8db4_category_symbol, attr_1a8db4_category_attr_67daf9)
+other_available_features(attr_518a48_key, attr_518a48_category_symbol, attr_518a48_identifier, attr_518a48_attr_67daf9)
+properties(attr_1a8db4_key, attr_1a8db4_category_symbol, calendar_mark_on_attr_c1c164, calendar_mark_attr_7391de, attr_1a8db4_identifier, attr_1a8db4_location_mark, attr_fef257_tally, attr_7c3613_attr_67a14a_monetary_value, attr_794aad_attr_093d77_monetary_value, attr_3c5169_attr_31862c_monetary_value, attr_583f72_attr_518a48_1, attr_583f72_attr_518a48_2, attr_583f72_attr_518a48_3, attr_39b7b2_attr_518a48_1, attr_39b7b2_attr_518a48_2, attr_39b7b2_attr_518a48_3, attr_ff85fd_attr_518a48_1, attr_ff85fd_attr_518a48_2, attr_ff85fd_attr_518a48_3, attr_57265b_attr_518a48_1, attr_57265b_attr_518a48_2, attr_57265b_attr_518a48_3, attr_d7c1cc_attr_518a48_1, attr_d7c1cc_attr_518a48_2, attr_d7c1cc_attr_518a48_3, attr_795f32_attr_1a8db4_attr_277929)
+other_property_features(attr_1a8db4_key, attr_518a48_key, attr_1a8db4_attr_518a48_attr_67daf9)
+
+Foreign keys:
+other_available_features.attr_518a48_category_symbol = ref_feature_types.attr_518a48_category_symbol
+properties.attr_1a8db4_category_symbol = ref_property_types.attr_1a8db4_category_symbol
+other_property_features.attr_1a8db4_key = properties.attr_1a8db4_key
+other_property_features.attr_518a48_key = other_available_features.attr_518a48_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What is the feature type name of feature AirCon?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

@@ -1,0 +1,10 @@
+{
+  "example_id": 254,
+  "db_id": "flight_2",
+  "level": "L1",
+  "question": "Give the flight numbers of flights arriving in Aberdeen.",
+  "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
+  "predicted_sql": "SELECT T1.flig FROM flights AS T1 JOIN airports AS T2 ON T1.dest = T2.airp WHERE T2.city = 'Aberdeen'",
+  "raw_response": "SELECT T1.flig FROM flights AS T1 JOIN airports AS T2 ON T1.dest = T2.airp WHERE T2.city = 'Aberdeen'",
+  "prompt_file": "prompts/L1/254.txt"
+}

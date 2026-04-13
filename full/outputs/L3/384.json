@@ -1,0 +1,10 @@
+{
+  "example_id": 384,
+  "db_id": "course_teach",
+  "level": "L3",
+  "question": "What are the names of the teachers ordered by ascending age?",
+  "gold_sql": "SELECT Name FROM teacher ORDER BY Age ASC",
+  "predicted_sql": "SELECT col_2 FROM table_2 ORDER BY col_3 ASC;",
+  "raw_response": "SELECT col_2 FROM table_2 ORDER BY col_3 ASC;",
+  "prompt_file": "prompts/L3/384.txt"
+}

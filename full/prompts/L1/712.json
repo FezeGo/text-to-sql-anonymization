@@ -1,0 +1,11 @@
+{
+  "example_id": 712,
+  "db_id": "world_1",
+  "level": "L1",
+  "question": "Which language is the most popular in Aruba?",
+  "gold_sql": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "prompts/L1/712.txt",
+  "schema_file": "schemas/L1/world_1.json"
+}

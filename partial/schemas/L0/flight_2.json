@@ -1,0 +1,44 @@
+{
+  "db_id": "flight_2",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "airlines",
+      "columns": [
+        "uid",
+        "airline",
+        "abbreviation",
+        "country"
+      ]
+    },
+    {
+      "table_name": "airports",
+      "columns": [
+        "city",
+        "airportcode",
+        "airportname",
+        "country",
+        "countryabbrev"
+      ]
+    },
+    {
+      "table_name": "flights",
+      "columns": [
+        "airline",
+        "flightno",
+        "sourceairport",
+        "destairport"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "flights.destairport",
+      "airports.airportcode"
+    ],
+    [
+      "flights.sourceairport",
+      "airports.airportcode"
+    ]
+  ]
+}

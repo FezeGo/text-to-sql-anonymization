@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+student(attr_ebaa72, attr_bfbb12, attr_a3da70, temporal_span, attr_3c3662, attr_f1425d, attr_a33c73, municipality_symbol)
+has_pet(attr_ebaa72, attr_f593a2)
+pets(attr_f593a2, attr_b92885, attr_6c43c0_temporal_span, attr_7edabf)
+
+Foreign keys:
+has_pet.attr_ebaa72 = student.attr_ebaa72
+has_pet.attr_f593a2 = pets.attr_f593a2
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+For students who have pets , how many pets does each student have ? list their ids instead of names .
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

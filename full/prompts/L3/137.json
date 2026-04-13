@@ -1,0 +1,11 @@
+{
+  "example_id": 137,
+  "db_id": "car_1",
+  "level": "L3",
+  "question": "What is the average edispl of the cars of model volvo?",
+  "gold_sql": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/137.txt",
+  "schema_file": "schemas/L3/car_1.json"
+}

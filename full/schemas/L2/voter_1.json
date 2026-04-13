@@ -1,0 +1,40 @@
+{
+  "db_id": "voter_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "pk_1",
+        "text_1"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "pk_1",
+        "num_1",
+        "fk_1",
+        "fk_2",
+        "date_1"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_3.fk_2",
+      "table_2.pk_1"
+    ],
+    [
+      "table_3.fk_1",
+      "table_1.text_1"
+    ]
+  ]
+}

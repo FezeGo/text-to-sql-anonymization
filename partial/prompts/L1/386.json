@@ -1,0 +1,11 @@
+{
+  "example_id": 386,
+  "db_id": "course_teach",
+  "level": "L1",
+  "question": "What is the age and hometown of every teacher?",
+  "gold_sql": "SELECT Age ,  Hometown FROM teacher",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/386.txt",
+  "schema_file": "test/schemas/L1/course_teach.json"
+}

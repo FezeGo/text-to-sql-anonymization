@@ -1,0 +1,11 @@
+{
+  "example_id": 21,
+  "db_id": "concert_singer",
+  "level": "L2",
+  "question": "How many concerts occurred in 2014 or 2015?",
+  "gold_sql": "SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "prompts/L2/21.txt",
+  "schema_file": "schemas/L2/concert_singer.json"
+}

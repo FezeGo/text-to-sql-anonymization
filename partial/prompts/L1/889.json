@@ -1,0 +1,11 @@
+{
+  "example_id": 889,
+  "db_id": "network_1",
+  "level": "L1",
+  "question": "What are the names of high schoolers who have 3 or more friends?",
+  "gold_sql": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  3",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/889.txt",
+  "schema_file": "test/schemas/L1/network_1.json"
+}

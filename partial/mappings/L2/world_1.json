@@ -1,0 +1,39 @@
+{
+  "db_id": "world_1",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "city": "city",
+    "sqlite_sequence": "sqlite_sequence",
+    "country": "country",
+    "countrylanguage": "countrylanguage"
+  },
+  "column_map": {
+    "city.id": "key",
+    "city.name": "identifier",
+    "city.countrycode": "attr_ea549d",
+    "city.district": "attr_6b77ef",
+    "city.population": "attr_248081",
+    "sqlite_sequence.name": "identifier",
+    "sqlite_sequence.seq": "attr_e068c2",
+    "country.code": "symbol",
+    "country.name": "identifier",
+    "country.continent": "attr_0e20e8",
+    "country.region": "attr_960db2",
+    "country.surfacearea": "attr_8cd0df",
+    "country.indepyear": "attr_286e89",
+    "country.population": "attr_248081",
+    "country.lifeexpectancy": "attr_a92b89",
+    "country.gnp": "attr_2c2d41",
+    "country.gnpold": "attr_c19ac9",
+    "country.localname": "attr_0180ac",
+    "country.governmentform": "attr_7bc9fe",
+    "country.headofstate": "attr_523ba9",
+    "country.capital": "attr_27f085",
+    "country.code2": "attr_602d1b",
+    "countrylanguage.countrycode": "attr_ea549d",
+    "countrylanguage.language": "attr_8512ae",
+    "countrylanguage.isofficial": "attr_38895b",
+    "countrylanguage.percentage": "attr_d1647a"
+  }
+}

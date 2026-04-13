@@ -1,0 +1,10 @@
+{
+  "example_id": 401,
+  "db_id": "course_teach",
+  "level": "L0",
+  "question": "Show names of teachers and the courses they are arranged to teach in ascending alphabetical order of the teacher's name.",
+  "gold_sql": "SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ORDER BY T3.Name",
+  "predicted_sql": "SELECT T1.name ,  T2.course FROM teacher AS T1 JOIN course_arrange AS T3 ON T1.teacher_id  =  T3.teacher_id JOIN course AS T2 ON T3.course_id  =  T2.course_id ORDER BY T1.name",
+  "raw_response": "SELECT T1.name ,  T2.course FROM teacher AS T1 JOIN course_arrange AS T3 ON T1.teacher_id  =  T3.teacher_id JOIN course AS T2 ON T3.course_id  =  T2.course_id ORDER BY T1.name",
+  "prompt_file": "test/prompts/L0/401.txt"
+}

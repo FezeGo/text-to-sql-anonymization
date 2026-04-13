@@ -1,0 +1,11 @@
+{
+  "example_id": 260,
+  "db_id": "employee_hire_evaluation",
+  "level": "L2",
+  "question": "Count the number of employees",
+  "gold_sql": "SELECT count(*) FROM employee",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "prompts/L2/260.txt",
+  "schema_file": "schemas/L2/employee_hire_evaluation.json"
+}

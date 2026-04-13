@@ -1,0 +1,37 @@
+{
+  "db_id": "tvshow",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "tv_channel": "tv_channel",
+    "tv_series": "tv_series",
+    "cartoon": "cartoon"
+  },
+  "column_map": {
+    "tv_channel.id": "key",
+    "tv_channel.series_name": "attr_bef995_identifier",
+    "tv_channel.country": "nation",
+    "tv_channel.language": "attr_8512ae",
+    "tv_channel.content": "attr_9a0364",
+    "tv_channel.pixel_aspect_ratio_par": "attr_ab4086_attr_e67e20_attr_828301_attr_d01826",
+    "tv_channel.hight_definition_tv": "attr_f0ab23_attr_30618b_tv",
+    "tv_channel.pay_per_view_ppv": "remuneration_attr_fe3838_attr_1bda80_attr_f3b02e",
+    "tv_channel.package_option": "attr_efe90a_attr_ef3e30",
+    "tv_series.id": "key",
+    "tv_series.episode": "attr_ec3781",
+    "tv_series.air_date": "attr_3c4588_calendar_mark",
+    "tv_series.rating": "attr_2c5504",
+    "tv_series.share": "attr_85e47a",
+    "tv_series.18_49_rating_share": "18_49_attr_2c5504_attr_85e47a",
+    "tv_series.viewers_m": "attr_4c21a8_m",
+    "tv_series.weekly_rank": "attr_4a11fc_ordering",
+    "tv_series.channel": "attr_c485d2",
+    "cartoon.id": "key",
+    "cartoon.title": "designation",
+    "cartoon.directed_by": "attr_42e55a_by",
+    "cartoon.written_by": "attr_9cc26f_by",
+    "cartoon.original_air_date": "attr_919c8b_attr_3c4588_calendar_mark",
+    "cartoon.production_code": "attr_fd8978_symbol",
+    "cartoon.channel": "attr_c485d2"
+  }
+}

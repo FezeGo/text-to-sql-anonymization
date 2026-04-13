@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+ref_template_types(template_type_code, template_type_description)
+templates(template_id, version_number, template_type_code, date_effective_from, date_effective_to, template_details)
+documents(document_id, template_id, document_name, document_description, other_details)
+paragraphs(paragraph_id, document_id, paragraph_text, other_details)
+
+Foreign keys:
+templates.template_type_code = ref_template_types.template_type_code
+documents.template_id = templates.template_id
+paragraphs.document_id = documents.document_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show all document ids, names and the number of paragraphs in each document.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

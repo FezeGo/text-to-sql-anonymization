@@ -1,0 +1,43 @@
+{
+  "db_id": "museum_visit",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "museum",
+      "columns": [
+        "attr_eb0ea0_key",
+        "identifier",
+        "attr_0fc3cf_of_attr_125320",
+        "attr_7cef8a_calendar_year"
+      ]
+    },
+    {
+      "table_name": "visitor",
+      "columns": [
+        "key",
+        "identifier",
+        "attr_c9e9a8_of_attr_b46127",
+        "temporal_span"
+      ]
+    },
+    {
+      "table_name": "visit",
+      "columns": [
+        "attr_eb0ea0_key",
+        "attr_127870_key",
+        "attr_0fc3cf_of_attr_cdfee2",
+        "aggregate_attr_167b8c"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "visit.attr_127870_key",
+      "visitor.key"
+    ],
+    [
+      "visit.attr_eb0ea0_key",
+      "museum.attr_eb0ea0_key"
+    ]
+  ]
+}

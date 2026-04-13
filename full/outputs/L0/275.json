@@ -1,0 +1,10 @@
+{
+  "example_id": 275,
+  "db_id": "employee_hire_evaluation",
+  "level": "L0",
+  "question": "Find the names of stores whose number products is more than the average number of products.",
+  "gold_sql": "SELECT name FROM shop WHERE number_products  >  (SELECT avg(number_products) FROM shop)",
+  "predicted_sql": "SELECT name FROM shop WHERE number_products > (SELECT AVG(number_products) FROM shop);",
+  "raw_response": "SELECT name FROM shop WHERE number_products > (SELECT AVG(number_products) FROM shop);",
+  "prompt_file": "prompts/L0/275.txt"
+}

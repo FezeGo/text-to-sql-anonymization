@@ -1,0 +1,10 @@
+{
+  "example_id": 598,
+  "db_id": "tvshow",
+  "level": "L3",
+  "question": "How many different series and contents are listed in the TV Channel table?",
+  "gold_sql": "SELECT count(DISTINCT series_name) ,  count(DISTINCT content) FROM TV_Channel;",
+  "predicted_sql": "SELECT count(DISTINCT col_3), count(DISTINCT col_4) FROM table_1;",
+  "raw_response": "SELECT count(DISTINCT col_3), count(DISTINCT col_4) FROM table_1;",
+  "prompt_file": "prompts/L3/598.txt"
+}

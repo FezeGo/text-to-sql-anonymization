@@ -1,0 +1,10 @@
+{
+  "example_id": 393,
+  "db_id": "course_teach",
+  "level": "L2",
+  "question": "Show different hometown of teachers and the number of teachers from each hometown.",
+  "gold_sql": "SELECT Hometown ,  COUNT(*) FROM teacher GROUP BY Hometown",
+  "predicted_sql": "SELECT text_2, COUNT(*) FROM table_2 GROUP BY text_2;",
+  "raw_response": "SELECT text_2, COUNT(*) FROM table_2 GROUP BY text_2;",
+  "prompt_file": "prompts/L2/393.txt"
+}

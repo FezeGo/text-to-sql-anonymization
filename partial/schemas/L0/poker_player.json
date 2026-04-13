@@ -1,0 +1,33 @@
+{
+  "db_id": "poker_player",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "poker_player",
+      "columns": [
+        "poker_player_id",
+        "people_id",
+        "final_table_made",
+        "best_finish",
+        "money_rank",
+        "earnings"
+      ]
+    },
+    {
+      "table_name": "people",
+      "columns": [
+        "people_id",
+        "nationality",
+        "name",
+        "birth_date",
+        "height"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "poker_player.people_id",
+      "people.people_id"
+    ]
+  ]
+}

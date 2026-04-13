@@ -1,0 +1,10 @@
+{
+  "example_id": 852,
+  "db_id": "orchestra",
+  "level": "L3",
+  "question": "List the record company shared by the most number of orchestras.",
+  "gold_sql": "SELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1",
+  "predicted_sql": "SELECT col_6 FROM orchestra GROUP BY col_6 ORDER BY COUNT(*) DESC LIMIT 1;",
+  "raw_response": "SELECT col_6 FROM orchestra GROUP BY col_6 ORDER BY COUNT(*) DESC LIMIT 1;",
+  "prompt_file": "test/prompts/L3/852.txt"
+}

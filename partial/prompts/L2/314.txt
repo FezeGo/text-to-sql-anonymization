@@ -1,0 +1,21 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+ref_template_types(attr_66f618_category_symbol, attr_66f618_category_attr_67daf9)
+templates(attr_66f618_key, attr_2af72f_index, attr_66f618_category_symbol, calendar_mark_attr_8726c9_attr_d98a07, calendar_mark_attr_8726c9_to, attr_66f618_attr_277929)
+documents(attr_fdc3bd_key, attr_66f618_key, attr_fdc3bd_identifier, attr_fdc3bd_attr_67daf9, attr_795f32_attr_277929)
+paragraphs(attr_32a97f_key, attr_fdc3bd_key, attr_32a97f_attr_1cb251, attr_795f32_attr_277929)
+
+Foreign keys:
+templates.attr_66f618_category_symbol = ref_template_types.attr_66f618_category_symbol
+documents.attr_66f618_key = templates.attr_66f618_key
+paragraphs.attr_fdc3bd_key = documents.attr_fdc3bd_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the template ids of any templates used in more than a single document?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

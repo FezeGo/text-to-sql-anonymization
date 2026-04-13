@@ -1,0 +1,22 @@
+{
+  "db_id": "poker_player",
+  "level": "L2",
+  "rename_tables": false,
+  "table_map": {
+    "poker_player": "poker_player",
+    "people": "people"
+  },
+  "column_map": {
+    "poker_player.poker_player_id": "attr_de46d4_attr_912af0_key",
+    "poker_player.people_id": "attr_12a032_key",
+    "poker_player.final_table_made": "attr_2a1585_attr_aab9e1_attr_4ab871",
+    "poker_player.best_finish": "attr_db8220_attr_3248bc",
+    "poker_player.money_rank": "attr_972625_ordering",
+    "poker_player.earnings": "attr_263fa9",
+    "people.people_id": "attr_12a032_key",
+    "people.nationality": "attr_f56d02",
+    "people.name": "identifier",
+    "people.birth_date": "attr_a3e2a6_calendar_mark",
+    "people.height": "attr_b435e2"
+  }
+}

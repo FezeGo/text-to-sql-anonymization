@@ -1,0 +1,11 @@
+{
+  "example_id": 871,
+  "db_id": "network_1",
+  "level": "L2",
+  "question": "What are the names of all high schoolers in grade 10?",
+  "gold_sql": "SELECT name FROM Highschooler WHERE grade  =  10",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "prompts/L2/871.txt",
+  "schema_file": "schemas/L2/network_1.json"
+}

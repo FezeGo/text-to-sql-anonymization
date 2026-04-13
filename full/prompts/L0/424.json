@@ -1,0 +1,11 @@
+{
+  "example_id": 424,
+  "db_id": "museum_visit",
+  "level": "L0",
+  "question": "What are the average and maximum number of tickets bought in all visits?",
+  "gold_sql": "SELECT avg(num_of_ticket) ,  max(num_of_ticket) FROM visit",
+  "query_type": "aggregation",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/424.txt",
+  "schema_file": "schemas/L0/museum_visit.json"
+}

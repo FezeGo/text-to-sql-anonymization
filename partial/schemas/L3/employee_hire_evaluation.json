@@ -1,0 +1,57 @@
+{
+  "db_id": "employee_hire_evaluation",
+  "level": "L3",
+  "tables": [
+    {
+      "table_name": "employee",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    },
+    {
+      "table_name": "shop",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6"
+      ]
+    },
+    {
+      "table_name": "hiring",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4"
+      ]
+    },
+    {
+      "table_name": "evaluation",
+      "columns": [
+        "col_1",
+        "col_2",
+        "col_3"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "hiring.col_2",
+      "employee.col_1"
+    ],
+    [
+      "hiring.col_1",
+      "shop.col_1"
+    ],
+    [
+      "evaluation.col_1",
+      "employee.col_1"
+    ]
+  ]
+}

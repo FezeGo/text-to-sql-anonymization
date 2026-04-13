@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+area_code_state(col_1, col_2)
+contestants(col_1, col_2)
+votes(col_1, col_2, col_3, col_4, col_5)
+
+Foreign keys:
+votes.col_4 = contestants.col_1
+votes.col_3 = area_code_state.col_2
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the create dates, states, and phone numbers of the votes that were for the contestant named 'Tabatha Gehling'?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

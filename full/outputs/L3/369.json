@@ -1,0 +1,10 @@
+{
+  "example_id": 369,
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L3",
+  "question": "Show all document ids, names and the number of paragraphs in each document.",
+  "gold_sql": "SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id",
+  "predicted_sql": "SELECT T1.col_1, T1.col_4, COUNT(*) FROM table_3 AS T1 JOIN table_4 AS T2 ON T1.col_1 = T2.col_2 GROUP BY T1.col_1;",
+  "raw_response": "SELECT T1.col_1, T1.col_4, COUNT(*) FROM table_3 AS T1 JOIN table_4 AS T2 ON T1.col_1 = T2.col_2 GROUP BY T1.col_1;",
+  "prompt_file": "prompts/L3/369.txt"
+}

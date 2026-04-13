@@ -1,0 +1,21 @@
+{
+  "db_id": "singer",
+  "level": "L1",
+  "rename_tables": false,
+  "table_map": {
+    "singer": "singer",
+    "song": "song"
+  },
+  "column_map": {
+    "singer.singer_id": "sing_id",
+    "singer.name": "nm",
+    "singer.birth_year": "birt_yr",
+    "singer.net_worth_millions": "net_wort_mill",
+    "singer.citizenship": "citi",
+    "song.song_id": "song_id",
+    "song.title": "titl",
+    "song.singer_id": "sing_id",
+    "song.sales": "sale",
+    "song.highest_position": "high_posi"
+  }
+}

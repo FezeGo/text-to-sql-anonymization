@@ -1,0 +1,11 @@
+{
+  "example_id": 390,
+  "db_id": "course_teach",
+  "level": "L3",
+  "question": "What are the names of the teachers who are aged either 32 or 33?",
+  "gold_sql": "SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33",
+  "query_type": "simple",
+  "difficulty": null,
+  "prompt_file": "prompts/L3/390.txt",
+  "schema_file": "schemas/L3/course_teach.json"
+}

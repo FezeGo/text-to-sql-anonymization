@@ -1,0 +1,10 @@
+{
+  "example_id": 854,
+  "db_id": "orchestra",
+  "level": "L3",
+  "question": "List the names of orchestras that have no performance.",
+  "gold_sql": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)",
+  "predicted_sql": "SELECT col_2 FROM table_2 WHERE col_1 NOT IN (SELECT col_2 FROM table_3)",
+  "raw_response": "SELECT col_2 FROM table_2 WHERE col_1 NOT IN (SELECT col_2 FROM table_3)",
+  "prompt_file": "prompts/L3/854.txt"
+}

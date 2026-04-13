@@ -1,0 +1,10 @@
+{
+  "example_id": 1026,
+  "db_id": "singer",
+  "level": "L1",
+  "question": "List the name of singers that do not have any song.",
+  "gold_sql": "SELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song)",
+  "predicted_sql": "SELECT nm FROM singer WHERE sing_id NOT IN (SELECT sing_id FROM song)",
+  "raw_response": "SELECT nm FROM singer WHERE sing_id NOT IN (SELECT sing_id FROM song)",
+  "prompt_file": "prompts/L1/1026.txt"
+}

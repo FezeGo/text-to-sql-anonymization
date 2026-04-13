@@ -1,0 +1,20 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+city(key, identifier, attr_ea549d, attr_6b77ef, attr_248081)
+sqlite_sequence(identifier, attr_e068c2)
+country(symbol, identifier, attr_0e20e8, attr_960db2, attr_8cd0df, attr_286e89, attr_248081, attr_a92b89, attr_2c2d41, attr_c19ac9, attr_0180ac, attr_7bc9fe, attr_523ba9, attr_27f085, attr_602d1b)
+countrylanguage(attr_ea549d, attr_8512ae, attr_38895b, attr_d1647a)
+
+Foreign keys:
+city.attr_ea549d = country.symbol
+countrylanguage.attr_ea549d = country.symbol
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the names of the nations with the 3 lowest populations?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

@@ -1,0 +1,81 @@
+{
+  "db_id": "car_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "fk_1"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "text_2",
+        "fk_1"
+      ]
+    },
+    {
+      "table_name": "table_4",
+      "columns": [
+        "pk_1",
+        "fk_1",
+        "text_1"
+      ]
+    },
+    {
+      "table_name": "table_5",
+      "columns": [
+        "pk_1",
+        "fk_1",
+        "text_1"
+      ]
+    },
+    {
+      "table_name": "table_6",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "num_1",
+        "num_2",
+        "text_2",
+        "num_3",
+        "num_4",
+        "num_5"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_2.fk_1",
+      "table_1.pk_1"
+    ],
+    [
+      "table_3.fk_1",
+      "table_2.pk_1"
+    ],
+    [
+      "table_4.fk_1",
+      "table_3.pk_1"
+    ],
+    [
+      "table_5.fk_1",
+      "table_4.text_1"
+    ],
+    [
+      "table_6.pk_1",
+      "table_5.pk_1"
+    ]
+  ]
+}

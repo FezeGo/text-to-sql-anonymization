@@ -1,0 +1,11 @@
+{
+  "example_id": 246,
+  "db_id": "flight_2",
+  "level": "L3",
+  "question": "Which flight numbers correspond to United Airlines flights?",
+  "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L3/246.txt",
+  "schema_file": "test/schemas/L3/flight_2.json"
+}

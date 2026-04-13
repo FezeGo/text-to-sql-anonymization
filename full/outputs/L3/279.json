@@ -1,0 +1,10 @@
+{
+  "example_id": 279,
+  "db_id": "employee_hire_evaluation",
+  "level": "L3",
+  "question": "Find the name of the employee who got the highest one time bonus.",
+  "gold_sql": "SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID ORDER BY t2.bonus DESC LIMIT 1",
+  "predicted_sql": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_3 AS T2 ON T1.col_1 = T2.col_2 JOIN table_2 AS T3 ON T2.col_1 = T3.col_1 ORDER BY T3.col_2 DESC LIMIT 1;",
+  "raw_response": "SELECT T1.col_2 FROM table_1 AS T1 JOIN table_3 AS T2 ON T1.col_1 = T2.col_2 JOIN table_2 AS T3 ON T2.col_1 = T3.col_1 ORDER BY T3.col_2 DESC LIMIT 1;",
+  "prompt_file": "prompts/L3/279.txt"
+}

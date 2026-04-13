@@ -1,0 +1,10 @@
+{
+  "example_id": 282,
+  "db_id": "employee_hire_evaluation",
+  "level": "L2",
+  "question": "What are the names of the employees who never received any evaluation?",
+  "gold_sql": "SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)",
+  "predicted_sql": "SELECT T1.identifier FROM employee AS T1 WHERE T1.staff_member_key NOT IN (SELECT T2.staff_member_key FROM evaluation AS T2)",
+  "raw_response": "SELECT T1.identifier FROM employee AS T1 WHERE T1.staff_member_key NOT IN (SELECT T2.staff_member_key FROM evaluation AS T2)",
+  "prompt_file": "test/prompts/L2/282.txt"
+}

@@ -1,0 +1,10 @@
+{
+  "example_id": 710,
+  "db_id": "world_1",
+  "level": "L1",
+  "question": "Which region is the city Kabul located in?",
+  "gold_sql": "SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\"",
+  "predicted_sql": "SELECT T1.regi FROM country AS T1 JOIN city AS T2 ON T1.code = T2.coun WHERE T2.nm = 'Kabul'",
+  "raw_response": "SELECT T1.regi FROM country AS T1 JOIN city AS T2 ON T1.code = T2.coun WHERE T2.nm = 'Kabul'",
+  "prompt_file": "test/prompts/L1/710.txt"
+}

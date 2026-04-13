@@ -1,0 +1,29 @@
+{
+  "db_id": "battle_death",
+  "level": "L2",
+  "table_map": {
+    "battle": "table_1",
+    "ship": "table_2",
+    "death": "table_3"
+  },
+  "column_map": {
+    "battle.id": "pk_1",
+    "battle.name": "text_1",
+    "battle.date": "date_1",
+    "battle.bulgarian_commander": "text_2",
+    "battle.latin_commander": "text_3",
+    "battle.result": "text_4",
+    "ship.lost_in_battle": "fk_1",
+    "ship.id": "pk_1",
+    "ship.name": "text_1",
+    "ship.tonnage": "text_2",
+    "ship.ship_type": "cat_1",
+    "ship.location": "text_3",
+    "ship.disposition_of_ship": "text_4",
+    "death.caused_by_ship_id": "fk_1",
+    "death.id": "pk_1",
+    "death.note": "text_1",
+    "death.killed": "num_1",
+    "death.injured": "num_2"
+  }
+}

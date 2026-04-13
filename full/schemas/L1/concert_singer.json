@@ -1,0 +1,61 @@
+{
+  "db_id": "concert_singer",
+  "level": "L1",
+  "tables": [
+    {
+      "table_name": "stadium",
+      "columns": [
+        "stad_id",
+        "loc",
+        "nm",
+        "capa",
+        "high",
+        "lowe",
+        "aver"
+      ]
+    },
+    {
+      "table_name": "singer",
+      "columns": [
+        "sing_id",
+        "nm",
+        "coun",
+        "song_nm",
+        "song_rele_year",
+        "age",
+        "is_male"
+      ]
+    },
+    {
+      "table_name": "concert",
+      "columns": [
+        "conc_id",
+        "conc_nm",
+        "them",
+        "stad_id",
+        "year"
+      ]
+    },
+    {
+      "table_name": "singer_in_concert",
+      "columns": [
+        "conc_id",
+        "sing_id"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "concert.stad_id",
+      "stadium.stad_id"
+    ],
+    [
+      "singer_in_concert.sing_id",
+      "singer.sing_id"
+    ],
+    [
+      "singer_in_concert.conc_id",
+      "concert.conc_id"
+    ]
+  ]
+}

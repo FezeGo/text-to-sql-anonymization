@@ -1,0 +1,19 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+course(course_id, staring_date, course)
+teacher(teacher_id, name, age, hometown)
+course_arrange(course_id, teacher_id, grade)
+
+Foreign keys:
+course_arrange.teacher_id = teacher.teacher_id
+course_arrange.course_id = course.course_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Show the name of the teacher for the math course.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

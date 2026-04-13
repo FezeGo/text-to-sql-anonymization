@@ -1,0 +1,17 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+poker_player(poker_player_id, people_id, final_table_made, best_finish, money_rank, earnings)
+people(people_id, nationality, name, birth_date, height)
+
+Foreign keys:
+poker_player.people_id = people.people_id
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+Count the number of different nationalities.
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

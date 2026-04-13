@@ -1,0 +1,24 @@
+{
+  "db_id": "flight_2",
+  "level": "L2",
+  "table_map": {
+    "airlines": "table_1",
+    "airports": "table_2",
+    "flights": "table_3"
+  },
+  "column_map": {
+    "airlines.uid": "pk_1",
+    "airlines.airline": "text_1",
+    "airlines.abbreviation": "text_2",
+    "airlines.country": "text_3",
+    "airports.city": "text_1",
+    "airports.airportcode": "pk_1",
+    "airports.airportname": "text_2",
+    "airports.country": "text_3",
+    "airports.countryabbrev": "text_4",
+    "flights.airline": "pk_1",
+    "flights.flightno": "num_1",
+    "flights.sourceairport": "fk_1",
+    "flights.destairport": "fk_2"
+  }
+}

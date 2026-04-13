@@ -1,0 +1,11 @@
+{
+  "example_id": 275,
+  "db_id": "employee_hire_evaluation",
+  "level": "L1",
+  "question": "Find the names of stores whose number products is more than the average number of products.",
+  "gold_sql": "SELECT name FROM shop WHERE number_products  >  (SELECT avg(number_products) FROM shop)",
+  "query_type": "nested",
+  "difficulty": null,
+  "prompt_file": "prompts/L1/275.txt",
+  "schema_file": "schemas/L1/employee_hire_evaluation.json"
+}

@@ -1,0 +1,23 @@
+{
+  "db_id": "museum_visit",
+  "level": "L2",
+  "table_map": {
+    "museum": "table_1",
+    "visitor": "table_2",
+    "visit": "table_3"
+  },
+  "column_map": {
+    "museum.museum_id": "pk_1",
+    "museum.name": "text_1",
+    "museum.num_of_staff": "num_1",
+    "museum.open_year": "date_1",
+    "visitor.id": "pk_1",
+    "visitor.name": "text_1",
+    "visitor.level_of_membership": "num_1",
+    "visitor.age": "num_2",
+    "visit.museum_id": "pk_1",
+    "visit.visitor_id": "fk_1",
+    "visit.num_of_ticket": "num_1",
+    "visit.total_spent": "num_2"
+  }
+}

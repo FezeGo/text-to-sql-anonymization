@@ -1,0 +1,10 @@
+{
+  "example_id": 108,
+  "db_id": "car_1",
+  "level": "L2",
+  "question": "What is the name of the country with the most car makers?",
+  "gold_sql": "SELECT T2.CountryName FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId GROUP BY T1.Country ORDER BY Count(*) DESC LIMIT 1;",
+  "predicted_sql": "SELECT T1.text_1 FROM table_2 AS T1 JOIN table_3 AS T2 ON T1.pk_1 = T2.fk_1 GROUP BY T1.pk_1 ORDER BY COUNT(*) DESC LIMIT 1;",
+  "raw_response": "SELECT T1.text_1 FROM table_2 AS T1 JOIN table_3 AS T2 ON T1.pk_1 = T2.fk_1 GROUP BY T1.pk_1 ORDER BY COUNT(*) DESC LIMIT 1;",
+  "prompt_file": "prompts/L2/108.txt"
+}

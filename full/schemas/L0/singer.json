@@ -1,0 +1,32 @@
+{
+  "db_id": "singer",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "singer",
+      "columns": [
+        "singer_id",
+        "name",
+        "birth_year",
+        "net_worth_millions",
+        "citizenship"
+      ]
+    },
+    {
+      "table_name": "song",
+      "columns": [
+        "song_id",
+        "title",
+        "singer_id",
+        "sales",
+        "highest_position"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "song.singer_id",
+      "singer.singer_id"
+    ]
+  ]
+}

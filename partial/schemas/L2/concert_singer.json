@@ -1,0 +1,61 @@
+{
+  "db_id": "concert_singer",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "stadium",
+      "columns": [
+        "attr_1424ca_key",
+        "attr_d5189d",
+        "identifier",
+        "attr_7bd14a",
+        "attr_de3706",
+        "attr_21f25a",
+        "mean"
+      ]
+    },
+    {
+      "table_name": "singer",
+      "columns": [
+        "attr_05011f_key",
+        "identifier",
+        "nation",
+        "attr_683eb6_identifier",
+        "attr_683eb6_attr_123fea_calendar_year",
+        "temporal_span",
+        "is_attr_07cf4f"
+      ]
+    },
+    {
+      "table_name": "concert",
+      "columns": [
+        "attr_090955_key",
+        "attr_090955_identifier",
+        "attr_f48457",
+        "attr_1424ca_key",
+        "calendar_year"
+      ]
+    },
+    {
+      "table_name": "singer_in_concert",
+      "columns": [
+        "attr_090955_key",
+        "attr_05011f_key"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "concert.attr_1424ca_key",
+      "stadium.attr_1424ca_key"
+    ],
+    [
+      "singer_in_concert.attr_05011f_key",
+      "singer.attr_05011f_key"
+    ],
+    [
+      "singer_in_concert.attr_090955_key",
+      "concert.attr_090955_key"
+    ]
+  ]
+}

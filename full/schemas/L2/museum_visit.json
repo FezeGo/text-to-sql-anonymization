@@ -1,0 +1,43 @@
+{
+  "db_id": "museum_visit",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "num_1",
+        "date_1"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "num_1",
+        "num_2"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "pk_1",
+        "fk_1",
+        "num_1",
+        "num_2"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_3.fk_1",
+      "table_2.pk_1"
+    ],
+    [
+      "table_3.pk_1",
+      "table_1.pk_1"
+    ]
+  ]
+}

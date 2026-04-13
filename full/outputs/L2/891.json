@@ -1,0 +1,10 @@
+{
+  "example_id": 891,
+  "db_id": "network_1",
+  "level": "L2",
+  "question": "Return the names of friends of the high school student Kyle.",
+  "gold_sql": "SELECT T3.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id JOIN Highschooler AS T3 ON T1.friend_id  =  T3.id WHERE T2.name  =  \"Kyle\"",
+  "predicted_sql": "SELECT T2.text_1 FROM table_1 AS T1 JOIN table_2 AS T3 ON T1.pk_1 = T3.pk_1 JOIN table_1 AS T2 ON T3.fk_1 = T2.pk_1 WHERE T1.text_1 = 'Kyle'",
+  "raw_response": "SELECT T2.text_1 FROM table_1 AS T1 JOIN table_2 AS T3 ON T1.pk_1 = T3.pk_1 JOIN table_1 AS T2 ON T3.fk_1 = T2.pk_1 WHERE T1.text_1 = 'Kyle'",
+  "prompt_file": "prompts/L2/891.txt"
+}

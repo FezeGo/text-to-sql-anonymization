@@ -1,0 +1,2167 @@
+[
+  {
+    "example_id": 791,
+    "db_id": "world_1",
+    "level": "L1",
+    "question": "Give the name, population, and head of state for the country that has the largest area.",
+    "gold_sql": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1",
+    "predicted_sql": "SELECT nm, popu, head FROM country ORDER BY surf DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Russian Federation",
+        146934000,
+        "Vladimir Putin"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 1032,
+    "db_id": "real_estate_properties",
+    "level": "L1",
+    "question": "Show the property type descriptions of properties belonging to that code.",
+    "gold_sql": "SELECT T2.property_type_description FROM Properties AS T1 JOIN Ref_Property_Types AS T2 ON T1.property_type_code  =  T2.property_type_code GROUP BY T1.property_type_code",
+    "predicted_sql": "SELECT T1.prop_typ_desc FROM ref_property_types AS T1 JOIN properties AS T2 ON T1.prop_typ_code = T2.prop_typ_code;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Apartment, Flat, Condo, etc."
+      ],
+      [
+        "Field, Meadow."
+      ],
+      [
+        "House, Bungalow, etc."
+      ],
+      [
+        "Other, to be determined."
+      ],
+      [
+        "Shop, Retail Outlet."
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 912,
+    "db_id": "network_1",
+    "level": "L1",
+    "question": "How many likes does Kyle have?",
+    "gold_sql": "SELECT count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"",
+    "predicted_sql": "SELECT COUNT(*) FROM likes JOIN highschooler ON likes.like_id = highschooler.id WHERE highschooler.nm = 'Kyle';",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 251,
+    "db_id": "flight_2",
+    "level": "L1",
+    "question": "What are flight numbers of flights departing from City \"Aberdeen \"?",
+    "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
+    "predicted_sql": "SELECT T1.flig FROM flights AS T1 JOIN airports AS T2 ON T1.sour = T2.airp WHERE T2.city = 'Aberdeen'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [],
+    "pred_result": null
+  },
+  {
+    "example_id": 314,
+    "db_id": "cre_Doc_Template_Mgt",
+    "level": "L1",
+    "question": "What are the template ids of any templates used in more than a single document?",
+    "gold_sql": "SELECT template_id FROM Documents GROUP BY template_id HAVING count(*)  >  1",
+    "predicted_sql": "SELECT temp_id FROM Documents GROUP BY temp_id HAVING COUNT(*) > 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        11
+      ],
+      [
+        14
+      ],
+      [
+        25
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 699,
+    "db_id": "voter_1",
+    "level": "L1",
+    "question": "What are the create dates, states, and phone numbers of the votes that were for the contestant named 'Tabatha Gehling'?",
+    "gold_sql": "SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  'Tabatha Gehling'",
+    "predicted_sql": "SELECT T1.crea, T1.stat, T1.phon_numb FROM votes AS T1 JOIN contestants AS T2 ON T1.cont_numb = T2.cont_numb WHERE T2.cont_nm = 'Tabatha Gehling'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "2018-03-09 19:03:21",
+        "NY",
+        7182887233
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 94,
+    "db_id": "car_1",
+    "level": "L1",
+    "question": "What is the full name of each car maker, along with its id and how many models it produces?",
+    "gold_sql": "SELECT T1.FullName ,  T1.Id ,  count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id;",
+    "predicted_sql": "SELECT T1.full, T1.id, count(*) FROM car_makers AS T1 JOIN model_list AS T2 ON T1.id = T2.make GROUP BY T1.id;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "American Motor Company",
+        1,
+        1
+      ],
+      [
+        "Volkswagen",
+        2,
+        2
+      ],
+      [
+        "BMW",
+        3,
+        1
+      ],
+      [
+        "General Motors",
+        4,
+        5
+      ],
+      [
+        "Ford Motor Company",
+        5,
+        3
+      ],
+      [
+        "Chrysler",
+        6,
+        4
+      ],
+      [
+        "Citroen",
+        7,
+        1
+      ],
+      [
+        "Nissan Motors",
+        8,
+        2
+      ],
+      [
+        "Fiat",
+        9,
+        1
+      ],
+      [
+        "Honda",
+        11,
+        1
+      ],
+      [
+        "Mazda",
+        12,
+        1
+      ],
+      [
+        "Daimler Benz",
+        13,
+        2
+      ],
+      [
+        "Opel",
+        14,
+        1
+      ],
+      [
+        "Peugeaut",
+        15,
+        1
+      ],
+      [
+        "Renault",
+        16,
+        1
+      ],
+      [
+        "Saab",
+        17,
+        1
+      ],
+      [
+        "Subaru",
+        18,
+        1
+      ],
+      [
+        "Toyota",
+        19,
+        2
+      ],
+      [
+        "Triumph",
+        20,
+        1
+      ],
+      [
+        "Volvo",
+        21,
+        1
+      ],
+      [
+        "Kia Motors",
+        22,
+        1
+      ],
+      [
+        "Hyundai",
+        23,
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 420,
+    "db_id": "museum_visit",
+    "level": "L1",
+    "question": "What are the id, name and membership level of visitors who have spent the largest amount of money in total in all museum tickets?",
+    "gold_sql": "SELECT t2.visitor_id ,  t1.name ,  t1.Level_of_membership FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t2.visitor_id ORDER BY sum(t2.Total_spent) DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.id, T1.nm, T1.leve_of_memb FROM visitor AS T1 JOIN visit AS T2 ON T1.id = T2.visi_id GROUP BY T1.id ORDER BY SUM(T2.tota_spen) DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "3",
+        "Arjen Robben",
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 499,
+    "db_id": "battle_death",
+    "level": "L1",
+    "question": "What are the ids and names of the battles that led to more than 10 people killed in total.",
+    "gold_sql": "SELECT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle JOIN death AS T3 ON T2.id  =  T3.caused_by_ship_id GROUP BY T1.id HAVING sum(T3.killed)  >  10",
+    "predicted_sql": "SELECT T1.id, T1.nm FROM battle AS T1 JOIN ship AS T2 ON T1.id = T2.lost_in_batt JOIN death AS T3 ON T2.id = T3.caus_by_ship_id GROUP BY T1.id, T1.nm HAVING SUM(T3.kill) > 10;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        5,
+        "Battle of Messinopolis"
+      ],
+      [
+        6,
+        "Battle of Boruy"
+      ],
+      [
+        8,
+        "Siege of Constantinople"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 860,
+    "db_id": "orchestra",
+    "level": "L1",
+    "question": "Show the years in which orchestras that have given more than one performance are founded.",
+    "gold_sql": "SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1",
+    "predicted_sql": "SELECT T1.year_of_foun FROM orchestra AS T1 JOIN performance AS T2 ON T1.orch_id = T2.orch_id GROUP BY T1.orch_id HAVING COUNT(*) > 1",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [],
+    "pred_result": null
+  },
+  {
+    "example_id": 883,
+    "db_id": "network_1",
+    "level": "L1",
+    "question": "How many friends does each student have?",
+    "gold_sql": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+    "predicted_sql": "SELECT T1.nm, COUNT(*) FROM highschooler AS T1 JOIN friend AS T2 ON T1.id = T2.stud_id GROUP BY T1.id;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        1101,
+        1
+      ],
+      [
+        1247,
+        2
+      ],
+      [
+        1304,
+        1
+      ],
+      [
+        1316,
+        1
+      ],
+      [
+        1381,
+        1
+      ],
+      [
+        1468,
+        2
+      ],
+      [
+        1501,
+        1
+      ],
+      [
+        1510,
+        2
+      ],
+      [
+        1661,
+        1
+      ],
+      [
+        1689,
+        2
+      ],
+      [
+        1709,
+        1
+      ],
+      [
+        1782,
+        3
+      ],
+      [
+        1911,
+        1
+      ],
+      [
+        1934,
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 246,
+    "db_id": "flight_2",
+    "level": "L1",
+    "question": "Which flight numbers correspond to United Airlines flights?",
+    "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"",
+    "predicted_sql": "SELECT T1.flig FROM flights AS T1 JOIN airlines AS T2 ON T1.airl = T2.uid WHERE T2.airl = 'United Airlines'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        28
+      ],
+      [
+        29
+      ],
+      [
+        44
+      ],
+      [
+        45
+      ],
+      [
+        54
+      ],
+      [
+        55
+      ],
+      [
+        90
+      ],
+      [
+        91
+      ],
+      [
+        108
+      ],
+      [
+        109
+      ],
+      [
+        142
+      ],
+      [
+        143
+      ],
+      [
+        148
+      ],
+      [
+        149
+      ],
+      [
+        198
+      ],
+      [
+        199
+      ],
+      [
+        226
+      ],
+      [
+        227
+      ],
+      [
+        276
+      ],
+      [
+        277
+      ],
+      [
+        308
+      ],
+      [
+        309
+      ],
+      [
+        326
+      ],
+      [
+        327
+      ],
+      [
+        370
+      ],
+      [
+        371
+      ],
+      [
+        414
+      ],
+      [
+        415
+      ],
+      [
+        424
+      ],
+      [
+        425
+      ],
+      [
+        470
+      ],
+      [
+        471
+      ],
+      [
+        520
+      ],
+      [
+        521
+      ],
+      [
+        556
+      ],
+      [
+        557
+      ],
+      [
+        560
+      ],
+      [
+        561
+      ],
+      [
+        604
+      ],
+      [
+        605
+      ],
+      [
+        608
+      ],
+      [
+        609
+      ],
+      [
+        626
+      ],
+      [
+        627
+      ],
+      [
+        658
+      ],
+      [
+        659
+      ],
+      [
+        708
+      ],
+      [
+        709
+      ],
+      [
+        744
+      ],
+      [
+        745
+      ],
+      [
+        754
+      ],
+      [
+        755
+      ],
+      [
+        786
+      ],
+      [
+        787
+      ],
+      [
+        810
+      ],
+      [
+        811
+      ],
+      [
+        828
+      ],
+      [
+        829
+      ],
+      [
+        878
+      ],
+      [
+        879
+      ],
+      [
+        888
+      ],
+      [
+        889
+      ],
+      [
+        900
+      ],
+      [
+        901
+      ],
+      [
+        924
+      ],
+      [
+        925
+      ],
+      [
+        946
+      ],
+      [
+        947
+      ],
+      [
+        996
+      ],
+      [
+        997
+      ],
+      [
+        1000
+      ],
+      [
+        1001
+      ],
+      [
+        1026
+      ],
+      [
+        1027
+      ],
+      [
+        1062
+      ],
+      [
+        1063
+      ],
+      [
+        1068
+      ],
+      [
+        1069
+      ],
+      [
+        1100
+      ],
+      [
+        1101
+      ],
+      [
+        1144
+      ],
+      [
+        1145
+      ],
+      [
+        1166
+      ],
+      [
+        1167
+      ],
+      [
+        1168
+      ],
+      [
+        1169
+      ],
+      [
+        1192
+      ],
+      [
+        1193
+      ],
+      [
+        1208
+      ],
+      [
+        1209
+      ],
+      [
+        1216
+      ],
+      [
+        1217
+      ],
+      [
+        1250
+      ],
+      [
+        1251
+      ],
+      [
+        1274
+      ],
+      [
+        1275
+      ],
+      [
+        1284
+      ],
+      [
+        1285
+      ],
+      [
+        1328
+      ],
+      [
+        1329
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 712,
+    "db_id": "world_1",
+    "level": "L1",
+    "question": "Which language is the most popular in Aruba?",
+    "gold_sql": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.lang FROM countrylanguage AS T1 JOIN country AS T2 ON T1.coun = T2.code WHERE T2.nm = 'Aruba' ORDER BY T1.perc DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Papiamento"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 790,
+    "db_id": "world_1",
+    "level": "L1",
+    "question": "What are the population, name and leader of the country with the largest area?",
+    "gold_sql": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1",
+    "predicted_sql": "SELECT popu, nm, head FROM country ORDER BY surf DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Russian Federation",
+        146934000,
+        "Vladimir Putin"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 401,
+    "db_id": "course_teach",
+    "level": "L1",
+    "question": "Show names of teachers and the courses they are arranged to teach in ascending alphabetical order of the teacher's name.",
+    "gold_sql": "SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ORDER BY T3.Name",
+    "predicted_sql": "SELECT T1.nm, T3.cour FROM teacher AS T1 JOIN course_arrange AS T2 ON T1.teac_id = T2.teac_id JOIN course AS T3 ON T2.cour_id = T3.cour_id ORDER BY T1.nm ASC;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Anne Walker",
+        "History"
+      ],
+      [
+        "Anne Walker",
+        "Bible"
+      ],
+      [
+        "Gustaaf Deloor",
+        "Science"
+      ],
+      [
+        "Kearsley Brown",
+        "Math"
+      ],
+      [
+        "Lucy Wong",
+        "Music"
+      ],
+      [
+        "Vicente Carretero",
+        "Math"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 236,
+    "db_id": "flight_2",
+    "level": "L1",
+    "question": "Which airlines have a flight with destination airport AHD?",
+    "gold_sql": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"",
+    "predicted_sql": "SELECT T1.airl FROM airlines AS T1 JOIN flights AS T2 ON T1.uid = T2.airl WHERE T2.dest = 'AHD'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [],
+    "pred_result": null
+  },
+  {
+    "example_id": 871,
+    "db_id": "network_1",
+    "level": "L1",
+    "question": "What are the names of all high schoolers in grade 10?",
+    "gold_sql": "SELECT name FROM Highschooler WHERE grade  =  10",
+    "predicted_sql": "SELECT nm FROM highschooler WHERE grad = 10;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Haley"
+      ],
+      [
+        "Andrew"
+      ],
+      [
+        "Kris"
+      ],
+      [
+        "Brittany"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 830,
+    "db_id": "orchestra",
+    "level": "L1",
+    "question": "What is the average attendance of shows?",
+    "gold_sql": "SELECT avg(Attendance) FROM SHOW",
+    "predicted_sql": "SELECT AVG(atte) FROM show",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        1326.4
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 390,
+    "db_id": "course_teach",
+    "level": "L1",
+    "question": "What are the names of the teachers who are aged either 32 or 33?",
+    "gold_sql": "SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33",
+    "predicted_sql": "SELECT nm FROM teacher WHERE age = 32 OR age = 33;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Joseph Huts"
+      ],
+      [
+        "John Deloor"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 282,
+    "db_id": "employee_hire_evaluation",
+    "level": "L1",
+    "question": "What are the names of the employees who never received any evaluation?",
+    "gold_sql": "SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)",
+    "predicted_sql": "SELECT nm FROM employee WHERE empl_id NOT IN (SELECT empl_id FROM evaluation)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Mark Regan"
+      ],
+      [
+        "Tim Payne"
+      ],
+      [
+        "Andrew Sheridan"
+      ],
+      [
+        "Phil Vickery"
+      ],
+      [
+        "Steve Borthwick"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 369,
+    "db_id": "cre_Doc_Template_Mgt",
+    "level": "L1",
+    "question": "Show all document ids, names and the number of paragraphs in each document.",
+    "gold_sql": "SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id",
+    "predicted_sql": "SELECT T1.docu_id, T1.docu_nm, COUNT(*) FROM documents AS T1 JOIN paragraphs AS T2 ON T1.docu_id = T2.docu_id GROUP BY T1.docu_id;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        3,
+        "Summer Show",
+        1
+      ],
+      [
+        80,
+        "Welcome to NY",
+        2
+      ],
+      [
+        2394,
+        "Customer reviews",
+        3
+      ],
+      [
+        3830,
+        "Do not panic",
+        1
+      ],
+      [
+        33930,
+        "How Google people work",
+        1
+      ],
+      [
+        50123,
+        "Learning French",
+        1
+      ],
+      [
+        651512,
+        "How to write a CV",
+        2
+      ],
+      [
+        3540024,
+        "Palm reading",
+        1
+      ],
+      [
+        16514113,
+        "A history of Arts",
+        2
+      ],
+      [
+        385906526,
+        "About Korea",
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 386,
+    "db_id": "course_teach",
+    "level": "L1",
+    "question": "What is the age and hometown of every teacher?",
+    "gold_sql": "SELECT Age ,  Hometown FROM teacher",
+    "predicted_sql": "SELECT age, home FROM teacher;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "32",
+        "Blackrod Urban District"
+      ],
+      [
+        "29",
+        "Bolton County Borough"
+      ],
+      [
+        "26",
+        "Farnworth Municipal Borough"
+      ],
+      [
+        "33",
+        "Horwich Urban District"
+      ],
+      [
+        "45",
+        "Kearsley Urban District"
+      ],
+      [
+        "41",
+        "Little Lever Urban District"
+      ],
+      [
+        "39",
+        "Turton Urban District"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 646,
+    "db_id": "tvshow",
+    "level": "L1",
+    "question": "What are the package options of all tv channels that are not playing any cartoons directed by Ben Jones?",
+    "gold_sql": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
+    "predicted_sql": "SELECT pack_opti FROM tv_channel WHERE id NOT IN (SELECT chan FROM cartoon WHERE dire_by = 'Ben Jones')",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "no ( FTV )"
+      ],
+      [
+        "Sky Famiglia + Sky HD"
+      ],
+      [
+        "no ( FTV )"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 503,
+    "db_id": "battle_death",
+    "level": "L1",
+    "question": "How many battles did not lose any ship with tonnage '225'?",
+    "gold_sql": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
+    "predicted_sql": "SELECT count(*) FROM battle WHERE id NOT IN (SELECT lost_in_batt FROM ship WHERE tonn = 225)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        7
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 684,
+    "db_id": "poker_player",
+    "level": "L1",
+    "question": "What are the names of people who do not play poker?",
+    "gold_sql": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)",
+    "predicted_sql": "SELECT nm FROM people WHERE peop_id NOT IN (SELECT peop_id FROM poker_player)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Roman Bragin"
+      ],
+      [
+        "Sergey Grankin"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 889,
+    "db_id": "network_1",
+    "level": "L1",
+    "question": "What are the names of high schoolers who have 3 or more friends?",
+    "gold_sql": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  3",
+    "predicted_sql": "SELECT nm FROM highschooler JOIN friend ON highschooler.id = friend.stud_id GROUP BY id HAVING COUNT(*) >= 3;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Andrew"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 85,
+    "db_id": "pets_1",
+    "level": "L1",
+    "question": "Find the average age of students who do not have any pet .",
+    "gold_sql": "select avg(age) from student where stuid not in (select stuid from has_pet)",
+    "predicted_sql": "SELECT AVG(age) FROM student WHERE stui NOT IN (SELECT stui FROM has_pet)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        19.625
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 427,
+    "db_id": "museum_visit",
+    "level": "L1",
+    "question": "Find the number of visitors who did not visit any museum opened after 2010.",
+    "gold_sql": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)",
+    "predicted_sql": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT T1.visi_id FROM visit AS T1 JOIN museum AS T2 ON T1.muse_id = T2.muse_id WHERE T2.open_year > 2010)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        3
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 763,
+    "db_id": "world_1",
+    "level": "L1",
+    "question": "What are the name, population, and life expectancy of the largest Asian country by land?",
+    "gold_sql": "SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1",
+    "predicted_sql": "SELECT nm, popu, life FROM country WHERE cont = 'Asia' ORDER BY surf DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "China",
+        1277558000,
+        71.4
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 166,
+    "db_id": "car_1",
+    "level": "L1",
+    "question": "For all of the 4 cylinder cars, which model has the most horsepower?",
+    "gold_sql": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+    "predicted_sql": "SELECT T1.mode FROM car_names AS T1 JOIN cars_data AS T2 ON T1.make = T2.id WHERE T2.cyli = 4 ORDER BY T2.hors DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "ford"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 424,
+    "db_id": "museum_visit",
+    "level": "L1",
+    "question": "What are the average and maximum number of tickets bought in all visits?",
+    "gold_sql": "SELECT avg(num_of_ticket) ,  max(num_of_ticket) FROM visit",
+    "predicted_sql": "SELECT AVG(num_of_tick), MAX(num_of_tick) FROM visit;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        10.5,
+        24
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 86,
+    "db_id": "pets_1",
+    "level": "L1",
+    "question": "What is the average age for all students who do not own any pets ?",
+    "gold_sql": "select avg(age) from student where stuid not in (select stuid from has_pet)",
+    "predicted_sql": "SELECT AVG(age) FROM student WHERE stui NOT IN (SELECT stui FROM has_pet)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        19.625
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 598,
+    "db_id": "tvshow",
+    "level": "L1",
+    "question": "How many different series and contents are listed in the TV Channel table?",
+    "gold_sql": "SELECT count(DISTINCT series_name) ,  count(DISTINCT content) FROM TV_Channel;",
+    "predicted_sql": "SELECT count(DISTINCT seri_nm), count(DISTINCT cont) FROM tv_channel;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        15,
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 609,
+    "db_id": "tvshow",
+    "level": "L1",
+    "question": "What is the TV Channel that shows the cartoon \"The Rise of the Blue Beetle!\"? List the TV Channel's series name.",
+    "gold_sql": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T2.Title = \"The Rise of the Blue Beetle!\";",
+    "predicted_sql": "SELECT T1.seri_nm FROM tv_channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.chan WHERE T2.titl = 'The Rise of the Blue Beetle!'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Sky Radio"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 275,
+    "db_id": "employee_hire_evaluation",
+    "level": "L1",
+    "question": "Find the names of stores whose number products is more than the average number of products.",
+    "gold_sql": "SELECT name FROM shop WHERE number_products  >  (SELECT avg(number_products) FROM shop)",
+    "predicted_sql": "SELECT nm FROM shop WHERE numb_prod > (SELECT AVG(numb_prod) FROM shop)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "HJK"
+      ],
+      [
+        "FC Inter"
+      ],
+      [
+        "FC Lahti"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 24,
+    "db_id": "concert_singer",
+    "level": "L1",
+    "question": "Show the stadium name and capacity with most number of concerts in year 2014 or after.",
+    "gold_sql": "SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.nm, T1.capa FROM stadium AS T1 JOIN concert AS T2 ON T1.stad_id = T2.stad_id WHERE T2.year >= 2014 GROUP BY T1.stad_id ORDER BY COUNT(*) DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Somerset Park",
+        11998
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 804,
+    "db_id": "world_1",
+    "level": "L1",
+    "question": "What are the names of the nations with the 3 lowest populations?",
+    "gold_sql": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3",
+    "predicted_sql": "SELECT nm FROM country ORDER BY popu ASC LIMIT 3;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Antarctica"
+      ],
+      [
+        "French Southern territories"
+      ],
+      [
+        "Bouvet Island"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 384,
+    "db_id": "course_teach",
+    "level": "L1",
+    "question": "What are the names of the teachers ordered by ascending age?",
+    "gold_sql": "SELECT Name FROM teacher ORDER BY Age ASC",
+    "predicted_sql": "SELECT nm FROM teacher ORDER BY age ASC;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Vicente Carretero"
+      ],
+      [
+        "Gustaaf Deloor"
+      ],
+      [
+        "Joseph Huts"
+      ],
+      [
+        "John Deloor"
+      ],
+      [
+        "Lucy Wong"
+      ],
+      [
+        "Anne Walker"
+      ],
+      [
+        "Kearsley Brown"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 279,
+    "db_id": "employee_hire_evaluation",
+    "level": "L1",
+    "question": "Find the name of the employee who got the highest one time bonus.",
+    "gold_sql": "SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID ORDER BY t2.bonus DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.nm FROM employee AS T1 JOIN evaluation AS T2 ON T1.empl_id = T2.empl_id ORDER BY T2.bonu DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Louis Deacon"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 668,
+    "db_id": "poker_player",
+    "level": "L1",
+    "question": "Return the money rank of the poker player with the greatest height.",
+    "gold_sql": "SELECT T2.Money_Rank FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.mone_rank FROM poker_player AS T1 JOIN people AS T2 ON T1.peop_id = T2.peop_id ORDER BY T2.heig DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        68.0
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 393,
+    "db_id": "course_teach",
+    "level": "L1",
+    "question": "Show different hometown of teachers and the number of teachers from each hometown.",
+    "gold_sql": "SELECT Hometown ,  COUNT(*) FROM teacher GROUP BY Hometown",
+    "predicted_sql": "SELECT home, COUNT(*) FROM teacher GROUP BY home;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Blackrod Urban District",
+        1
+      ],
+      [
+        "Bolton County Borough",
+        1
+      ],
+      [
+        "Farnworth Municipal Borough",
+        1
+      ],
+      [
+        "Horwich Urban District",
+        1
+      ],
+      [
+        "Kearsley Urban District",
+        1
+      ],
+      [
+        "Little Lever Urban District",
+        1
+      ],
+      [
+        "Turton Urban District",
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 686,
+    "db_id": "poker_player",
+    "level": "L1",
+    "question": "Count the number of different nationalities.",
+    "gold_sql": "SELECT count(DISTINCT Nationality) FROM people",
+    "predicted_sql": "SELECT COUNT(DISTINCT nati) FROM people;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        2
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 281,
+    "db_id": "employee_hire_evaluation",
+    "level": "L1",
+    "question": "Find the names of employees who never won any award in the evaluation.",
+    "gold_sql": "SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)",
+    "predicted_sql": "SELECT nm FROM employee WHERE empl_id NOT IN (SELECT empl_id FROM evaluation)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Mark Regan"
+      ],
+      [
+        "Tim Payne"
+      ],
+      [
+        "Andrew Sheridan"
+      ],
+      [
+        "Phil Vickery"
+      ],
+      [
+        "Steve Borthwick"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 852,
+    "db_id": "orchestra",
+    "level": "L1",
+    "question": "List the record company shared by the most number of orchestras.",
+    "gold_sql": "SELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1",
+    "predicted_sql": "SELECT reco_comp FROM orchestra GROUP BY reco_comp ORDER BY COUNT(*) DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Decca Records"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 311,
+    "db_id": "cre_Doc_Template_Mgt",
+    "level": "L1",
+    "question": "What is the id and type code for the template used by the most documents?",
+    "gold_sql": "SELECT T1.template_id ,  T2.Template_Type_Code FROM Documents AS T1 JOIN Templates AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_id ORDER BY count(*) DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.temp_id, T1.temp_typ_code FROM templates AS T1 JOIN documents AS T2 ON T1.temp_id = T2.temp_id GROUP BY T1.temp_id ORDER BY COUNT(*) DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        25,
+        "PP"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 254,
+    "db_id": "flight_2",
+    "level": "L1",
+    "question": "Give the flight numbers of flights arriving in Aberdeen.",
+    "gold_sql": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
+    "predicted_sql": "SELECT T1.flig FROM flights AS T1 JOIN airports AS T2 ON T1.dest = T2.airp WHERE T2.city = 'Aberdeen'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [],
+    "pred_result": null
+  },
+  {
+    "example_id": 891,
+    "db_id": "network_1",
+    "level": "L1",
+    "question": "Return the names of friends of the high school student Kyle.",
+    "gold_sql": "SELECT T3.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id JOIN Highschooler AS T3 ON T1.friend_id  =  T3.id WHERE T2.name  =  \"Kyle\"",
+    "predicted_sql": "SELECT T2.nm FROM highschooler AS T1 JOIN friend ON T1.id = friend.stud_id JOIN highschooler AS T2 ON friend.frie_id = T2.id WHERE T1.nm = 'Kyle';",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Jordan"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 645,
+    "db_id": "tvshow",
+    "level": "L1",
+    "question": "find the package option of the tv channel that do not have any cartoon directed by Ben Jones.",
+    "gold_sql": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
+    "predicted_sql": "SELECT pack_opti FROM tv_channel WHERE id NOT IN (SELECT chan FROM cartoon WHERE dire_by = 'Ben Jones')",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "no ( FTV )"
+      ],
+      [
+        "Sky Famiglia + Sky HD"
+      ],
+      [
+        "no ( FTV )"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ],
+      [
+        "Sky Famiglia"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 33,
+    "db_id": "concert_singer",
+    "level": "L1",
+    "question": "Show the name and theme for all concerts and the number of singers in each concert.",
+    "gold_sql": "SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id",
+    "predicted_sql": "SELECT T1.conc_nm, T1.them, count(*) FROM concert AS T1 JOIN singer_in_concert AS T2 ON T1.conc_id = T2.conc_id GROUP BY T1.conc_id",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Auditions",
+        "Free choice",
+        3
+      ],
+      [
+        "Super bootcamp",
+        "Free choice 2",
+        2
+      ],
+      [
+        "Home Visits",
+        "Bleeding Love",
+        1
+      ],
+      [
+        "Week 1",
+        "Wide Awake",
+        1
+      ],
+      [
+        "Week 1",
+        "Happy Tonight",
+        2
+      ],
+      [
+        "Week 2",
+        "Party All Night",
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 184,
+    "db_id": "flight_2",
+    "level": "L1",
+    "question": "What are the airline names and abbreviations for airlines in the USA?",
+    "gold_sql": "SELECT Airline ,  Abbreviation FROM AIRLINES WHERE Country  =  \"USA\"",
+    "predicted_sql": "SELECT airl, abbr FROM airlines WHERE coun = 'USA';",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "United Airlines",
+        "UAL"
+      ],
+      [
+        "US Airways",
+        "USAir"
+      ],
+      [
+        "Delta Airlines",
+        "Delta"
+      ],
+      [
+        "Southwest Airlines",
+        "Southwest"
+      ],
+      [
+        "American Airlines",
+        "American"
+      ],
+      [
+        "Northwest Airlines",
+        "Northwest"
+      ],
+      [
+        "Continental Airlines",
+        "Continental"
+      ],
+      [
+        "JetBlue Airways",
+        "JetBlue"
+      ],
+      [
+        "Frontier Airlines",
+        "Frontier"
+      ],
+      [
+        "AirTran Airways",
+        "AirTran"
+      ],
+      [
+        "Allegiant Air",
+        "Allegiant"
+      ],
+      [
+        "Virgin America",
+        "Virgin"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 887,
+    "db_id": "network_1",
+    "level": "L1",
+    "question": "Return the name of the high school student with the most friends.",
+    "gold_sql": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1",
+    "predicted_sql": "SELECT T1.nm FROM highschooler AS T1 JOIN friend AS T2 ON T1.id = T2.stud_id GROUP BY T2.stud_id ORDER BY COUNT(*) DESC LIMIT 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Andrew"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 825,
+    "db_id": "orchestra",
+    "level": "L1",
+    "question": "What are the names of conductors, ordered by age?",
+    "gold_sql": "SELECT Name FROM conductor ORDER BY Age ASC",
+    "predicted_sql": "SELECT nm FROM conductor ORDER BY age",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Antal Doráti"
+      ],
+      [
+        "Igor Stravinsky"
+      ],
+      [
+        "Colin Davis"
+      ],
+      [
+        "Michael Tilson Thomas"
+      ],
+      [
+        "Paul Jorgensen"
+      ],
+      [
+        "Antal Brown"
+      ],
+      [
+        "Charles Dutoit"
+      ],
+      [
+        "Seiji Ozawa"
+      ],
+      [
+        "Valeri Gergiev"
+      ],
+      [
+        "Pierre Boulez"
+      ],
+      [
+        "Gerard Schwarz"
+      ],
+      [
+        "Robert Craft"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 425,
+    "db_id": "museum_visit",
+    "level": "L1",
+    "question": "What is the total ticket expense of the visitors whose membership level is 1?",
+    "gold_sql": "SELECT sum(t2.Total_spent) FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id WHERE t1.Level_of_membership  =  1",
+    "predicted_sql": "SELECT sum(T1.tota_spen) FROM visit AS T1 JOIN visitor AS T2 ON T1.visi_id = T2.id WHERE T2.leve_of_memb = 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        570.84
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 697,
+    "db_id": "voter_1",
+    "level": "L1",
+    "question": "How many contestants did not get voted?",
+    "gold_sql": "SELECT count(*) FROM contestants WHERE contestant_number NOT IN ( SELECT contestant_number FROM votes )",
+    "predicted_sql": "SELECT count(*) FROM contestants WHERE cont_numb NOT IN (SELECT cont_numb FROM votes)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        8
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 1026,
+    "db_id": "singer",
+    "level": "L1",
+    "question": "List the name of singers that do not have any song.",
+    "gold_sql": "SELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song)",
+    "predicted_sql": "SELECT nm FROM singer WHERE sing_id NOT IN (SELECT sing_id FROM song)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Alice Walton"
+      ],
+      [
+        "Abigail Johnson"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 137,
+    "db_id": "car_1",
+    "level": "L1",
+    "question": "What is the average edispl of the cars of model volvo?",
+    "gold_sql": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';",
+    "predicted_sql": "SELECT AVG(T1.edis) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.id = T2.make WHERE T2.mode = 'volvo'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        133.5
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 4,
+    "db_id": "concert_singer",
+    "level": "L1",
+    "question": "What is the average, minimum, and maximum age of all singers from France?",
+    "gold_sql": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",
+    "predicted_sql": "SELECT AVG(age), MIN(age), MAX(age) FROM singer WHERE coun = 'France';",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        34.5,
+        25,
+        43
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 80,
+    "db_id": "pets_1",
+    "level": "L1",
+    "question": "For students who have pets , how many pets does each student have ? list their ids instead of names .",
+    "gold_sql": "select count(*) ,  t1.stuid from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid group by t1.stuid",
+    "predicted_sql": "SELECT stui, COUNT(*) FROM has_pet GROUP BY stui;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        1,
+        1001
+      ],
+      [
+        2,
+        1002
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 422,
+    "db_id": "museum_visit",
+    "level": "L1",
+    "question": "What is the name of the museum that had no visitor yet?",
+    "gold_sql": "SELECT name FROM museum WHERE Museum_ID NOT IN (SELECT museum_id FROM visit)",
+    "predicted_sql": "SELECT nm FROM museum WHERE muse_id NOT IN (SELECT muse_id FROM visit)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Jefferson Development Museum"
+      ],
+      [
+        "RiverPark Museum"
+      ],
+      [
+        "Place Tower Museum"
+      ],
+      [
+        "Central City District Residential Museum"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 658,
+    "db_id": "poker_player",
+    "level": "L1",
+    "question": "Return the maximum final tables made across all poker players who have earnings below 200000.",
+    "gold_sql": "SELECT max(Final_Table_Made) FROM poker_player WHERE Earnings  <  200000",
+    "predicted_sql": "SELECT MAX(fina_tabl_made) FROM poker_player WHERE earn < 200000;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        26.0
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 79,
+    "db_id": "pets_1",
+    "level": "L1",
+    "question": "Find the number of pets for each student who has any pet and student id.",
+    "gold_sql": "SELECT count(*) ,  T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid",
+    "predicted_sql": "SELECT count(*), stui FROM has_pet GROUP BY stui;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        1,
+        1001
+      ],
+      [
+        2,
+        1002
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 1006,
+    "db_id": "singer",
+    "level": "L1",
+    "question": "List the name of singers whose citizenship is not \"France\".",
+    "gold_sql": "SELECT Name FROM singer WHERE Citizenship != \"France\"",
+    "predicted_sql": "SELECT nm FROM singer WHERE citi != 'France'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Christy Walton"
+      ],
+      [
+        "Alice Walton"
+      ],
+      [
+        "Iris Fontbona"
+      ],
+      [
+        "Jacqueline Mars"
+      ],
+      [
+        "Gina Rinehart"
+      ],
+      [
+        "Susanne Klatten"
+      ],
+      [
+        "Abigail Johnson"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 623,
+    "db_id": "tvshow",
+    "level": "L1",
+    "question": "What is the TV Channel of TV series with Episode \"A Love of a Lifetime\"? List the TV Channel's series name.",
+    "gold_sql": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";",
+    "predicted_sql": "SELECT T1.seri_nm FROM tv_channel AS T1 JOIN tv_series AS T2 ON T1.id = T2.chan WHERE T2.epis = 'A Love of a Lifetime'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Sky Radio"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 43,
+    "db_id": "concert_singer",
+    "level": "L1",
+    "question": "Find the number of concerts happened in the stadium with the highest capacity .",
+    "gold_sql": "select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1)",
+    "predicted_sql": "SELECT count(*) FROM concert JOIN stadium ON concert.stad_id = stadium.stad_id WHERE stadium.capa = (SELECT max(capa) FROM stadium)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        0
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 120,
+    "db_id": "car_1",
+    "level": "L1",
+    "question": "What is the minimum weight of the car with 8 cylinders produced in 1974 ?",
+    "gold_sql": "select min(weight) from cars_data where cylinders  =  8 and year  =  1974",
+    "predicted_sql": "SELECT MIN(weig) FROM cars_data WHERE cyli = 8 AND year = 1974;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        4141
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 161,
+    "db_id": "car_1",
+    "level": "L1",
+    "question": "How many countries has more than 2 car makers ?",
+    "gold_sql": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+    "predicted_sql": "SELECT count(*) FROM (SELECT coun FROM car_makers GROUP BY coun HAVING count(*) > 2);",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        4
+      ],
+      [
+        4
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 680,
+    "db_id": "poker_player",
+    "level": "L1",
+    "question": "What are the names and birth dates of people, ordered by their names in alphabetical order?",
+    "gold_sql": "SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC",
+    "predicted_sql": "SELECT nm, birt_dt FROM people ORDER BY nm;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Aleksey Ostapenko",
+        "May 26, 1986"
+      ],
+      [
+        "Maksim Botin",
+        "July 14, 1983"
+      ],
+      [
+        "Roman Bragin",
+        "April 17, 1987"
+      ],
+      [
+        "Semen Poltavskiy",
+        "February 8, 1981"
+      ],
+      [
+        "Sergey Grankin",
+        "January 22, 1987"
+      ],
+      [
+        "Teodor Salparov",
+        "August 16, 1982"
+      ],
+      [
+        "Yevgeni Sivozhelez",
+        "August 8, 1986"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 403,
+    "db_id": "course_teach",
+    "level": "L1",
+    "question": "Show the name of the teacher for the math course.",
+    "gold_sql": "SELECT T3.Name FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID WHERE T2.Course  =  \"Math\"",
+    "predicted_sql": "SELECT T1.nm FROM teacher AS T1 JOIN course_arrange AS T2 ON T1.teac_id = T2.teac_id JOIN course AS T3 ON T2.cour_id = T3.cour_id WHERE T3.cour = 'math'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Kearsley Brown"
+      ],
+      [
+        "Vicente Carretero"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 1031,
+    "db_id": "real_estate_properties",
+    "level": "L1",
+    "question": "What is the feature type name of feature AirCon?",
+    "gold_sql": "SELECT T2.feature_type_name FROM Other_Available_Features AS T1 JOIN Ref_Feature_Types AS T2 ON T1.feature_type_code  =  T2.feature_type_code WHERE T1.feature_name  =  \"AirCon\"",
+    "predicted_sql": "SELECT T1.feat_typ_nm FROM ref_feature_types AS T1 JOIN other_available_features AS T2 ON T1.feat_typ_code = T2.feat_typ_code WHERE T2.feat_nm = 'AirCon'",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Amenity, eg Pool."
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 842,
+    "db_id": "orchestra",
+    "level": "L1",
+    "question": "Show the names of conductors that have conducted more than one orchestras.",
+    "gold_sql": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1",
+    "predicted_sql": "SELECT T1.nm FROM conductor AS T1 JOIN orchestra AS T2 ON T1.cond_id = T2.cond_id GROUP BY T1.cond_id HAVING COUNT(*) > 1;",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [],
+    "pred_result": null
+  },
+  {
+    "example_id": 854,
+    "db_id": "orchestra",
+    "level": "L1",
+    "question": "List the names of orchestras that have no performance.",
+    "gold_sql": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)",
+    "predicted_sql": "SELECT orch FROM orchestra WHERE orch_id NOT IN (SELECT orch_id FROM performance)",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "San Francisco Symphony Orchestra"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 23,
+    "db_id": "concert_singer",
+    "level": "L1",
+    "question": "For each stadium, how many concerts play there?",
+    "gold_sql": "SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",
+    "predicted_sql": "SELECT count(*), stad_id FROM concert GROUP BY stad_id",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Stark's Park",
+        1
+      ],
+      [
+        "Glebe Park",
+        1
+      ],
+      [
+        "Somerset Park",
+        2
+      ],
+      [
+        "Recreation Park",
+        1
+      ],
+      [
+        "Balmoor",
+        1
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 710,
+    "db_id": "world_1",
+    "level": "L1",
+    "question": "Which region is the city Kabul located in?",
+    "gold_sql": "SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\"",
+    "predicted_sql": "SELECT T2.regi FROM city AS T1 JOIN country AS T2 ON T1.coun = T2.code WHERE T1.nm = 'Kabul';",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        "Southern and Central Asia"
+      ]
+    ],
+    "pred_result": null
+  },
+  {
+    "example_id": 62,
+    "db_id": "pets_1",
+    "level": "L1",
+    "question": "What major is every student who does not own a cat as a pet, and also how old are they?",
+    "gold_sql": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
+    "predicted_sql": "SELECT majo, age FROM student WHERE stui NOT IN (SELECT T1.stui FROM has_pet AS T1 JOIN pets AS T2 ON T1.peti = T2.peti WHERE T2.pett = 'cat')",
+    "error_type": "syntax_or_execution_error",
+    "gold_result": [
+      [
+        600,
+        19
+      ],
+      [
+        600,
+        21
+      ],
+      [
+        600,
+        20
+      ],
+      [
+        600,
+        26
+      ],
+      [
+        600,
+        18
+      ],
+      [
+        600,
+        18
+      ],
+      [
+        600,
+        20
+      ],
+      [
+        600,
+        19
+      ],
+      [
+        600,
+        17
+      ],
+      [
+        600,
+        22
+      ],
+      [
+        600,
+        20
+      ],
+      [
+        600,
+        18
+      ],
+      [
+        600,
+        16
+      ],
+      [
+        600,
+        17
+      ],
+      [
+        600,
+        27
+      ],
+      [
+        600,
+        20
+      ],
+      [
+        600,
+        18
+      ],
+      [
+        520,
+        22
+      ],
+      [
+        520,
+        19
+      ],
+      [
+        540,
+        17
+      ],
+      [
+        520,
+        20
+      ],
+      [
+        540,
+        18
+      ],
+      [
+        520,
+        18
+      ],
+      [
+        520,
+        19
+      ],
+      [
+        520,
+        18
+      ],
+      [
+        550,
+        20
+      ],
+      [
+        100,
+        17
+      ],
+      [
+        550,
+        21
+      ],
+      [
+        550,
+        20
+      ],
+      [
+        550,
+        20
+      ],
+      [
+        550,
+        18
+      ],
+      [
+        50,
+        18
+      ],
+      [
+        50,
+        26
+      ]
+    ],
+    "pred_result": null
+  }
+]

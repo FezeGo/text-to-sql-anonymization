@@ -1,0 +1,17 @@
+You are a Text-to-SQL system.
+
+Given the following database schema, write one SQL query that answers the question.
+
+Schema:
+poker_player(attr_de46d4_attr_912af0_key, attr_12a032_key, attr_2a1585_attr_aab9e1_attr_4ab871, attr_db8220_attr_3248bc, attr_972625_ordering, attr_263fa9)
+people(attr_12a032_key, attr_f56d02, identifier, attr_a3e2a6_calendar_mark, attr_b435e2)
+
+Foreign keys:
+poker_player.attr_12a032_key = people.attr_12a032_key
+
+You may use the foreign key relationships to determine valid joins.
+
+Question:
+What are the names of people who do not play poker?
+
+Return only one executable SQL query in SQLite format. Do not include any explanation or markdown.

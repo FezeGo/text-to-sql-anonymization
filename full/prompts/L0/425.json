@@ -1,0 +1,11 @@
+{
+  "example_id": 425,
+  "db_id": "museum_visit",
+  "level": "L0",
+  "question": "What is the total ticket expense of the visitors whose membership level is 1?",
+  "gold_sql": "SELECT sum(t2.Total_spent) FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id WHERE t1.Level_of_membership  =  1",
+  "query_type": "join_agg",
+  "difficulty": null,
+  "prompt_file": "prompts/L0/425.txt",
+  "schema_file": "schemas/L0/museum_visit.json"
+}

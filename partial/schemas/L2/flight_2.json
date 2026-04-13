@@ -1,0 +1,44 @@
+{
+  "db_id": "flight_2",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "airlines",
+      "columns": [
+        "attr_9871d3",
+        "attr_6d2f2f",
+        "attr_c70297",
+        "nation"
+      ]
+    },
+    {
+      "table_name": "airports",
+      "columns": [
+        "municipality",
+        "attr_bee03b",
+        "attr_430408",
+        "nation",
+        "attr_d16076"
+      ]
+    },
+    {
+      "table_name": "flights",
+      "columns": [
+        "attr_6d2f2f",
+        "attr_6d8380",
+        "attr_bb3b2d",
+        "attr_f2262b"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "flights.attr_f2262b",
+      "airports.attr_bee03b"
+    ],
+    [
+      "flights.attr_bb3b2d",
+      "airports.attr_bee03b"
+    ]
+  ]
+}

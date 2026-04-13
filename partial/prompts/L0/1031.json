@@ -1,0 +1,11 @@
+{
+  "example_id": 1031,
+  "db_id": "real_estate_properties",
+  "level": "L0",
+  "question": "What is the feature type name of feature AirCon?",
+  "gold_sql": "SELECT T2.feature_type_name FROM Other_Available_Features AS T1 JOIN Ref_Feature_Types AS T2 ON T1.feature_type_code  =  T2.feature_type_code WHERE T1.feature_name  =  \"AirCon\"",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L0/1031.txt",
+  "schema_file": "test/schemas/L0/real_estate_properties.json"
+}

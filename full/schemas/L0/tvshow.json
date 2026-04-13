@@ -1,0 +1,56 @@
+{
+  "db_id": "tvshow",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "tv_channel",
+      "columns": [
+        "id",
+        "series_name",
+        "country",
+        "language",
+        "content",
+        "pixel_aspect_ratio_par",
+        "hight_definition_tv",
+        "pay_per_view_ppv",
+        "package_option"
+      ]
+    },
+    {
+      "table_name": "tv_series",
+      "columns": [
+        "id",
+        "episode",
+        "air_date",
+        "rating",
+        "share",
+        "18_49_rating_share",
+        "viewers_m",
+        "weekly_rank",
+        "channel"
+      ]
+    },
+    {
+      "table_name": "cartoon",
+      "columns": [
+        "id",
+        "title",
+        "directed_by",
+        "written_by",
+        "original_air_date",
+        "production_code",
+        "channel"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "tv_series.channel",
+      "tv_channel.id"
+    ],
+    [
+      "cartoon.channel",
+      "tv_channel.id"
+    ]
+  ]
+}

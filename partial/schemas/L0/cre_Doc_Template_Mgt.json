@@ -1,0 +1,57 @@
+{
+  "db_id": "cre_Doc_Template_Mgt",
+  "level": "L0",
+  "tables": [
+    {
+      "table_name": "ref_template_types",
+      "columns": [
+        "template_type_code",
+        "template_type_description"
+      ]
+    },
+    {
+      "table_name": "templates",
+      "columns": [
+        "template_id",
+        "version_number",
+        "template_type_code",
+        "date_effective_from",
+        "date_effective_to",
+        "template_details"
+      ]
+    },
+    {
+      "table_name": "documents",
+      "columns": [
+        "document_id",
+        "template_id",
+        "document_name",
+        "document_description",
+        "other_details"
+      ]
+    },
+    {
+      "table_name": "paragraphs",
+      "columns": [
+        "paragraph_id",
+        "document_id",
+        "paragraph_text",
+        "other_details"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "templates.template_type_code",
+      "ref_template_types.template_type_code"
+    ],
+    [
+      "documents.template_id",
+      "templates.template_id"
+    ],
+    [
+      "paragraphs.document_id",
+      "documents.document_id"
+    ]
+  ]
+}

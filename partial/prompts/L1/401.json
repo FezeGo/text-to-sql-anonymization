@@ -1,0 +1,11 @@
+{
+  "example_id": 401,
+  "db_id": "course_teach",
+  "level": "L1",
+  "question": "Show names of teachers and the courses they are arranged to teach in ascending alphabetical order of the teacher's name.",
+  "gold_sql": "SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ORDER BY T3.Name",
+  "query_type": "join",
+  "difficulty": null,
+  "prompt_file": "test/prompts/L1/401.txt",
+  "schema_file": "test/schemas/L1/course_teach.json"
+}

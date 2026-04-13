@@ -1,0 +1,62 @@
+{
+  "db_id": "world_1",
+  "level": "L2",
+  "tables": [
+    {
+      "table_name": "table_1",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "fk_1",
+        "text_2",
+        "num_1"
+      ]
+    },
+    {
+      "table_name": "table_2",
+      "columns": [
+        "text_1",
+        "text_2"
+      ]
+    },
+    {
+      "table_name": "table_3",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "text_2",
+        "text_3",
+        "num_1",
+        "num_2",
+        "num_3",
+        "num_4",
+        "num_5",
+        "num_6",
+        "text_4",
+        "text_5",
+        "text_6",
+        "num_7",
+        "text_7"
+      ]
+    },
+    {
+      "table_name": "table_4",
+      "columns": [
+        "pk_1",
+        "text_1",
+        "text_2",
+        "num_1"
+      ]
+    }
+  ],
+  "foreign_keys": [
+    [
+      "table_1.fk_1",
+      "table_3.pk_1"
+    ],
+    [
+      "table_4.pk_1",
+      "table_3.pk_1"
+    ]
+  ]
+}
