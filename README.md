@@ -67,7 +67,7 @@ We further compare two anonymization schemes:
 │   ├── outputs/
 │   ├── mappings/
 │   ├── errors/
-│   └── scripts (Scripts for partial scheme execution)
+│   └── scripts/ (Scripts for partial scheme execution)
 │
 ├── scripts/                        # Data preprocessing and utility tools
 │   ├── sample_spider_subset.py     # Draws the 80 representative samples
