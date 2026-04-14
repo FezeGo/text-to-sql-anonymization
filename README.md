@@ -1,46 +1,68 @@
-# 🧠 Text-to-SQL under Schema Anonymization
+# Text-to-SQL under Schema Anonymization
 
-This project investigates how large language models (LLMs) perform on Text-to-SQL tasks when schema semantics are progressively removed. Specifically, we study whether models rely more on **lexical schema information** (e.g., column names) or **relational structure** (e.g., foreign keys).
+## Overview
 
-
-## 📌 Overview
-
-Recent LLM-based Text-to-SQL systems achieve strong performance on benchmarks like Spider. However, it remains unclear:
+This project investigates how Gemini perform on Text-to-SQL tasks when schema semantics are progressively removed. Specifically, this study explores whether models rely more on **lexical schema information** (e.g., column names) or **relational structure** (e.g., foreign keys).
 
 > Do models truly reason over database structure, or do they rely primarily on lexical matching?
 
-To answer this, we design controlled experiments using **schema anonymization**.
+## Dataset
 
+Utilize the [Spider dataset](https://yale-lily.github.io/spider), a large-scale cross-domain benchmark for text-to-SQL. It contains complex queries over multiple databases with diverse schemas, requiring generalization to unseen domains.
 
-## 🧪 Key Idea
+- Sample **80 examples** to ensure manageable evaluation.
+- The subset covers multiple query types, including:
+  - Simple
+  - Aggregation
+  - Join
+  - Join-Aggregation
+  - Nested
+- Each example is annotated with a query type label for analysis.
 
-We systematically transform database schemas into multiple levels:
+### Data Setup
 
-| Level | Description |
-|------|------------|
-| **L0** | Original schema (full semantics) |
-| **L1** | Abbreviated schema (e.g., `name → nm`) |
-| **L2** | Typed schema (e.g., `text_1`, `num_1`) |
-| **L3** | Fully anonymized (e.g., `col_1`, `table_1`) |
-
-We further compare two anonymization schemes:
-
-- **Partial Anonymization** → retains weak lexical cues  
-- **Full Anonymization** → removes all lexical information  
-
-
-## 📊 Main Findings
-
-- 🚨 Performance drops sharply as schema semantics are removed  
-- ❌ Under full anonymization, accuracy collapses to near zero  
-- ⚠️ Even simple queries fail without lexical grounding  
-- 🧩 Models retain SQL structure (templates) but fail to map semantics  
-
-
-## 🏗️ Project Structure
+1. Download the Spider dataset from the official website.
+2. Place the database files under:
 
 ```bash
-.
+spider/spider_data/database/
+```
+
+3. Please the processed subsrt file:
+
+```bash
+data/spider_subset_80.json
+```
+
+## Key Idea
+
+Systematically transform database schemas into multiple levels:
+
+| Level | Description | Example |
+| :--- | :--- | :--- |
+| **L0** | **Original** (Full semantics) | `name`, `age`, `student_id` |
+| **L1** | **Abbreviated** (Human-readable cues) | `nm`, `ag`, `st_id` |
+| **L2** | **Typed** (Data type only) | `text_1`, `num_1`, `id_1` |
+| **L3** | **Fully Anonymized** (No semantics) | `col_1`, `col_2`, `col_3` |
+
+Compare two anonymization schemes:
+1.  **Partial Anonymization**: Table names are preserved, but columns are masked.
+2.  **Full Anonymization**: Both table and column names are completely replaced by abstract IDs (e.g., `table_1.col_1`).
+
+## Requirements
+
+- Python 3.11+
+- Gemini API access 
+```bash
+export GEMINI_API_KEY="my_api_key_here"
+```
+- Required packages: 
+  - `google-genai`
+  - `numpy`
+
+## Project Structure
+
+```bash
 .
 ├── data/                         # Core datasets and filtered subsets
 │   ├── spider_subset_80.json     # Final 80 samples used for evaluation
@@ -78,3 +100,4 @@ We further compare two anonymization schemes:
 │
 ├── README.md                       # Project documentation
 └── requirements.txt                # Python dependencies
+```
